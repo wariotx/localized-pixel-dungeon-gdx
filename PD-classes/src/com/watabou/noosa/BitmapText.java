@@ -84,7 +84,6 @@ public class BitmapText extends Visual {
 	
 	@Override
 	public void draw() {
-		
 		super.draw();
 		
 		NoosaScript script = NoosaScript.get();
@@ -109,18 +108,75 @@ public class BitmapText extends Visual {
 		else
 		{
 			String t = text == null ? "" : LanguageFactory.INSTANCE.translate(text);
-			Game.batch.setShader(new ShaderProgram(Gdx.files.internal("translate/shader/outline.vert"), Gdx.files.internal("translate/shader/outline.frag")));
 			Game.batch.begin();
 
-			BitmapFont.TextBounds tb = LanguageFactory.INSTANCE.font1x.getBounds(t);
-			float fScaleX = matrix[0];
-			float fScaleY = matrix[5];
-			float fX = matrix[12];
-			float fY = matrix[13];
-			LanguageFactory.INSTANCE.font1x.draw(Game.batch, t, fX * 3 + width / 2 - tb.width / 2, Game.height - fY * 3);
-			for (int i = 0; i < matrix.length; i++)
-				System.out.println(text + " : " + i + " : " + matrix[i]);
-			System.out.println(text + " : " + width);
+			ShaderProgram shader;
+			BitmapFont fnt;
+			switch ((int)font.baseLine)
+			{
+				case 6:
+					fnt = LanguageFactory.INSTANCE.getFont("1x");
+					shader = new ShaderProgram(Gdx.files.internal("translate/shader/outline.vert"), Gdx.files.internal("translate/shader/outline.frag"));
+					break;
+				case 9:
+					fnt = LanguageFactory.INSTANCE.getFont("15x");
+					shader = new ShaderProgram(Gdx.files.internal("translate/shader/outline.vert"), Gdx.files.internal("translate/shader/outline.frag"));
+					break;
+				case 11:
+					fnt = LanguageFactory.INSTANCE.getFont("2x");
+					shader = new ShaderProgram(Gdx.files.internal("translate/shader/outline.vert"), Gdx.files.internal("translate/shader/outline.frag"));
+					break;
+				case 13:
+					fnt = LanguageFactory.INSTANCE.getFont("25x");
+					shader = new ShaderProgram(Gdx.files.internal("translate/shader/outlineAA.vert"), Gdx.files.internal("translate/shader/outlineAA.frag"));
+					break;
+				case 17:
+					fnt = LanguageFactory.INSTANCE.getFont("3x");
+					shader = new ShaderProgram(Gdx.files.internal("translate/shader/outlineAA.vert"), Gdx.files.internal("translate/shader/outlineAA.frag"));
+					break;
+				default:
+					fnt = LanguageFactory.INSTANCE.getFont("1x");
+					shader = new ShaderProgram(Gdx.files.internal("translate/shader/outline.vert"), Gdx.files.internal("translate/shader/outline.frag"));
+					break;
+			}
+
+			Game.batch.setShader(shader);
+
+			float zoom = camera().zoom;
+			int camX = camera().x;
+			int camY = camera().y;
+
+			if (text.startsWith("To un"))
+			{
+				// debug me, first multiline popup encountered.
+			}
+
+			if (zoom < 4)
+			{
+				if (this instanceof BitmapTextMultiline)
+				{
+					fnt.drawWrapped(Game.batch, t, camX + x * zoom, Game.height - (y * zoom + camY), width);
+				}
+				else
+				{
+					fnt.draw(Game.batch, t, camX + x * zoom + width / 2 - fnt.getBounds(t).width / 2, Game.height - (y * zoom + camY));
+				}
+			}
+			else
+			{
+				if (this instanceof BitmapTextMultiline)
+				{
+					fnt.setScale(camera().zoom / 2);
+					fnt.drawWrapped(Game.batch, t, camX + x * zoom, Game.height - (y * zoom + camY), width);
+					fnt.setScale(1);
+				}
+				else
+				{
+					fnt.setScale(camera().zoom / 2);
+					fnt.draw(Game.batch, t, camX + x * zoom + width / 4 * zoom - fnt.getBounds(t).width / 2, Game.height - (y * zoom + camY));
+					fnt.setScale(1);
+				}
+			}
 
 			Game.batch.end();
 			Game.batch.setShader(null);

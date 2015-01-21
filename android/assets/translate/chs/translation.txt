@@ -1,0 +1,39 @@
+# THIS FILE MUST BE UTF8 WITHOUT BOM
+Play
+开始游戏
+Rankings
+排行榜
+Badges
+奖章
+About
+关于
+
+# Rankings
+No games have been played yet.
+[YELLOW]没有任何游戏记录。[]
+
+# Badges
+Your Badges
+[YELLOW]你的奖章[]
+
+# Game
+To unlock "Challenges", win the game with any character class.
+要解锁“挑战”，必须得使用任意角色通关一次。
+WARRIOR
+战士
+MAGE
+法师
+ROGUE
+盗贼
+HUNTRESS
+猎人
+New Game
+开始新游戏
+
+# Intro
+Many heroes of all kinds ventured into the Dungeon before you. Some of them have returned with treasures and magical artifacts, most have never been heard of since. But none have succeeded in retrieving the Amulet of Yendor, which is told to be hidden in the depths of the Dungeon.\n\nYou consider yourself ready for the challenge, but most importantly, you feel that fortune smiles on you. It's time to start your own adventure!
+[BLACK]我就是个测试\n啊啊啊[]
+
+# GameScene
+Welcome to the level %d of Pixel Dungeon!
+欢迎来到Pixel Dungeon的第%d层！

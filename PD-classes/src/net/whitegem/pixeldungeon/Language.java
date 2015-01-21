@@ -6,8 +6,8 @@ package net.whitegem.pixeldungeon;
 public enum Language
 {
     ENGLISH("en"),
-    S_CHINESE("CHS"),
-    T_CHINESE("CHT");
+    S_CHINESE("chs"),
+    T_CHINESE("cht");
 
     private final String SHORT_FORM;
 

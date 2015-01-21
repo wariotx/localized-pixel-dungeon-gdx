@@ -2,13 +2,16 @@ package net.whitegem.pixeldungeon;
 
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 
+import java.util.HashMap;
+
 /**
  * Created by Carl-Station on 01/18/15.
  */
 public class LanguageFactory
 {
     public static final LanguageFactory INSTANCE;
-    public BitmapFont font1x;
+    private HashMap<String, BitmapFont> fonts;
+    private Translator translator;
 
     private Language language;
 
@@ -19,23 +22,56 @@ public class LanguageFactory
 
     private LanguageFactory()
     {
+        translator = new Translator(Language.ENGLISH);
+        fonts = new HashMap<String, BitmapFont>();
         setLanguage(Language.ENGLISH);
     }
 
     public void setLanguage(Language lang)
     {
         language = lang;
-        font1x = FontFactory.generate("translate/chs/font/6");
-        font1x.setMarkupEnabled(true);
+        translator = new Translator(language);
+        fonts.clear();
+        if (language != Language.ENGLISH)
+        {
+            BitmapFont font1x = FontFactory.generate("translate/" + language + "/font/1x");
+            font1x.setMarkupEnabled(true);
+            BitmapFont font15x = FontFactory.generate("translate/" + language + "/font/15x");
+            font15x.setMarkupEnabled(true);
+            BitmapFont font2x = FontFactory.generate("translate/" + language + "/font/2x");
+            font2x.setMarkupEnabled(true);
+            BitmapFont font25x = FontFactory.generate("translate/" + language + "/font/25x");
+            font25x.setMarkupEnabled(true);
+            BitmapFont font3x = FontFactory.generate("translate/" + language + "/font/3x");
+            font3x.setMarkupEnabled(true);
+            fonts.put("1x", font1x);
+            fonts.put("15x", font15x);
+            fonts.put("2x", font2x);
+            fonts.put("25x", font25x);
+            fonts.put("3x", font3x);
+        }
+    }
+
+    public BitmapFont getFont(String zoom)
+    {
+        if (fonts.containsKey(zoom))
+            return fonts.get(zoom);
+        return fonts.get("1x");
     }
 
     public String translate(String originalText)
     {
-        return Translator.translate(originalText, language);
+        originalText = originalText.replace("\n", "\\n");
+        if (language == Language.ENGLISH)
+            return originalText;
+        return translator.translate(originalText).replace("\\n", "\n");
     }
 
     public boolean hasKey(String key)
     {
-        return Translator.hasKey(key, language);
+        key = key.replace("\n", "\\n");
+        if (language == Language.ENGLISH)
+            return false;
+        return translator.hasKey(key);
     }
 }

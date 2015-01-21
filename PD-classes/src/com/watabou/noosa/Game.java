@@ -34,6 +34,8 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.PDPlatformSupport;
 import com.watabou.utils.Signal;
 import com.watabou.utils.SystemTime;
+import net.whitegem.pixeldungeon.Language;
+import net.whitegem.pixeldungeon.LanguageFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -86,7 +88,10 @@ public abstract class Game<GameActionType> implements ApplicationListener {
 	@Override
 	public void create() {
 		instance = this;
-		
+
+		// set language
+		LanguageFactory.INSTANCE.setLanguage(Language.S_CHINESE);
+
 		density = Gdx.graphics.getDensity();
 		this.inputProcessor.init();
 		Gdx.input.setInputProcessor(this.inputProcessor);

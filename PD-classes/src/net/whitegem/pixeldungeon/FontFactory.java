@@ -24,7 +24,8 @@ public class FontFactory
             if (file.extension().equals("png"))
             {
                 Texture fontTexture = new Texture(file, true);
-                fontTexture.setFilter(TextureFilter.MipMapLinearLinear, TextureFilter.Linear);
+                //fontTexture.setFilter(TextureFilter.MipMapLinearLinear, TextureFilter.Linear);
+                fontTexture.setFilter(TextureFilter.Nearest, TextureFilter.Nearest);
                 textureRegions[textureCounter] = new TextureRegion(fontTexture);
                 textureCounter++;
             }
