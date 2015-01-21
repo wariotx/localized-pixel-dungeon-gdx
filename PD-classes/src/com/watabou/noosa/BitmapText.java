@@ -19,8 +19,13 @@ package com.watabou.noosa;
 
 import java.nio.FloatBuffer;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.TextureData;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.glutils.ShaderProgram;
+import com.badlogic.gdx.math.Matrix4;
 import com.watabou.gdx.GdxTexture;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
@@ -28,6 +33,9 @@ import com.watabou.glwrap.Matrix;
 import com.watabou.glwrap.Quad;
 
 import com.watabou.utils.RectF;
+import net.whitegem.pixeldungeon.FontFactory;
+import net.whitegem.pixeldungeon.LanguageFactory;
+import net.whitegem.pixeldungeon.Translator;
 
 public class BitmapText extends Visual {
 
@@ -86,15 +94,39 @@ public class BitmapText extends Visual {
 		if (dirty) {
 			updateVertices();
 		}
-		
+
 		script.camera( camera() );
-		
+
 		script.uModel.valueM4( matrix );
-		script.lighting( 
-			rm, gm, bm, am, 
-			ra, ga, ba, aa );
-		script.drawQuadSet( quads, realLength );
-		
+		script.lighting(
+				rm, gm, bm, am,
+				ra, ga, ba, aa);
+
+		if (!LanguageFactory.INSTANCE.hasKey(text))
+		{
+			script.drawQuadSet(quads, realLength);
+		}
+		else
+		{
+			String t = text == null ? "" : LanguageFactory.INSTANCE.translate(text);
+			Game.batch.setShader(new ShaderProgram(Gdx.files.internal("translate/shader/outline.vert"), Gdx.files.internal("translate/shader/outline.frag")));
+			Game.batch.begin();
+
+			BitmapFont.TextBounds tb = LanguageFactory.INSTANCE.font1x.getBounds(t);
+			float fScaleX = matrix[0];
+			float fScaleY = matrix[5];
+			float fX = matrix[12];
+			float fY = matrix[13];
+			LanguageFactory.INSTANCE.font1x.draw(Game.batch, t, fX * 3 + width / 2 - tb.width / 2, Game.height - fY * 3);
+			for (int i = 0; i < matrix.length; i++)
+				System.out.println(text + " : " + i + " : " + matrix[i]);
+			System.out.println(text + " : " + width);
+
+			Game.batch.end();
+			Game.batch.setShader(null);
+			Gdx.gl.glEnable(GL20.GL_BLEND);
+			NoosaScript.get().use();
+		}
 	}
 	
 	protected void updateVertices() {
