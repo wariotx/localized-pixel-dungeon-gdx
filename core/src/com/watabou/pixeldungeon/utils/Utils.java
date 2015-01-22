@@ -17,6 +17,8 @@
  */
 package com.watabou.pixeldungeon.utils;
 
+import net.whitegem.pixeldungeon.LanguageFactory;
+
 import java.util.Locale;
 
 public class Utils {
@@ -26,7 +28,9 @@ public class Utils {
 	}
 	
 	public static String format( String format, Object...args ) {
-		return String.format( Locale.ENGLISH, format, args );
+		String result = String.format( Locale.ENGLISH, format, args );
+		LanguageFactory.INSTANCE.addFormatTranslation(result, format, args);
+		return result;
 	}
 	
 	public static String VOWELS	= "aoeiu";

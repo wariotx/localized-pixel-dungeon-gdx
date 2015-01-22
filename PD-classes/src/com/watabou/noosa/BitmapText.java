@@ -40,6 +40,7 @@ import net.whitegem.pixeldungeon.Translator;
 public class BitmapText extends Visual {
 
 	protected String text;
+	protected String translatedText;
 	protected Font font;
 
 	protected float[] vertices = new float[16];
@@ -101,13 +102,22 @@ public class BitmapText extends Visual {
 				rm, gm, bm, am,
 				ra, ga, ba, aa);
 
-		if (!LanguageFactory.INSTANCE.hasKey(text))
+		String s = null;
+		if (LanguageFactory.INSTANCE.stored.containsKey(text))
+		{
+			s = LanguageFactory.INSTANCE.stored.get(text);
+			LanguageFactory.INSTANCE.stored.remove(text);
+		}
+		if (!LanguageFactory.INSTANCE.hasKey(text) && translatedText == null && s == null)
 		{
 			script.drawQuadSet(quads, realLength);
 		}
 		else
 		{
-			String t = text == null ? "" : LanguageFactory.INSTANCE.translate(text);
+			if (translatedText == null)
+			{
+				translatedText = (text == null) ? "" : (s == null) ? LanguageFactory.INSTANCE.translate(text) : s;
+			}
 			Game.batch.begin();
 
 			ShaderProgram shader;
@@ -155,11 +165,11 @@ public class BitmapText extends Visual {
 			{
 				if (this instanceof BitmapTextMultiline)
 				{
-					fnt.drawWrapped(Game.batch, t, camX + x * zoom, Game.height - (y * zoom + camY), width);
+					fnt.drawWrapped(Game.batch, translatedText, camX + x * zoom, Game.height - (y * zoom + camY), width);
 				}
 				else
 				{
-					fnt.draw(Game.batch, t, camX + x * zoom + width / 2 - fnt.getBounds(t).width / 2, Game.height - (y * zoom + camY));
+					fnt.draw(Game.batch, translatedText, camX + x * zoom + width / 2 - fnt.getBounds(translatedText).width / 2, Game.height - (y * zoom + camY));
 				}
 			}
 			else
@@ -167,13 +177,13 @@ public class BitmapText extends Visual {
 				if (this instanceof BitmapTextMultiline)
 				{
 					fnt.setScale(camera().zoom / 2);
-					fnt.drawWrapped(Game.batch, t, camX + x * zoom, Game.height - (y * zoom + camY), width);
+					fnt.drawWrapped(Game.batch, translatedText, camX + x * zoom, Game.height - (y * zoom + camY), width);
 					fnt.setScale(1);
 				}
 				else
 				{
 					fnt.setScale(camera().zoom / 2);
-					fnt.draw(Game.batch, t, camX + x * zoom + width / 4 * zoom - fnt.getBounds(t).width / 2, Game.height - (y * zoom + camY));
+					fnt.draw(Game.batch, translatedText, camX + x * zoom + width / 4 * zoom - fnt.getBounds(translatedText).width / 2, Game.height - (y * zoom + camY));
 					fnt.setScale(1);
 				}
 			}

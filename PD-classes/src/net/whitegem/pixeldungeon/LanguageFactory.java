@@ -12,6 +12,7 @@ public class LanguageFactory
     public static final LanguageFactory INSTANCE;
     private HashMap<String, BitmapFont> fonts;
     private Translator translator;
+    public HashMap<String, String> stored = new HashMap<String, String>();
 
     private Language language;
 
@@ -73,5 +74,16 @@ public class LanguageFactory
         if (language == Language.ENGLISH)
             return false;
         return translator.hasKey(key);
+    }
+
+    public void addFormatTranslation(String formattedText, String format, Object[] args)
+    {
+        if (!stored.containsKey(formattedText))
+        {
+            if (hasKey(format))
+            {
+                stored.put(formattedText, String.format(translate(format), args));
+            }
+        }
     }
 }
