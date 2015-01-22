@@ -32,7 +32,7 @@ public class Translator
                 {
                     if (!line.trim().equals("") && !line.trim().startsWith("#"))
                     {
-                        lines.add(line.trim().toLowerCase());
+                        lines.add(line.trim());
                     }
                     line = reader.readLine();
                 }
@@ -54,14 +54,14 @@ public class Translator
 
     public boolean hasKey(String key)
     {
-        return translation.containsKey(key.toLowerCase());
+        return translation.containsKey(key);
     }
 
     public String translate(String originalText)
     {
         if (hasKey(originalText))
         {
-            return translation.get(originalText.toLowerCase());
+            return translation.get(originalText);
         }
         return originalText;
     }

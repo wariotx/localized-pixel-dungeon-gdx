@@ -86,10 +86,8 @@ public class LanguageFactory
     {
         if (!stored.containsKey(formattedText))
         {
-            System.out.println(formattedText + ", " + format + ", " + args[0]);
             if (hasKey(format))
             {
-                System.out.println("has");
                 for (int i = 0; i < args.length; i++)
                 {
                     if (hasKey(args[i].toString()))
