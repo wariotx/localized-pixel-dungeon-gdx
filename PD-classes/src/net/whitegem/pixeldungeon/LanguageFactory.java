@@ -1,6 +1,8 @@
 package net.whitegem.pixeldungeon;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 
 import java.util.HashMap;
 
@@ -11,6 +13,8 @@ public class LanguageFactory
 {
     public static final LanguageFactory INSTANCE;
     private HashMap<String, BitmapFont> fonts;
+    public static final ShaderProgram shaderPixel;
+    public static final ShaderProgram shaderAA;
     private Translator translator;
     public HashMap<String, String> stored = new HashMap<String, String>();
 
@@ -19,6 +23,8 @@ public class LanguageFactory
     static
     {
         INSTANCE = new LanguageFactory();
+        shaderPixel = new ShaderProgram(Gdx.files.internal("translate/shader/outline.vert"), Gdx.files.internal("translate/shader/outline.frag"));
+        shaderAA = new ShaderProgram(Gdx.files.internal("translate/shader/outlineAA.vert"), Gdx.files.internal("translate/shader/outlineAA.frag"));
     }
 
     private LanguageFactory()
@@ -39,7 +45,7 @@ public class LanguageFactory
             font1x.setMarkupEnabled(true);
             BitmapFont font15x = FontFactory.generate("translate/" + language + "/font/15x");
             font15x.setMarkupEnabled(true);
-            BitmapFont font2x = FontFactory.generate("translate/" + language + "/font/2x");
+            BitmapFont font2x = FontFactory.generate("translate/" + language + "/font/1x");
             font2x.setMarkupEnabled(true);
             BitmapFont font25x = FontFactory.generate("translate/" + language + "/font/25x");
             font25x.setMarkupEnabled(true);

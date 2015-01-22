@@ -120,37 +120,30 @@ public class BitmapText extends Visual {
 			}
 			Game.batch.begin();
 
-			ShaderProgram shader;
-			BitmapFont fnt;
+			String fontScale;
 			switch ((int)font.baseLine)
 			{
-				case 6:
-					fnt = LanguageFactory.INSTANCE.getFont("1x");
-					shader = new ShaderProgram(Gdx.files.internal("translate/shader/outline.vert"), Gdx.files.internal("translate/shader/outline.frag"));
-					break;
 				case 9:
-					fnt = LanguageFactory.INSTANCE.getFont("15x");
-					shader = new ShaderProgram(Gdx.files.internal("translate/shader/outline.vert"), Gdx.files.internal("translate/shader/outline.frag"));
+					fontScale = "15x";
+					Game.batch.setShader(LanguageFactory.shaderPixel);
 					break;
 				case 11:
-					fnt = LanguageFactory.INSTANCE.getFont("2x");
-					shader = new ShaderProgram(Gdx.files.internal("translate/shader/outline.vert"), Gdx.files.internal("translate/shader/outline.frag"));
+					fontScale = "2x";
+					Game.batch.setShader(LanguageFactory.shaderPixel);
 					break;
 				case 13:
-					fnt = LanguageFactory.INSTANCE.getFont("25x");
-					shader = new ShaderProgram(Gdx.files.internal("translate/shader/outlineAA.vert"), Gdx.files.internal("translate/shader/outlineAA.frag"));
+					fontScale = "25x";
+					Game.batch.setShader(LanguageFactory.shaderAA);
 					break;
 				case 17:
-					fnt = LanguageFactory.INSTANCE.getFont("3x");
-					shader = new ShaderProgram(Gdx.files.internal("translate/shader/outlineAA.vert"), Gdx.files.internal("translate/shader/outlineAA.frag"));
+					fontScale = "3x";
+					Game.batch.setShader(LanguageFactory.shaderAA);
 					break;
 				default:
-					fnt = LanguageFactory.INSTANCE.getFont("1x");
-					shader = new ShaderProgram(Gdx.files.internal("translate/shader/outline.vert"), Gdx.files.internal("translate/shader/outline.frag"));
+					fontScale = "1x";
+					Game.batch.setShader(LanguageFactory.shaderPixel);
 					break;
 			}
-
-			Game.batch.setShader(shader);
 
 			float zoom = camera().zoom;
 			int camX = camera().x;
@@ -165,26 +158,26 @@ public class BitmapText extends Visual {
 			{
 				if (this instanceof BitmapTextMultiline)
 				{
-					fnt.drawWrapped(Game.batch, translatedText, camX + x * zoom, Game.height - (y * zoom + camY), width);
+					LanguageFactory.INSTANCE.getFont(fontScale).drawWrapped(Game.batch, translatedText, camX + x * zoom, Game.height - (y * zoom + camY), width);
 				}
 				else
 				{
-					fnt.draw(Game.batch, translatedText, camX + x * zoom + width / 2 - fnt.getBounds(translatedText).width / 2, Game.height - (y * zoom + camY));
+					LanguageFactory.INSTANCE.getFont(fontScale).draw(Game.batch, translatedText, camX + x * zoom + width / 2 - LanguageFactory.INSTANCE.getFont(fontScale).getBounds(translatedText).width / 2, Game.height - (y * zoom + camY));
 				}
 			}
 			else
 			{
 				if (this instanceof BitmapTextMultiline)
 				{
-					fnt.setScale(camera().zoom / 2);
-					fnt.drawWrapped(Game.batch, translatedText, camX + x * zoom, Game.height - (y * zoom + camY), width);
-					fnt.setScale(1);
+					LanguageFactory.INSTANCE.getFont(fontScale).setScale(camera().zoom / 2);
+					LanguageFactory.INSTANCE.getFont(fontScale).drawWrapped(Game.batch, translatedText, camX + x * zoom, Game.height - (y * zoom + camY), width);
+					LanguageFactory.INSTANCE.getFont(fontScale).setScale(1);
 				}
 				else
 				{
-					fnt.setScale(camera().zoom / 2);
-					fnt.draw(Game.batch, translatedText, camX + x * zoom + width / 4 * zoom - fnt.getBounds(translatedText).width / 2, Game.height - (y * zoom + camY));
-					fnt.setScale(1);
+					LanguageFactory.INSTANCE.getFont(fontScale).setScale(camera().zoom / 2);
+					LanguageFactory.INSTANCE.getFont(fontScale).draw(Game.batch, translatedText, camX + x * zoom + width / 4 * zoom - LanguageFactory.INSTANCE.getFont(fontScale).getBounds(translatedText).width / 2, Game.height - (y * zoom + camY));
+					LanguageFactory.INSTANCE.getFont(fontScale).setScale(1);
 				}
 			}
 

@@ -32,9 +32,9 @@ New Game
 Load Game
 载入游戏
 Depth: %d, level: %d
-%d层，%d级
+[#cacfc2]%d层，%d级[]
 Erase current game
-覆盖现有存档
+[#cacfc2]覆盖现有存档[]
 
 # Intro
 Many heroes of all kinds ventured into the Dungeon before you. Some of them have returned with treasures and magical artifacts, most have never been heard of since. But none have succeeded in retrieving the Amulet of Yendor, which is told to be hidden in the depths of the Dungeon.\n\nYou consider yourself ready for the challenge, but most importantly, you feel that fortune smiles on you. It's time to start your own adventure!
