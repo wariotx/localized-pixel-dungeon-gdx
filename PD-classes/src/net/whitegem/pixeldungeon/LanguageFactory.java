@@ -86,9 +86,18 @@ public class LanguageFactory
     {
         if (!stored.containsKey(formattedText))
         {
+            System.out.println(formattedText + ", " + format + ", " + args[0]);
             if (hasKey(format))
             {
-                stored.put(formattedText, String.format(translate(format), args));
+                System.out.println("has");
+                for (int i = 0; i < args.length; i++)
+                {
+                    if (hasKey(args[i].toString()))
+                    {
+                        args[i] = translate(args[i].toString());
+                    }
+                }
+                stored.put(formattedText.toLowerCase(), String.format(translate(format), args));
             }
         }
     }

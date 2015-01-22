@@ -103,10 +103,11 @@ public class BitmapText extends Visual {
 				ra, ga, ba, aa);
 
 		String s = null;
-		if (LanguageFactory.INSTANCE.stored.containsKey(text))
+		if (LanguageFactory.INSTANCE.stored.containsKey(text.toLowerCase().replaceAll("\\.$", "")))
 		{
-			s = LanguageFactory.INSTANCE.stored.get(text);
-			LanguageFactory.INSTANCE.stored.remove(text);
+			// todo: search combined
+			s = LanguageFactory.INSTANCE.stored.get(text.toLowerCase().replaceAll("\\.$", ""));
+			LanguageFactory.INSTANCE.stored.remove(text.toLowerCase().replaceAll("\\.$", ""));
 		}
 		if (!LanguageFactory.INSTANCE.hasKey(text) && translatedText == null && s == null)
 		{
