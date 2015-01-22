@@ -43,6 +43,10 @@ public class BitmapText extends Visual {
 	protected String translatedText;
 	protected Font font;
 
+	protected float transWidth;
+	protected float transHeight;
+	protected String fontScale;
+
 	protected float[] vertices = new float[16];
 	protected FloatBuffer quads;
 	
@@ -63,6 +67,81 @@ public class BitmapText extends Visual {
 		
 		this.text = text;
 		this.font = font;
+
+
+		translate();
+	}
+
+	private void translate()
+	{
+		String s = null;
+		if (text != null && LanguageFactory.INSTANCE.stored.containsKey(text.toLowerCase().replaceAll("\\.$", "")))
+		{
+			// todo: search combined
+			s = LanguageFactory.INSTANCE.stored.get(text.toLowerCase().replaceAll("\\.$", ""));
+			LanguageFactory.INSTANCE.stored.remove(text.toLowerCase().replaceAll("\\.$", ""));
+		}
+		if (text != null && (LanguageFactory.INSTANCE.hasKey(text) || s != null))
+		{
+			translatedText = (text == null) ? "" : (s == null) ? LanguageFactory.INSTANCE.translate(text) : s;
+		}
+
+		fontScale = "1x";
+		if (font != null && font.baseLine != 0)
+		{
+			switch ((int) font.baseLine)
+			{
+				case 9:
+					fontScale = "15x";
+					//Game.batch.setShader(LanguageFactory.shaderPixel);
+					break;
+				case 11:
+					fontScale = "2x";
+					//Game.batch.setShader(LanguageFactory.shaderPixel);
+					break;
+				case 13:
+					fontScale = "25x";
+					//Game.batch.setShader(LanguageFactory.shaderPixel);
+					break;
+				case 17:
+					fontScale = "3x";
+					//Game.batch.setShader(LanguageFactory.shaderPixel);
+					break;
+				default:
+					fontScale = "1x";
+					//Game.batch.setShader(LanguageFactory.shaderPixel);
+					break;
+			}
+		}
+
+		if (translatedText != null)
+		{
+			measure();
+
+			if (transWidth == 0)
+			{
+				if (this instanceof BitmapTextMultiline)
+				{
+					transWidth = width;
+				}
+				else
+				{
+					transWidth = LanguageFactory.INSTANCE.getFont(fontScale).getBounds(translatedText).width;
+				}
+			}
+
+			if (transHeight == 0)
+			{
+				if (this instanceof BitmapTextMultiline)
+				{
+					transHeight = LanguageFactory.INSTANCE.getFont(fontScale).getWrappedBounds(translatedText, width).height;
+				}
+				else
+				{
+					transHeight = LanguageFactory.INSTANCE.getFont(fontScale).getBounds(translatedText).height;
+				}
+			}
+		}
 	}
 	
 	@Override
@@ -102,53 +181,16 @@ public class BitmapText extends Visual {
 				rm, gm, bm, am,
 				ra, ga, ba, aa);
 
-		String s = null;
-		if (LanguageFactory.INSTANCE.stored.containsKey(text.toLowerCase().replaceAll("\\.$", "")))
-		{
-			// todo: search combined
-			s = LanguageFactory.INSTANCE.stored.get(text.toLowerCase().replaceAll("\\.$", ""));
-			LanguageFactory.INSTANCE.stored.remove(text.toLowerCase().replaceAll("\\.$", ""));
-		}
-		if (!LanguageFactory.INSTANCE.hasKey(text) && translatedText == null && s == null)
+		if (translatedText == null)
 		{
 			script.drawQuadSet(quads, realLength);
 		}
 		else
 		{
-			if (translatedText == null)
-			{
-				translatedText = (text == null) ? "" : (s == null) ? LanguageFactory.INSTANCE.translate(text) : s;
-			}
-
 			String col = String.format("[#%02X%02X%02X%02X]", (int)Math.abs(rm * 255), (int)Math.abs(gm * 255), (int)Math.abs(bm * 255), (int)Math.abs(am * 255));
 			String coloredTranslatedText = col + translatedText + "[]";
 
 			Game.batch.begin();
-
-			String fontScale;
-			switch ((int)font.baseLine)
-			{
-				case 9:
-					fontScale = "15x";
-					//Game.batch.setShader(LanguageFactory.shaderPixel);
-					break;
-				case 11:
-					fontScale = "2x";
-					//Game.batch.setShader(LanguageFactory.shaderPixel);
-					break;
-				case 13:
-					fontScale = "25x";
-					//Game.batch.setShader(LanguageFactory.shaderPixel);
-					break;
-				case 17:
-					fontScale = "3x";
-					//Game.batch.setShader(LanguageFactory.shaderPixel);
-					break;
-				default:
-					fontScale = "1x";
-					//Game.batch.setShader(LanguageFactory.shaderPixel);
-					break;
-			}
 
 			float zoom = camera().zoom;
 			int camX = camera().x;
@@ -156,6 +198,8 @@ public class BitmapText extends Visual {
 
 			if (zoom < 4)
 			{
+				transWidth *= 2;
+				transHeight *= 2;
 				if (this instanceof BitmapTextMultiline)
 				{
 					// not working for GameLog
@@ -164,7 +208,7 @@ public class BitmapText extends Visual {
 				}
 				else
 				{
-					LanguageFactory.INSTANCE.getFont(fontScale).draw(Game.batch, coloredTranslatedText, camX + x * zoom + width / 2 - LanguageFactory.INSTANCE.getFont(fontScale).getBounds(coloredTranslatedText).width / 2, Game.height - (y * zoom + camY));
+					LanguageFactory.INSTANCE.getFont(fontScale).draw(Game.batch, coloredTranslatedText, camX + x * zoom, Game.height - (y * zoom + camY));
 				}
 			}
 			else
@@ -180,7 +224,7 @@ public class BitmapText extends Visual {
 				else
 				{
 					LanguageFactory.INSTANCE.getFont(fontScale).scale(camera().zoom / 2);
-					LanguageFactory.INSTANCE.getFont(fontScale).draw(Game.batch, coloredTranslatedText, camX + x * zoom + width / 4 * zoom - LanguageFactory.INSTANCE.getFont(fontScale).getBounds(coloredTranslatedText).width / 2, Game.height - (y * zoom + camY));
+					LanguageFactory.INSTANCE.getFont(fontScale).draw(Game.batch, coloredTranslatedText, camX + x * zoom, Game.height - (y * zoom + camY));
 					LanguageFactory.INSTANCE.getFont(fontScale).setScale(1);
 				}
 			}
@@ -191,6 +235,27 @@ public class BitmapText extends Visual {
 			NoosaScript.get().use();
 		}
 	}
+
+	@Override
+	public float width()
+	{
+		if (this instanceof BitmapTextMultiline)
+			return super.width();
+		if (transWidth != 0)
+			return transWidth * scale.x;
+		return super.width();
+	}
+
+	@Override
+	public float height()
+	{
+		if (this instanceof BitmapTextMultiline)
+			return super.height();
+		if (transHeight != 0)
+			return transHeight * scale.y;
+		return super.height();
+	}
+
 	
 	protected void updateVertices() {
 		
@@ -300,6 +365,7 @@ public class BitmapText extends Visual {
 	
 	public void text( String str ) {
 		text = str;
+		translate();
 		dirty = true;
 	}
 	

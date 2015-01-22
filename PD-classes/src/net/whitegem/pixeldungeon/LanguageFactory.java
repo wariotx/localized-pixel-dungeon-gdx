@@ -90,7 +90,7 @@ public class LanguageFactory
             {
                 for (int i = 0; i < args.length; i++)
                 {
-                    if (hasKey(args[i].toString()))
+                    if (args[i] instanceof String && hasKey(args[i].toString()))
                     {
                         args[i] = translate(args[i].toString());
                     }
