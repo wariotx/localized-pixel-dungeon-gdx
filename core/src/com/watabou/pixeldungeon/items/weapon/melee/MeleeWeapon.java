@@ -134,14 +134,17 @@ public class MeleeWeapon extends Weapon {
 		
 		if (DLY != 1f) {
 			info.append( mw_text_14 + (DLY < 1f ? mw_text_15 : mw_text_16) );
-			if (ACU != 1f) {
-				if ((ACU > 1f) == (DLY < 1f)) {
-					info.append( mw_text_17);
-				} else {
-					info.append( mw_text_18);
+			if (ACU != 1f)
+			{
+				if ((ACU > 1f) == (DLY < 1f))
+				{
+					info.append(mw_text_17);
+				} else
+				{
+					info.append(mw_text_18);
 				}
-				info.append( ACU > 1f ? mw_text_19 : mw_text_20 );
-		20
+				info.append(ACU > 1f ? mw_text_19 : mw_text_20);
+			}
 			info.append( mw_text_21);
 		} else if (ACU != 1f) {
 			info.append( mw_text_22 + (ACU > 1f ? mw_text_19 : mw_text_20) + mw_text_21 );
