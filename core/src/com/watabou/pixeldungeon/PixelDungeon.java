@@ -30,6 +30,7 @@ import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
 import com.watabou.utils.PDPlatformSupport;
 import com.watabou.utils.Signal;
+import net.whitegem.pixeldungeon.LanguageUtil;
 
 public class PixelDungeon extends Game<GameAction> {
 
@@ -97,7 +98,10 @@ public class PixelDungeon extends Game<GameAction> {
 	@Override
 	public void create() {
 		super.create();
-		
+
+		// set language
+		LanguageUtil.setLanguage("chs");
+
 		boolean landscape = Gdx.graphics.getWidth() > Gdx.graphics.getHeight();
 
 		final Preferences prefs = Preferences.INSTANCE;

@@ -17,15 +17,15 @@
 
 package com.watabou.noosa;
 
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.nio.FloatBuffer;
+import java.util.ArrayList;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.TextureData;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.graphics.glutils.ShaderProgram;
-import com.badlogic.gdx.math.Matrix4;
 import com.watabou.gdx.GdxTexture;
 import com.watabou.gltextures.SmartTexture;
 import com.watabou.gltextures.TextureCache;
@@ -33,19 +33,12 @@ import com.watabou.glwrap.Matrix;
 import com.watabou.glwrap.Quad;
 
 import com.watabou.utils.RectF;
-import net.whitegem.pixeldungeon.FontFactory;
 import net.whitegem.pixeldungeon.LanguageFactory;
-import net.whitegem.pixeldungeon.Translator;
 
 public class BitmapText extends Visual {
 
 	protected String text;
-	protected String translatedText;
 	protected Font font;
-
-	protected float transWidth;
-	protected float transHeight;
-	protected String fontScale;
 
 	protected float[] vertices = new float[16];
 	protected FloatBuffer quads;
@@ -66,80 +59,24 @@ public class BitmapText extends Visual {
 		super( 0, 0, 0, 0 );
 		
 		this.text = text;
+		setTranslation();
 		this.font = font;
-
-
-		translate();
 	}
 
-	private void translate()
+	private void setTranslation()
 	{
-		String s = null;
-		if (text != null && LanguageFactory.INSTANCE.stored.containsKey(text.toLowerCase().replaceAll("\\.$", "")))
+		if (!LanguageFactory.INSTANCE.language.equals("en"))
 		{
-			// todo: search combined
-			s = LanguageFactory.INSTANCE.stored.get(text.toLowerCase().replaceAll("\\.$", ""));
-			LanguageFactory.INSTANCE.stored.remove(text.toLowerCase().replaceAll("\\.$", ""));
-		}
-		if (text != null && (LanguageFactory.INSTANCE.hasKey(text) || s != null))
-		{
-			translatedText = (text == null) ? "" : (s == null) ? LanguageFactory.INSTANCE.translate(text) : s;
-		}
-
-		fontScale = "1x";
-		if (font != null && font.baseLine != 0)
-		{
-			switch ((int) font.baseLine)
+			String s = null;
+			if (text != null && LanguageFactory.INSTANCE.stored.containsKey(text.toLowerCase().replaceAll("\\.$", "")))
 			{
-				case 9:
-					fontScale = "15x";
-					//Game.batch.setShader(LanguageFactory.shaderPixel);
-					break;
-				case 11:
-					fontScale = "2x";
-					//Game.batch.setShader(LanguageFactory.shaderPixel);
-					break;
-				case 13:
-					fontScale = "25x";
-					//Game.batch.setShader(LanguageFactory.shaderPixel);
-					break;
-				case 17:
-					fontScale = "3x";
-					//Game.batch.setShader(LanguageFactory.shaderPixel);
-					break;
-				default:
-					fontScale = "1x";
-					//Game.batch.setShader(LanguageFactory.shaderPixel);
-					break;
+				// todo: search combined
+				s = LanguageFactory.INSTANCE.stored.get(text.toLowerCase().replaceAll("\\.$", ""));
+				LanguageFactory.INSTANCE.stored.remove(text.toLowerCase().replaceAll("\\.$", ""));
 			}
-		}
-
-		if (translatedText != null)
-		{
-			measure();
-
-			if (transWidth == 0)
+			if (text != null && (LanguageFactory.INSTANCE.hasKey(text) || s != null))
 			{
-				if (this instanceof BitmapTextMultiline)
-				{
-					transWidth = width;
-				}
-				else
-				{
-					transWidth = LanguageFactory.INSTANCE.getFont(fontScale).getBounds(translatedText).width;
-				}
-			}
-
-			if (transHeight == 0)
-			{
-				if (this instanceof BitmapTextMultiline)
-				{
-					transHeight = LanguageFactory.INSTANCE.getFont(fontScale).getWrappedBounds(translatedText, width).height;
-				}
-				else
-				{
-					transHeight = LanguageFactory.INSTANCE.getFont(fontScale).getBounds(translatedText).height;
-				}
+				text = (text == null) ? "" : (s == null) ? LanguageFactory.INSTANCE.translate(text) : s;
 			}
 		}
 	}
@@ -164,6 +101,7 @@ public class BitmapText extends Visual {
 	
 	@Override
 	public void draw() {
+		
 		super.draw();
 		
 		NoosaScript script = NoosaScript.get();
@@ -173,89 +111,16 @@ public class BitmapText extends Visual {
 		if (dirty) {
 			updateVertices();
 		}
-
+		
 		script.camera( camera() );
-
+		
 		script.uModel.valueM4( matrix );
-		script.lighting(
-				rm, gm, bm, am,
-				ra, ga, ba, aa);
-
-		if (translatedText == null)
-		{
-			script.drawQuadSet(quads, realLength);
-		}
-		else
-		{
-			String col = String.format("[#%02X%02X%02X%02X]", (int)Math.abs(rm * 255), (int)Math.abs(gm * 255), (int)Math.abs(bm * 255), (int)Math.abs(am * 255));
-			String coloredTranslatedText = col + translatedText + "[]";
-
-			Game.batch.begin();
-
-			float zoom = camera().zoom;
-			int camX = camera().x;
-			int camY = camera().y;
-
-			if (zoom < 4)
-			{
-				transWidth *= 2;
-				transHeight *= 2;
-				if (this instanceof BitmapTextMultiline)
-				{
-					// not working for GameLog
-					// LanguageFactory.INSTANCE.getFont(fontScale).drawWrapped(Game.batch, translatedText, camX + (camera().screenWidth - width) / 2, Game.height - camY - (camera().screenHeight - height) / 2, width);
-					LanguageFactory.INSTANCE.getFont(fontScale).drawWrapped(Game.batch, coloredTranslatedText, camX + x * zoom, Game.height - camY - y * zoom, width);
-				}
-				else
-				{
-					LanguageFactory.INSTANCE.getFont(fontScale).draw(Game.batch, coloredTranslatedText, camX + x * zoom, Game.height - (y * zoom + camY));
-				}
-			}
-			else
-			{
-				if (this instanceof BitmapTextMultiline)
-				{
-					LanguageFactory.INSTANCE.getFont(fontScale).scale(camera().zoom / 2);
-					// not working for GameLog
-					// LanguageFactory.INSTANCE.getFont(fontScale).drawWrapped(Game.batch, translatedText, camX + (camera().screenWidth - width) / 2, Game.height - camY - (camera().screenHeight - height) / 2, width);
-					LanguageFactory.INSTANCE.getFont(fontScale).drawWrapped(Game.batch, coloredTranslatedText, camX + x * zoom, Game.height - camY - y * zoom, width);
-					LanguageFactory.INSTANCE.getFont(fontScale).setScale(1);
-				}
-				else
-				{
-					LanguageFactory.INSTANCE.getFont(fontScale).scale(camera().zoom / 2);
-					LanguageFactory.INSTANCE.getFont(fontScale).draw(Game.batch, coloredTranslatedText, camX + x * zoom, Game.height - (y * zoom + camY));
-					LanguageFactory.INSTANCE.getFont(fontScale).setScale(1);
-				}
-			}
-
-			Game.batch.end();
-			Game.batch.setShader(null);
-			Gdx.gl.glEnable(GL20.GL_BLEND);
-			NoosaScript.get().use();
-		}
+		script.lighting( 
+			rm, gm, bm, am, 
+			ra, ga, ba, aa );
+		script.drawQuadSet( quads, realLength );
+		
 	}
-
-	@Override
-	public float width()
-	{
-		if (this instanceof BitmapTextMultiline)
-			return super.width();
-		if (transWidth != 0)
-			return transWidth * scale.x;
-		return super.width();
-	}
-
-	@Override
-	public float height()
-	{
-		if (this instanceof BitmapTextMultiline)
-			return super.height();
-		if (transHeight != 0)
-			return transHeight * scale.y;
-		return super.height();
-	}
-
 	
 	protected void updateVertices() {
 		
@@ -365,7 +230,7 @@ public class BitmapText extends Visual {
 	
 	public void text( String str ) {
 		text = str;
-		translate();
+		setTranslation();
 		dirty = true;
 	}
 	
@@ -397,7 +262,7 @@ public class BitmapText extends Visual {
 		}
 		
 		public Font( SmartTexture tx, int width, int height, String chars ) {
-			super( tx );
+			super(tx);
 			
 			texture = tx;
 			
@@ -423,6 +288,99 @@ public class BitmapText extends Visual {
 			}
 			
 			lineHeight = baseLine = height;
+		}
+
+		private class FntFileChar
+		{
+			protected char c;
+			protected int x, y, width, height, x_offset, y_offset;
+			public FntFileChar(char c, int x, int y, int width, int height, int x_offset, int y_offset)
+			{
+				this.c=c;
+				this.x=x;
+				this.y=y;
+				this.width=width;
+				this.height=height;
+				this.x_offset=x_offset;
+				this.y_offset=y_offset;
+			}
+		}
+
+		private ArrayList<FntFileChar> processFntFile(String fntFile)
+		{
+			ArrayList<FntFileChar> chars = new ArrayList<FntFileChar>();
+
+			FileHandle file = Gdx.files.internal(fntFile);
+			BufferedReader reader = new BufferedReader(file.reader());
+			ArrayList<String> lines = new ArrayList<String>();
+			int start = 0;
+			try
+			{
+				String line = reader.readLine();
+				while (line != null)
+				{
+					start++;
+					if (!line.trim().equals("") && start >= 5)
+					{
+						lines.add(line.trim());
+					}
+					line = reader.readLine();
+				}
+			} catch (IOException ioe)
+			{
+			}
+			for (String line : lines)
+			{
+				String[] objs = line.split("\\s+");
+				String id = objs[1].split("=")[1];
+				String x = objs[2].split("=")[1];
+				String y = objs[3].split("=")[1];
+				String w = objs[4].split("=")[1];
+				String h = objs[5].split("=")[1];
+				String xo = objs[6].split("=")[1];
+				String yo = objs[7].split("=")[1];
+				int idi = Integer.parseInt(id);
+				int xi = Integer.parseInt(x);
+				int yi = Integer.parseInt(y);
+				int wi = Integer.parseInt(w);
+				int hi = Integer.parseInt(h);
+				int xoi = Integer.parseInt(xo);
+				int yoi = Integer.parseInt(yo);
+				char idc = (char)idi;
+				FntFileChar ffc = new FntFileChar(idc, xi, yi, wi, hi, xoi, yoi);
+				chars.add(ffc);
+			}
+			return chars;
+		}
+
+		protected void splitBy( GdxTexture bitmap, int height, int color, String chars, String fntFile ) {
+			autoUppercase = false;
+
+			ArrayList<FntFileChar> realChars = processFntFile(fntFile);
+
+			int width = bitmap.getWidth();
+			int length = realChars.size();
+
+			TextureData td = bitmap.getTextureData();
+			if (!td.isPrepared()) {
+				td.prepare();
+			}
+			final Pixmap pixmap = td.consumePixmap();
+
+			for (int i=0; i < length; i++) {
+				FntFileChar ch = realChars.get(i);
+				if (ch.c == ' ')
+				{
+					add(ch.c, new RectF(1 - (float)ch.height / 2 / width, 1 - (float)ch.height / height, 1, 1));
+				}
+				else
+				{
+					add(ch.c, new RectF((float) ch.x / width, (float) ch.y / height, (float) (ch.x + ch.width) / width, (float) (ch.y + ch.height) / height));
+				}
+			}
+			pixmap.dispose();
+
+			lineHeight = baseLine = height( frames.get( realChars.get( 0 ).c ) );
 		}
 		
 		protected void splitBy( GdxTexture bitmap, int height, int color, String chars ) {
@@ -471,7 +429,6 @@ public class BitmapText extends Visual {
 							}
 						}
 					} while (!found);
-					
 					add( ch, new RectF( (float)pos / width, 0, (float)separator / width, vHeight ) );
 					pos = separator + 1;
 				}
@@ -494,10 +451,22 @@ public class BitmapText extends Visual {
 			font.splitBy( bmp, bmp.getHeight(), color, chars );
 			return font;
 		}
-		 
+
 		public static Font colorMarked( GdxTexture bmp, int height, int color, String chars ) {
 			Font font = new Font( TextureCache.get( bmp ) );
 			font.splitBy( bmp, height, color, chars );
+			return font;
+		}
+
+		public static Font colorMarked( GdxTexture bmp, int color, String chars, String fntFile ) {
+			Font font = new Font( TextureCache.get( bmp ) );
+			font.splitBy( bmp, bmp.getHeight(), color, chars, fntFile );
+			return font;
+		}
+
+		public static Font colorMarked( GdxTexture bmp, int height, int color, String chars, String fntFile ) {
+			Font font = new Font( TextureCache.get( bmp ) );
+			font.splitBy( bmp, height, color, chars, fntFile );
 			return font;
 		}
 		

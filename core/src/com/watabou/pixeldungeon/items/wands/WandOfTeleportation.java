@@ -36,9 +36,6 @@ public class WandOfTeleportation extends Wand {
 	@Override
 	protected void onZap( int cell ) {
 		
-		final String teleportwand_text_0 = " teleported ";
-		final String teleportwand_text_1 = " to somewhere";
-		
 		Char ch = Actor.findChar( cell );
 		
 		if (ch == curUser) {
@@ -66,7 +63,7 @@ public class WandOfTeleportation extends Wand {
 				ch.pos = pos;
 				ch.sprite.place( ch.pos );
 				ch.sprite.visible = Dungeon.visible[pos];
-				GLog.i( curUser.name + teleportwand_text_0 + ch.name + teleportwand_text_1 );
+				GLog.i( curUser.name + " teleported " + ch.name + " to somewhere" );
 				
 			}
 

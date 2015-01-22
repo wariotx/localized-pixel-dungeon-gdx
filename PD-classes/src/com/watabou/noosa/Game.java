@@ -22,9 +22,6 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.glutils.ShaderProgram;
 import com.badlogic.gdx.utils.reflect.ClassReflection;
 import com.watabou.glscripts.Script;
 import com.watabou.gltextures.TextureCache;
@@ -34,8 +31,6 @@ import com.watabou.noosa.audio.Sample;
 import com.watabou.utils.PDPlatformSupport;
 import com.watabou.utils.Signal;
 import com.watabou.utils.SystemTime;
-import net.whitegem.pixeldungeon.Language;
-import net.whitegem.pixeldungeon.LanguageFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -74,9 +69,6 @@ public abstract class Game<GameActionType> implements ApplicationListener {
 	public static float timeScale = 1f;
 	public static float elapsed = 0f;
 
-	public static SpriteBatch batch;
-	private OrthographicCamera oCam;
-
 	public Game( Class<? extends Scene> c, PDPlatformSupport<GameActionType> platformSupport ) {
 		super();
 		sceneClass = c;
@@ -88,17 +80,10 @@ public abstract class Game<GameActionType> implements ApplicationListener {
 	@Override
 	public void create() {
 		instance = this;
-
-		// set language
-		LanguageFactory.INSTANCE.setLanguage(Language.S_CHINESE);
-
+		
 		density = Gdx.graphics.getDensity();
 		this.inputProcessor.init();
 		Gdx.input.setInputProcessor(this.inputProcessor);
-
-		batch = new SpriteBatch();
-		oCam = new OrthographicCamera();
-		oCam.setToOrtho(false, width, height);
 
 		// TODO: Is this right?
 		onSurfaceCreated();
@@ -134,8 +119,6 @@ public abstract class Game<GameActionType> implements ApplicationListener {
 
 	@Override
 	public void render() {
-		oCam.update();
-		batch.setProjectionMatrix(oCam.combined);
 		
 		if (width == 0 || height == 0) {
 			return;
@@ -149,7 +132,7 @@ public abstract class Game<GameActionType> implements ApplicationListener {
 		step();
 
 		NoosaScript.get().resetCamera();
-		Gdx.gl.glScissor(0, 0, width, height);
+		Gdx.gl.glScissor( 0, 0, width, height );
 		Gdx.gl.glClear( GL20.GL_COLOR_BUFFER_BIT );
 		draw();
 	}
@@ -169,8 +152,6 @@ public abstract class Game<GameActionType> implements ApplicationListener {
 				switchScene(sc.getClass());
 			}
 		}
-
-		oCam.setToOrtho(false, width, height);
 	}
 
 	public void onSurfaceCreated() {
@@ -242,7 +223,7 @@ public abstract class Game<GameActionType> implements ApplicationListener {
 	protected void update() {
 		Game.elapsed = Game.timeScale * step * 0.001f;
 		
-		scene.update();
+		scene.update();		
 		Camera.updateAll();
 	}
 	

@@ -82,108 +82,76 @@ public class MeleeWeapon extends Weapon {
 	public String info() {
 		
 		final String p = "\n\n";
-		final String mw_text_0 = "This ";
-		final String mw_text_1 = " is ";
-		final String mw_text_2 = "upgraded";
-		final String mw_text_3 = "degraded";
-		final String mw_text_4 = " tier-";
-		final String mw_text_5 = " melee weapon. ";
-		final String mw_text_6 = "Its average damage is ";
-		final String mw_text_7 = " points per hit. ";
-		final String mw_text_8 = "Its typical average damage is ";
-		final String mw_text_9 = " points per hit. ";
-		final String mw_text_10 = "Its typical average damage is ";
-		final String mw_text_11 = "and usually it requires ";
-		final String mw_text_12 = " points of strength. ";
-		final String mw_text_13 = "Probably this weapon is too heavy for you. ";
-		final String mw_text_14 = "This is a rather ";
-		final String mw_text_15 = "fast";
-		final String mw_text_16 = "slow";
-		final String mw_text_17 = " and ";
-		final String mw_text_18 = " but ";
-		final String mw_text_19 = "accurate";
-		final String mw_text_20 = "inaccurate";
-		final String mw_text_21 = " weapon. ";
-		final String mw_text_22 = "This is a rather ";
-		final String mw_text_23 = "It was balanced to make it faster. ";
-		final String mw_text_24 = "It was balanced to make it more accurate. ";
-		final String mw_text_25 = "It is enchanted.";
-		final String mw_text_26 = "Because of your inadequate strength the accuracy and speed of your attack with this weapon is decreased.";
-		final String mw_text_27 = "Because of your excess strength the damage of your attack with this weapon is increased.";
-		final String mw_text_28 = "You hold the weapon at the ready";
-		final String mw_text_29 = ", and because it is cursed, you are powerless to let go.";
-		final String mw_text_30 = "You can feel a malevolent magic lurking within this weapon.";
 		
 		StringBuilder info = new StringBuilder( desc() );
 		
-		String quality = levelKnown && level != 0 ? (level > 0 ? mw_text_2 : mw_text_3) : "";
+		String quality = levelKnown && level != 0 ? (level > 0 ? "upgraded" : "degraded") : "";
 		info.append( p );
-		info.append( mw_text_0 + name + mw_text_1 + Utils.indefinite( quality ) );
-		info.append( mw_text_4 + tier + mw_text_5 );
+		info.append( "This " + name + " is " + Utils.indefinite( quality ) );
+		info.append( " tier-" + tier + " melee weapon. " );
 		
 		if (levelKnown) {
-			info.append( mw_text_6 + (MIN + (MAX - MIN) / 2) + mw_text_7 );
+			info.append( "Its average damage is " + (MIN + (MAX - MIN) / 2) + " points per hit. " );
 		} else {
 			info.append( 
-				mw_text_10 + (min() + (max() - min()) / 2) + mw_text_7 +
-				mw_text_11 + typicalSTR() + mw_text_12 );
+				"Its typical average damage is " + (min() + (max() - min()) / 2) + " points per hit " +
+				"and usually it requires " + typicalSTR() + " points of strength. " );
 			if (typicalSTR() > Dungeon.hero.STR()) {
-				info.append( mw_text_13 );
+				info.append( "Probably this weapon is too heavy for you. " );
 			}
 		}
 		
 		if (DLY != 1f) {
-			info.append( mw_text_14 + (DLY < 1f ? mw_text_15 : mw_text_16) );
-			if (ACU != 1f)
-			{
-				if ((ACU > 1f) == (DLY < 1f))
-				{
-					info.append(mw_text_17);
-				} else
-				{
-					info.append(mw_text_18);
+			info.append( "This is a rather " + (DLY < 1f ? "fast" : "slow") );
+			if (ACU != 1f) {
+				if ((ACU > 1f) == (DLY < 1f)) {
+					info.append( " and ");
+				} else {
+					info.append( " but ");
 				}
-				info.append(ACU > 1f ? mw_text_19 : mw_text_20);
+				info.append( ACU > 1f ? "accurate" : "inaccurate" );
 			}
-			info.append( mw_text_21);
+			info.append( " weapon. ");
 		} else if (ACU != 1f) {
-			info.append( mw_text_22 + (ACU > 1f ? mw_text_19 : mw_text_20) + mw_text_21 );
+			info.append( "This is a rather " + (ACU > 1f ? "accurate" : "inaccurate") + " weapon. " );
 		}
 		switch (imbue) {
 		case SPEED:
-			info.append( mw_text_23 );
+			info.append( "It was balanced to make it faster. " );
 			break;
 		case ACCURACY:
-			info.append( mw_text_24 );
+			info.append( "It was balanced to make it more accurate. " );
 			break;
 		case NONE:
 		}
 		
 		if (enchantment != null) {
-			info.append( mw_text_25 );
+			info.append( "It is enchanted." );
 		}
 		
 		if (levelKnown && Dungeon.hero.belongings.backpack.items.contains( this )) {
 			if (STR > Dungeon.hero.STR()) {
 				info.append( p );
 				info.append( 
-					mw_text_26 );
+					"Because of your inadequate strength the accuracy and speed " +
+					"of your attack with this " + name + " is decreased." );
 			}
 			if (STR < Dungeon.hero.STR()) {
 				info.append( p );
 				info.append( 
-					mw_text_27 );
+					"Because of your excess strength the damage " +
+					"of your attack with this " + name + " is increased." );
 			}
 		}
 		
 		if (isEquipped( Dungeon.hero )) {
 			info.append( p );
-			info.append( mw_text_28 + 
-				(cursed ? mw_text_29 : ".") ); 
+			info.append( "You hold the " + name + " at the ready" + 
+				(cursed ? ", and because it is cursed, you are powerless to let go." : ".") ); 
 		} else {
 			if (cursedKnown && cursed) {
 				info.append( p );
-				info.append( mw_text_30 );
+				info.append( "You can feel a malevolent magic lurking within " + name +"." );
 			}
 		}
 		
