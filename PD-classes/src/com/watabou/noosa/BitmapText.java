@@ -118,6 +118,10 @@ public class BitmapText extends Visual {
 			{
 				translatedText = (text == null) ? "" : (s == null) ? LanguageFactory.INSTANCE.translate(text) : s;
 			}
+
+			String col = String.format("[#%02X%02X%02X%02X]", (int)Math.abs(rm * 255), (int)Math.abs(gm * 255), (int)Math.abs(bm * 255), (int)Math.abs(am * 255));
+			String coloredTranslatedText = col + translatedText + "[]";
+
 			Game.batch.begin();
 
 			String fontScale;
@@ -125,23 +129,23 @@ public class BitmapText extends Visual {
 			{
 				case 9:
 					fontScale = "15x";
-					Game.batch.setShader(LanguageFactory.shaderPixel);
+					//Game.batch.setShader(LanguageFactory.shaderPixel);
 					break;
 				case 11:
 					fontScale = "2x";
-					Game.batch.setShader(LanguageFactory.shaderPixel);
+					//Game.batch.setShader(LanguageFactory.shaderPixel);
 					break;
 				case 13:
 					fontScale = "25x";
-					Game.batch.setShader(LanguageFactory.shaderAA);
+					//Game.batch.setShader(LanguageFactory.shaderPixel);
 					break;
 				case 17:
 					fontScale = "3x";
-					Game.batch.setShader(LanguageFactory.shaderAA);
+					//Game.batch.setShader(LanguageFactory.shaderPixel);
 					break;
 				default:
 					fontScale = "1x";
-					Game.batch.setShader(LanguageFactory.shaderPixel);
+					//Game.batch.setShader(LanguageFactory.shaderPixel);
 					break;
 			}
 
@@ -149,34 +153,33 @@ public class BitmapText extends Visual {
 			int camX = camera().x;
 			int camY = camera().y;
 
-			if (text.startsWith("To un"))
-			{
-				// debug me, first multiline popup encountered.
-			}
-
 			if (zoom < 4)
 			{
 				if (this instanceof BitmapTextMultiline)
 				{
-					LanguageFactory.INSTANCE.getFont(fontScale).drawWrapped(Game.batch, translatedText, camX + x * zoom, Game.height - (y * zoom + camY), width);
+					// not working for GameLog
+					// LanguageFactory.INSTANCE.getFont(fontScale).drawWrapped(Game.batch, translatedText, camX + (camera().screenWidth - width) / 2, Game.height - camY - (camera().screenHeight - height) / 2, width);
+					LanguageFactory.INSTANCE.getFont(fontScale).drawWrapped(Game.batch, coloredTranslatedText, camX + x * zoom, Game.height - camY - y * zoom, width);
 				}
 				else
 				{
-					LanguageFactory.INSTANCE.getFont(fontScale).draw(Game.batch, translatedText, camX + x * zoom + width / 2 - LanguageFactory.INSTANCE.getFont(fontScale).getBounds(translatedText).width / 2, Game.height - (y * zoom + camY));
+					LanguageFactory.INSTANCE.getFont(fontScale).draw(Game.batch, coloredTranslatedText, camX + x * zoom + width / 2 - LanguageFactory.INSTANCE.getFont(fontScale).getBounds(coloredTranslatedText).width / 2, Game.height - (y * zoom + camY));
 				}
 			}
 			else
 			{
 				if (this instanceof BitmapTextMultiline)
 				{
-					LanguageFactory.INSTANCE.getFont(fontScale).setScale(camera().zoom / 2);
-					LanguageFactory.INSTANCE.getFont(fontScale).drawWrapped(Game.batch, translatedText, camX + x * zoom, Game.height - (y * zoom + camY), width);
+					LanguageFactory.INSTANCE.getFont(fontScale).scale(camera().zoom / 2);
+					// not working for GameLog
+					// LanguageFactory.INSTANCE.getFont(fontScale).drawWrapped(Game.batch, translatedText, camX + (camera().screenWidth - width) / 2, Game.height - camY - (camera().screenHeight - height) / 2, width);
+					LanguageFactory.INSTANCE.getFont(fontScale).drawWrapped(Game.batch, coloredTranslatedText, camX + x * zoom, Game.height - camY - y * zoom, width);
 					LanguageFactory.INSTANCE.getFont(fontScale).setScale(1);
 				}
 				else
 				{
-					LanguageFactory.INSTANCE.getFont(fontScale).setScale(camera().zoom / 2);
-					LanguageFactory.INSTANCE.getFont(fontScale).draw(Game.batch, translatedText, camX + x * zoom + width / 4 * zoom - LanguageFactory.INSTANCE.getFont(fontScale).getBounds(translatedText).width / 2, Game.height - (y * zoom + camY));
+					LanguageFactory.INSTANCE.getFont(fontScale).scale(camera().zoom / 2);
+					LanguageFactory.INSTANCE.getFont(fontScale).draw(Game.batch, coloredTranslatedText, camX + x * zoom + width / 4 * zoom - LanguageFactory.INSTANCE.getFont(fontScale).getBounds(coloredTranslatedText).width / 2, Game.height - (y * zoom + camY));
 					LanguageFactory.INSTANCE.getFont(fontScale).setScale(1);
 				}
 			}

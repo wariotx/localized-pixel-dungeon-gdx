@@ -11,15 +11,12 @@ const float smoothing = 1.0/16.0;
 
 void main()
 {
-    float alpha = texture2D(u_texture, v_texCoord).a; 
-    //If somewhere between complete transparent and completely opaque
-    if (alpha > 0.0 && alpha < 1.0)
-    {
-        gl_FragColor = vec4(0.0, 0.0, 0.0, abs(0.5 - alpha));
-    }
+    float distance = texture2D(u_texture, v_texCoord).a;
+    float alpha = smoothstep(0.3 - smoothing, 0.3 + smoothing, distance);
+    if (distance >= 0.45 && distance < 0.55)
+        gl_FragColor = mix(vec4(0.0, 0.0, 0.0, alpha), vec4(v_color.rgb, alpha), (distance - 0.45) * 10.0);
+    else if (distance < 0.45)
+        gl_FragColor = vec4(0.0, 0.0, 0.0, alpha);
     else
-    {
         gl_FragColor = vec4(v_color.rgb, alpha);
-    }
-        
 }

@@ -45,7 +45,7 @@ public class LanguageFactory
             font1x.setMarkupEnabled(true);
             BitmapFont font15x = FontFactory.generate("translate/" + language + "/font/15x");
             font15x.setMarkupEnabled(true);
-            BitmapFont font2x = FontFactory.generate("translate/" + language + "/font/1x");
+            BitmapFont font2x = FontFactory.generate("translate/" + language + "/font/2x");
             font2x.setMarkupEnabled(true);
             BitmapFont font25x = FontFactory.generate("translate/" + language + "/font/25x");
             font25x.setMarkupEnabled(true);
