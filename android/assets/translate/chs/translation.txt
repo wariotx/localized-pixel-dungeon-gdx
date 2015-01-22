@@ -43,10 +43,10 @@ Load Game
 载入游戏
 
 Depth: %d, level: %d
-[#cacfc2]%d层，%d级[]
+第%d层，第%d级
 
 Erase current game
-[#cacfc2]覆盖现有存档[]
+覆盖现有存档
 
 Top Rankings
 排行榜
@@ -55,13 +55,13 @@ Total games played: %d
 进行游戏次数: %d
 
 No games have been played yet.
-[YELLOW]尚无任何游戏记录.[]
+尚无任何游戏记录.
 
 No additional information
 无额外信息
 
 Your Badges
-[YELLOW]你的勋章[]
+你的勋章
 
 # GameScene
 
@@ -655,3 +655,534 @@ Battle wand
 
 Non-battle wand
 辅助法杖
+
+# Plants
+
+Dreamweed
+幻梦草
+seed of Dreamweed
+幻梦草种子
+Upon touching a Dreamweed it secretes a glittering cloud of confusing gas.
+触碰到幻梦草会刺激它分泌出一种令人陷入困惑幻觉的闪光气体.
+
+Earthroot
+地缚根
+seed of Earthroot
+地缚根种子
+When a creature touches an Earthroot, its roots create a kind of natural armor around it.
+被生物触碰到的地缚根会在生物体表用根须形成一种天然的护铠.
+
+Fadeleaf
+褪叶草
+seed of Fadeleaf
+褪叶草种子
+Touching a Fadeleaf will teleport any creature to a random place on the current level.
+触碰到褪叶草的生物会被传送到当前层的某个随机位置.
+
+Firebloom
+烈焰花
+seed of Firebloom
+烈焰花种子
+When something touches a Firebloom, it bursts into flames.
+烈焰花会将触碰它的东西点燃.
+
+Icecap
+冰帽草
+seed of Icecap
+冰帽草种子
+Upon touching an Icecap excretes a pollen, which freezes everything in its vicinity.
+被触碰的冰帽草会释放出花粉将附近的一切冰冻起来.
+
+Sorrowmoss
+悲伤藓
+seed of Sorrowmoss
+悲伤藓种子
+A Sorrowmoss is a flower (not a moss) with razor-sharp petals, coated with a deadly venom.
+悲伤藓是一种有着刀片一样锋利的花瓣的花(并非苔藓),花瓣上涂满了致命的毒液.
+
+Sungrass
+太阳草
+seed of Sungrass
+太阳草种子
+Sungrass is renowned for its sap's healing properties.
+太阳草以其汁液的治愈特效而闻名.
+Herbal healing
+草药治愈
+
+Throw this seed to the place where you want to grow %s.\n\n%s
+将种子扔在你希望%s生长的地方.
+
+
+# Items
+
+weightstone
+磨刀石
+Select a weapon to balance
+选择一柄武器进行磨制
+you balanced your %s to make it faster
+磨制你的%s使之挥舞起来更快
+you balanced your %s to make it more accurate
+磨制你的%s使之命中更加精准
+Using a weightstone, you can balance your melee weapon to increase its speed or accuracy.
+使用磨刀石能够将近战武器变得更快速或者更精准.
+How would you like to balance your %s?
+你想要怎样磨制你的%s呢?
+For speed
+提升速度
+For accuracy
+提升精准
+APPLY
+应用
+Never mind
+算了
+
+torch
+火把
+It's an indispensable item in The Demon Halls, which are notorious for their poor ambient lighting.
+恶魔大厅不可或缺的物品,那里因可怜的环境照明而臭名昭著.
+
+Tome of Mastery
+进阶宝典
+You can't read while blinded
+致盲时无法阅读
+This worn leather book is not that thick, but you feel somehow, that you can gather a lot from it. Remember though that reading this tome may require some time.
+这本皮革封面的书并不那么厚,但你感觉从中获益匪浅.但请谨记阅读这本书会花费一些时间.
+You have chosen the way of the %s!
+你选择了%s的道路!
+
+arcane stylus
+奥术蚀笔
+Select an armor to inscribe on
+选择一件护甲来进行蚀刻
+you inscribed the %s on your %s
+你将%s符文蚀刻在了你的%s上.
+This arcane stylus is made of some dark, very hard stone. Using it you can inscribe a magical glyph on your armor, but you have no power over choosing what glyph it will be, the stylus will decide it for you.
+奥术蚀笔是用一些黑色的非常坚硬的石料做成的.使用它能够在护甲上蚀刻魔法符文,但你无力去选择蚀刻哪一种符文,蚀刻出的符文是由蚀笔替你选择的.
+
+lloyd's beacon
+劳埃德的信标
+SET
+设置
+RETURN
+返回
+Strong magic aura of this place prevents you from using the lloyd's beacon!
+此地强烈的魔法波动使你无法使用劳埃德的信标!
+Psychic aura of neighbouring creatures doesn't allow you to use the lloyd's beacon at this moment.
+附近生物的心灵波动导致你此刻无法使用劳埃德的信标!
+The lloyd's beacon is successfully set at your current location, now you can return here anytime.
+劳埃德的信标成功地绑定到你当前的位置,现在你可以选择在任何时间点回到这里.
+Lloyd's beacon is an intricate magic device, that allows you to return to a place you have already been.
+劳埃德的信标是一种复杂的魔法设备,能够允许你回到曾经去过的地方.
+\n\nThis beacon was set somewhere on the level %d of Pixel Dungeon.
+\n\n信标设置在了像素地牢第%d层的某处.
+
+you wince as your grip involuntarily tightens around your %s
+你畏葸不前不自觉地握紧了手中的%s
+
+Your pack is too full for the %s
+你的背包太满装不下%s了
+
+DROP
+丢弃
+
+THROW
+扔出
+Choose direction of throw
+选择投掷方向
+
+gold
+金币
+Collect gold coins to spend them later in a shop.
+收集金币以后可以在商店进行消费.
+A pile of %d gold coins. Collect gold coins to spend them later in a shop.
+一堆价值%d金的金币.收集金币以后可以在商店进行消费.
+One gold coin. Collect gold coins to spend them later in a shop.
+一枚金币.收集金币以后可以在商店进行消费.
+
+You can't remove cursed %s!
+你无法脱下被诅咒的%s!
+
+EQUIP
+装备
+UNEQUIP
+卸下
+
+dewdrop
+露珠
+A crystal clear dewdrop.
+水晶般澄澈的露珠.
+
+dew vial
+露水瓶
+DRINK
+饮用
+The dew vial was emptied to heal your wounds.
+饮干露水瓶可以使伤口愈合.
+You collected a dewdrop into your dew vial.
+你将收集到的一滴露珠放进了露水瓶中.
+Your dew vial is full!
+露水瓶装满了!
+Your dew vial is empty!
+露水瓶是空的!
+You can store excess dew in this tiny vessel for drinking it later. If the vial is full, in a moment of deadly peril the dew will be consumed automatically.
+你能够将额外的露珠存放进这个小瓷瓶中以供将来使用.如果装满它,在承受致命伤害的刹那会自动消耗露水来治愈伤口.
+
+armor kit
+防具升级工具
+Select an armor to upgrade
+选择一件防具来升级
+you applied the armor kit to upgrade your %s
+你使用防具升级工具改造了你的%s
+Using this kit of small tools and materials anybody can transform any armor into an \"epic armor\", which will keep all properties of the original armor, but will also provide its wearer a special ability depending on his class. No skills in tailoring, leatherworking or blacksmithing are required.
+使用这套工具和材料任何人都能够将任何防具改造成一件\"传奇装备\",它不但能保留原有防具的全部特性,还能使得穿戴者获得独特的职业技能.不需要任何裁剪,皮革加工和铁匠技能.
+
+Ankh
+重生十字章
+The ancient symbol of immortality grants an ability to return to life after death. Upon resurrection all non-equipped items are lost.
+那古老的不朽之符文赋予了你死后重生的能力.一旦重生会丢失掉携带的全部物品.
+
+Amulet of Yendor
+尼德罗护符
+END THE GAME
+终结游戏
+The Amulet of Yendor is the most powerful known artifact of unknown origin. It is said that the amulet is able to fulfil any wish if its owner's will-power is strong enough to \"persuade\" it to do it.
+尼德罗护符是最强大的已知神器,无人知道它的来历.据说如果它的主人拥有足够强烈的意愿就能说服这枚护符实现任何愿望.
+
+You are now familiar enough with your %s to identify it. It is %s.
+你已经足够熟悉你的%s,能够鉴定它了.它其实是%s.
+Interaction of different types of magic has negated the enchantment on this weapon!
+不同类型的魔力干扰使得武器附魔失去了效力.
+
+# Enchantments
+
+Grim %s
+残暴%s
+Blazing %s
+烈焰%s
+Eldritch %s
+威吓%s
+Unstable %s
+震荡%s
+Vampiric %s
+吸血%s
+Lucky %s
+好运%s
+Stunning %s
+晕眩%s
+Piercing %s
+穿刺%s
+Venomous %s
+淬毒%s
+Chilling %s
+霜冻%s
+Wild %s
+狂野%s
+
+# Weapon
+
+This 
+这柄
+ is 
+是一柄
+upgraded
+升级后的
+degraded
+降级后的
+ tier-
+第
+ melee weapon.
+阶近战武器. 
+Its average damage is 
+它的平均伤害为每击
+ points per hit. 
+点.
+Its typical average damage is 
+它一般的平均伤害为每击
+and usually it requires
+此外它通常需要 
+ points of strength.
+点力量. 
+Probably this weapon is too heavy for you. 
+或许这柄武器对你来说过于沉重.
+This is a rather 
+这是一柄相当
+fast
+快速
+slow
+缓慢
+ and
+且 
+ but
+但却 
+accurate
+精准
+inaccurate
+不精准
+ weapon. 
+的武器
+It was balanced to make it faster. 
+它被磨制得更加快速了.
+It was balanced to make it more accurate. 
+它被磨制得更加精准了.
+It is enchanted.
+它已被附魔.
+Because of your inadequate strength the accuracy and speed of your attack with this weapon is decreased.
+因为你力量过于孱弱这柄武器的攻击速度和精准都下降了.
+Because of your excess strength the damage of your attack with this weapon is increased.
+因为你力量超过需求这柄武器的攻击速度和精准都增加了.
+You hold the weapon at the ready
+你正握着这柄武器
+, and because it is cursed, you are powerless to let go.
+,由于它被诅咒了,所以你没办法放手.
+You can feel a malevolent magic lurking within this weapon.
+你感到武器中蕴藏着恶毒的魔法.
+
+battle axe
+战斧
+The enormous steel head of this battle axe puts considerable heft behind each stroke.
+这柄战斧斧刃使用了大量钢材使得它每一次劈砍都能造成客观的伤害.
+
+dagger
+匕首
+A simple iron dagger with a well worn wooden handle.
+一柄铁匕首,木质手柄磨损得很厉害.
+
+glaive
+大刀
+A polearm consisting of a sword blade on the end of a pole.
+由刀刃和末端的杆构成的长柄武器.
+
+knuckleduster
+指虎
+A piece of iron shaped to fit around the knuckles.
+一块贴合手指关节形状的铁片.
+
+longsword
+长剑
+This towering blade inflicts heavy damage by investing its heft into every cut.
+这柄长刃发挥它沉重的优势每一次劈砍都能造成大量伤害.
+
+mace
+权杖
+The iron head of this weapon inflicts substantial damage.
+这柄武器的铁头能够造成大量伤害.
+
+quarterstaff
+长棍
+A staff of hardwood, its ends are shod with iron.
+一根硬质木杖,末端钉有铁头.
+
+short sword
+短剑
+REFORGE
+重铸
+Select a weapon to upgrade
+选择一件武器来升级
+you reforged the short sword to upgrade your %s
+重铸这柄短剑来升级你的%s
+you can't upgrade a boomerang this way
+你不能用这种方式来升级回旋镖
+It is indeed quite short, just a few inches longer, than a dagger.
+一柄的确相当短,只是比匕首稍长寸许的短剑.
+
+spear
+长枪
+A slender wooden rod tipped with sharpened iron.
+尖端装上锋利铁锥的细长木杆.
+
+sword
+剑
+The razor-sharp length of steel blade shines reassuringly.
+锋利的钢刃闪闪发光令人心安.
+
+war hammer
+战锤
+Few creatures can withstand the crushing blow of this towering mass of lead and steel, but only the strongest of adventurers can use it effectively.
+罕有生物能够承受这柄铅与钢锻造的沉重钝器的碾压性打击,但也只有那些最强壮的冒险者才能自如地挥动它.
+
+Missile weapon
+投掷武器
+
+Yes, I know what I'm doing
+是的我明白自己在做什么
+No, I changed my mind
+不我改注意了
+Do you really want to equip it as a melee weapon?
+你真的要把它作为近战武器装备吗?
+
+boomerang
+回旋镖
+Thrown to the enemy this flat curved wooden missile will return to the hands of its thrower.
+将它扔向敌人这柄削平的木质飞镖会自动回到投资者的手中.
+
+curare dart
+淬毒飞镖
+These little evil darts don't do much damage but they can paralyze the target leaving it helpless and motionless for some time.
+这些恶毒的小飞镖造成不了多少伤害但却能够让目标麻痹使其在一段时间内都无助地陷在原地无法移动.
+
+dart
+飞镖
+These simple metal spikes are weighted to fly true and sting their prey with a flick of the wrist.
+这些简单的金属尖刺经过配重平衡能够精确地飞行,手腕一抖便能按你的意志飞向目标.
+
+incendiary dart
+火焰飞镖
+The spike on each of these darts is designed to pin it to its target while the unstable compounds strapped to its length burst into brilliant flames.
+这些飞镖上的尖刺会在命中时钉入目标同时附在飞镖上的不稳定化合物会爆炸点燃火焰.
+
+javelin
+投枪
+This length of metal is weighted to keep the spike at its tip foremost as it sails through the air.
+这柄金属杆经过配重平衡能够让它的尖锥稳稳保持在前,刺破空气飞向目标.
+
+shuriken
+手里剑
+Star-shaped pieces of metal with razor-sharp blades do significant damage when they hit a target. They can be thrown at very high rate.
+带有利刃的星形铁片,在命中目标时能够造成可观的伤害.它们能够以很高的频率丢掷.
+
+tomahawk
+手斧
+This throwing axe is not that heavy, but it still requires significant strength to be used effectively.
+这种用来投掷的斧头并不沉重,但要想自如地使用它依然需要可观的力量.
+
+
+# Wand
+
+ZAP
+释术
+Choose direction to zap
+选择释放法术的方向
+This thin %s wand is warm to the touch. Who knows what it will do when used?
+这柄%s法杖握起来非常温暖.谁知道它使用时会有什么样的效果呢?
+When this wand is used as a melee weapon, its average damage is %d points per hit.
+当作为近战武器使用时,它的平均伤害为每击%d点.
+You can use this wand as a melee weapon.
+你可以将这柄法杖作为近战武器使用.
+your wand fizzles; it must be out of charges for now
+你的法杖嘶嘶作响;一定是现在耗光了能量.
+You can't target yourself
+你不能以自己为目标
+
+holly
+冬青
+yew
+紫杉
+ebony
+黑檀
+cherry
+樱木
+teak
+柚木
+rowan
+山梨
+willow
+柳木
+mahogany
+桃花心木
+bamboo
+竹制
+purpleheart
+紫心苏木
+oak
+橡木
+birch
+桦木
+
+Wand of Amok
+狂乱法杖
+nothing happened
+什么事都没有发生
+The purple light from this wand will make the target run amok attacking random creatures in its vicinity.
+法杖发出的紫色光芒能够让目标陷入狂乱随机攻击附近的生物.
+
+Wand of Avalanche
+崩塌法杖
+You killed yourself with your own Wand of Avalanche...
+你使用你自己的崩塌法杖杀死了自己.
+When a discharge of this wand hits a wall (or any other solid obstacle) it causes an avalanche of stones, damaging and stunning all creatures in the affected area.
+法杖释放的魔弹碰到墙壁或别的固态屏障时会造成土石崩塌,伤害并晕眩附近受影响区域的所有生物.
+
+Wand of Blink
+闪现法杖
+This wand will allow you to teleport in the chosen direction. Creatures and inanimate obstructions will block the teleportation.
+这柄法杖能够将你传送到选定的位置.生物或者无法移动的屏障会阻挡传送.
+
+Wand of Disintegration
+解离法杖
+This wand emits a beam of destructive energy, which pierces all creatures in its way. The more targets it hits, the more damage it inflicts to each of them.
+这柄法杖发出一道毁灭性的能量,穿透所有途径的生物.它击中的目标越多,对每个目标造成的伤害就越大.
+
+Wand of Firebolt
+火球法杖
+You killed yourself with your own Wand of Firebolt...
+你使用你自己的火球法杖杀死了自己.
+This wand unleashes bursts of magical fire. It will ignite flammable terrain, and will damage and burn a creature it hits.
+这柄法杖发出一道魔力火焰,能够引燃可燃地形,并伤害和点燃击中的生物.
+
+Wand of Flock
+羊群法杖
+A flick of this wand summons a flock of magic sheep, creating temporary impenetrable obstacle.
+这柄法杖能够召唤出一群魔法山羊,制造出无法通过的临时屏障.
+sheep
+绵羊
+Baa!
+咩!
+Baa?
+咩?
+Baa.
+咩.
+Baa...
+咩...
+This is a magic sheep. What's so magical about it? You can't kill it. It will stand there until it magcially fades away, all the while chewing cud with a blank stare.
+这是一只魔法山羊.它有什么神奇的地方呢?你无法杀死它.它将会一直存在到魔力消失,一边咀嚼反刍的食物一边用那茫然的眼神盯着你.
+
+Wand of Lightning
+雷霆法杖
+You killed yourself with your own Wand of Lightning...
+你使用你自己的雷霆法杖杀死了自己.
+This wand conjures forth deadly arcs of electricity, which deal damage to several creatures standing close to each other.
+这柄法杖向前放出一道致命的电弧,能够对相邻而站的一群生物造成伤害.
+
+Wand of Magic Missile
+魔弹法杖
+You killed yourself with your own Wand of Magic Missile...
+你使用你自己的魔弹法杖杀死了自己.
+This wand launches missiles of pure magical energy, dealing moderate damage to a target creature.
+这柄法杖能够发出纯净魔力构成的魔弹,对目标生物造成一定的伤害.
+DISENCHANT
+祛魔
+Select a wand to upgrade
+选择一柄法杖来升级
+you disenchanted the Wand of Magic Missile and used its essence to upgrade your %s
+你祛除了魔弹法杖的魔力并用它来升级你的%s
+
+Wand of Poison
+剧毒法杖
+The vile blast of this twisted bit of wood will imbue its target with a deadly venom. A creature that is poisoned will suffer periodic damage until the effect ends. The duration of the effect increases with the level of the staff.
+这柄有些扭曲的法杖释放的恶毒魔力能够让目标染上致命毒素.中毒的生物在效果结束前会持续掉血.效果持续时间随着法杖等级的提升而延长.
+
+Wand of Regrowth
+草木法杖
+\"When life ceases new life always begins to grow... The eternal cycle always remains!\"
+\"生生不息,周而复始!\"
+
+Wand of Slowness
+迟缓法杖
+This wand will cause a creature to move and attack at half its ordinary speed until the effect ends
+这柄法杖能够让生物移动和攻击速度在效果结束前都减半.
+
+Wand of Telekinesis
+念力法杖
+You have magically transported %s into your backpack
+你神奇地将%s传送到了背包中.
+Waves of magic force from this wand will affect all cells on their way triggering traps, trampling high vegetation, opening closed doors and closing open ones. They also push back monsters.
+这柄法杖发出的魔力波动能够影响它途径的所有地方,触发陷阱,践踏草木,开门或者关门.还能将怪物推向后方.
+
+Wand of Teleportation
+传送法杖
+A blast from this wand will teleport a creature against its will to a random place on the current level.
+这柄法杖释放出的魔力能够将生物不受意志驱使地随机传送到当前层的某个地方.
+ teleported 
+将
+ to somewhere
+传送到了某处.
