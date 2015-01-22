@@ -10,11 +10,11 @@ About
 
 # Rankings
 No games have been played yet.
-[YELLOW]没有任何游戏记录。[]
+没有任何游戏记录。
 
 # Badges
 Your Badges
-[YELLOW]你的奖章[]
+你的奖章
 
 # Game
 To unlock "Challenges", win the game with any character class.
@@ -32,14 +32,26 @@ New Game
 Load Game
 载入游戏
 Depth: %d, level: %d
-[#cacfc2]%d层，%d级[]
+%d层，%d级
 Erase current game
-[#cacfc2]覆盖现有存档[]
+覆盖现有存档
 
 # Intro
 Many heroes of all kinds ventured into the Dungeon before you. Some of them have returned with treasures and magical artifacts, most have never been heard of since. But none have succeeded in retrieving the Amulet of Yendor, which is told to be hidden in the depths of the Dungeon.\n\nYou consider yourself ready for the challenge, but most importantly, you feel that fortune smiles on you. It's time to start your own adventure!
-[BLACK]我就是个测试\n啊啊啊[]
+我就是个测试\n啊啊啊
 
 # GameScene
 Welcome to the level %d of Pixel Dungeon!
 欢迎来到Pixel Dungeon的第%d层！
+Don't overestimate your strength, use weapons and armor you can handle.
+的费鬼地方换个地方涣发大号哥哥的人二个二个人工二个热狗二个二个
+marsupial rat
+啊啊啊老鼠
+Marsupial rat
+啊老鼠
+You don't have a matching key.
+你没钥匙啦！
+%s hit %s
+%s攻击%s
+%s %s %s's attack
+%s %s %s的攻击
