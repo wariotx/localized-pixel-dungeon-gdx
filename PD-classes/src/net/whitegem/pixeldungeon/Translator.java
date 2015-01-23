@@ -49,7 +49,7 @@ public class Translator
         for (int i = 0; i < lines.size(); i += 2)
         {
             String trans = lines.get(i + 1);
-            translation.put(lines.get(i), trans);
+            translation.put(lines.get(i).toLowerCase(), trans);
         }
     }
 
@@ -206,14 +206,14 @@ public class Translator
 
     public boolean hasKey(String key)
     {
-        return translation.containsKey(key);
+        return translation.containsKey(key.toLowerCase());
     }
 
     public String translate(String originalText)
     {
         if (hasKey(originalText))
         {
-            return translation.get(originalText);
+            return translation.get(originalText.toLowerCase());
         }
         return originalText;
     }
