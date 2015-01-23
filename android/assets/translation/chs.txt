@@ -1442,8 +1442,8 @@ You hold the weapon at the ready
 你正握着这柄武器
 , and because it is cursed, you are powerless to let go.
 ,由于它被诅咒了,所以你没办法放手.
-You can feel a malevolent magic lurking within this weapon.
-你感到武器中蕴藏着恶毒的魔法.
+You can feel a malevolent magic lurking within 
+你感到武器中蕴藏着恶毒的魔法,啊,那恶毒的
 
 battle axe
 战斧
@@ -1552,6 +1552,139 @@ tomahawk
 手斧
 This throwing axe is not that heavy, but it still requires significant strength to be used effectively.
 这种用来投掷的斧头并不沉重,但要想自如地使用它依然需要可观的力量.
+
+
+# Armors
+
+Interaction of different types of magic has erased the glyph on this armor!
+不同类型的魔力干扰使得护甲符文失去了效力.
+your %s constricts around you painfully
+你感到你的%s紧紧包在身上,疼痛难忍.
+
+\n\nThis 
+这件
+ provides damage absorption up to 
+能够吸收
+  points per attack. 
+点伤害,
+\n\nBecause of your inadequate strength your movement speed and defense skill is decreased. 
+\n\n由于你的力量不足因此移动速度和防御技巧都下降了.
+\n\nBecause of your inadequate strength wearing this armor will decrease your movement speed and defense skill. 
+\n\n由于你的力量不足这件护甲会使你的移动速度和防御技巧下降.
+\n\nTypical
+\n\n一般来说 
+ and requires 
+并且需要
+ points of strength. 
+点力量.
+Probably this armor is too heavy for you. 
+或许这件护甲对你来说过于沉重.
+It is inscribed.
+它上面镌刻着符文.
+\n\nYou are wearing the 
+\n\n你正穿着这件
+, and because it is cursed, you are powerless to remove it.
+,由于它被诅咒了,所以你没办法脱下它.
+\n\nYou can feel a malevolent magic lurking within the 
+\n\n你感到护甲中蕴藏着恶毒的魔法,啊,那恶毒的
+
+Your health is too low!
+你的生命值过低!
+You need to be wearing this armor to use its special power!
+你需要穿着这件护甲才能发动特殊能力!
+The thing looks awesome!
+这东西看起来无与伦比!
+
+cloth armor
+布甲
+This lightweight armor offers basic protection.
+这件单薄的护甲能够提供基本的防护.
+leather armor
+皮甲
+Armor made from tanned monster hide. Not as light as cloth armor but provides better protection.
+使用鞣制怪物皮做出的护甲.比布甲沉一些但防护效果也好一些.
+mail armor
+链甲
+Interlocking metal links make for a tough but flexible suit of armor.
+铁片相连做成的护甲,坚韧而富有弹性.
+scale armor
+鳞甲
+The metal scales sewn onto a leather vest create a flexible, yet protective armor.
+将金属鳞片缝进皮革做成的兼顾弹性和防护性能的护甲.
+plate armor
+板甲
+Enormous plates of metal are joined together into a suit that provides unmatched protection to any adventurer strong enough to bear its staggering weight.
+使用大量金属板打造而成,为那些能够承受得了它那惊人重量的冒险者提供无可比拟的防护.
+
+warrior suit of armor
+战士铠甲
+Only warriors can use this armor!
+只有战士才能穿上这种护甲!
+HEROIC LEAP
+英勇跳跃
+While this armor looks heavy, it allows a warrior to perform heroic leap towards a targeted location, slamming down to stun all neighbouring enemies.
+这件看起来非常沉重的铠甲能够让穿上它的战士凌空跳起跃向目标位置,轰然落地震晕所有附近的敌人.
+Choose direction to leap
+选择跳跃方向
+
+mage robe
+法师长袍
+Only mages can use this armor!
+只有法师才能穿上这种护甲!
+MOLTEN EARTH
+业火地幔
+Wearing this gorgeous robe, a mage can cast a spell of molten earth: all the enemies in his field of view will be set on fire and unable to move at the same time.
+
+rogue garb
+游侠套装
+You can only jump to an empty location in your field of view
+Only rogues can use this armor!
+只有游侠才能穿上这种护甲!
+SMOKE BOMB
+烟雾弹
+Wearing this dark garb, a rogue can perform a trick, that is called "smoke bomb" (though no real explosives are used): he blinds enemies who could see him and jumps aside.
+穿上套装后的游侠能够耍一个名为烟雾弹的小把戏(尽管确实会造成真正的爆炸):他会弄瞎所有看见他的人并跳往其他地方.
+Choose a location to jump to
+选择跳跃方向
+
+huntress cloak
+女猎披风
+No enemies in sight
+视野里未发现敌踪
+Only huntresses can use this armor!
+只有女猎才能穿上这种护甲!
+SPECTRAL BLADES
+灵能之刃
+A huntress in such cloak can create a fan of spectral blades. Each of these blades will target a single enemy in the huntress's field of view, inflicting damage depending on her currently equipped melee weapon.
+戴上披风后的女猎能够发出扇状的灵能之刃.每一片刀刃都能独自锁定一名女猎视野中的敌人,造成的伤害则取决于女猎当前装备的近战武器.
+
+deferred %d
+推延%d
+Defered damage (%d)
+推延伤害%d
+%s killed you...
+%s杀死了你...
+
+%s of viscosity
+粘稠%s
+%s of stench
+恶臭%s
+%s of potential
+潜能%s
+%s of multiplicity
+分身%s
+%s of entanglement
+缠结%s
+%s of metabolism
+代谢%s
+%s of displacement
+置换%s
+%s of bounce
+反弹%s
+%s of anti-entropy
+反熵%s
+%s of affection
+反射%s
 
 
 # Wand
@@ -2209,4 +2342,4 @@ This small velvet pouch allows you to store any number of seeds in it. Very conv
 scroll holder
 卷轴筒
 You can place any number of scrolls into this tubular container. It saves room in your backpack and protects scrolls from fire.
-你可以将任意类型的卷轴放入这个管状容器保存.它能够节约背包空间,并且使卷轴不会被火点燃.
+你可以将任意类型的卷轴放入这个管状容器保存.它能够节约背包空间,并且能够让卷轴不会被火点燃.
