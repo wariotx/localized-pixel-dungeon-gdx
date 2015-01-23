@@ -81,10 +81,16 @@ public class Translator
                     {
                         String endStr = trans.substring(end - 1, end);
                         String endStrNext = trans.substring(end, end + 1);
-                        if (endStr.equals(" ") || (endStr.matches("\\p{P}") && !endStrNext.matches("[0-9]")) || (endStr.matches("[0-9]") && !endStrNext.matches("[0-9]")))
+                        if (endStr.equals(" ") || (endStr.matches(",") && !endStrNext.matches(" ")) || (endStr.matches("\\p{P}") && endStrNext.matches(" ")) || (endStr.matches("[0-9]") && !endStrNext.matches("[0-9]")))
                         {
                             transAfter.add(str.trim());
                             start = end;
+                        }
+                        else if (isChinese(endStr.charAt(0)))
+                        {
+                            transAfter.add(trans.substring(start, end - 1));
+                            start = end - 1;
+                            end--;
                         }
                         end++;
                     }
@@ -101,7 +107,7 @@ public class Translator
             String current = transAfter.get(c);
             String result = current;
 
-            if (current.equals("\n"))
+            if (current.equals("\n") || current.equals(" "))
             {
                 c++;
                 continue;
@@ -109,7 +115,7 @@ public class Translator
 
             if (current.length() == 1 && isChinese(current.charAt(0))) // chinese
             {
-                if (!isChinese(next.charAt(0)) && ! next.matches("\\p{P}"))
+                if (!isChinese(next.charAt(0)) && !(next.charAt(0) + "").matches("\\p{P}"))
                 {
                     result += " ";
                 }
@@ -117,7 +123,7 @@ public class Translator
             else if (current.matches("\\p{P}"))
             {
 
-                if (current.matches("[,.!?;:，。！？；：]"))
+                if (current.matches("[,.!?;:]") && isChinese(next.charAt(0)))
                 {
                     result += " ";
                 }

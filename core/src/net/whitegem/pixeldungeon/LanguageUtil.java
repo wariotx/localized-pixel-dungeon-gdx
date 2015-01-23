@@ -22,13 +22,13 @@ public class LanguageUtil
         // 5x8 (10)
         PixelScene.font15x = BitmapText.Font.colorMarked(
                 BitmapCache.get("font15xc.png"), 0x00000000, BitmapText.Font.LATIN_FULL, "font15xc.fnt");
-        PixelScene.font15x.baseLine = 12;
+        PixelScene.font15x.baseLine = 10;
         PixelScene.font15x.tracking = 0;
 
         // 6x10 (12)
         PixelScene.font2x = BitmapText.Font.colorMarked(
                 BitmapCache.get("font2xc.png"), 0x00000000, BitmapText.Font.LATIN_FULL, "font2xc.fnt");
-        PixelScene.font2x.baseLine = 15;
+        PixelScene.font2x.baseLine = 12;
         PixelScene.font2x.tracking = 0;
 
         // 7x12 (15)

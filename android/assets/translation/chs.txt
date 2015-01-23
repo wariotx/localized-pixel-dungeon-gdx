@@ -344,7 +344,7 @@ Everything is spinning around you!
 # About
 
 Original code & graphics: Watabou\nLibGDX port: Arcnor\nMusic: Cube_Code\n\nThis game is inspired by Brian Walker's Brogue. Try it on Windows, Mac OS or Linux - it's awesome! ;)\n\nPlease visit official website for additional info:
-代码与图像原作者:Watabou\nLibGDX移植:Arcnor\n音乐:Cube_Code\n汉化:白宝石汉化组\n\n游戏灵感来自Brian_Walker的Roguelike游戏Brogue.\n在windows,mac_os或者linux系统试玩下吧-很好玩的.;)\n\n更多信息请访问游戏官网:
+代码与图像原作者: Watabou\nLibGDX移植: Arcnor\n音乐: Cube_Code\n汉化: 白宝石汉化组\n\n游戏灵感来自Brian Walker的Roguelike游戏Brogue.\n在Windows,Mac OS或者Linux系统试玩下吧——很好玩的. ;)\n\n更多信息请访问游戏官网:
 
 pixeldungeon.watabou.ru
 pixeldungeon.watabou.ru
