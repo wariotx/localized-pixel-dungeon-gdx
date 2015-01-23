@@ -24,6 +24,7 @@ import com.watabou.glwrap.Quad;
 import com.watabou.utils.PointF;
 
 import com.watabou.utils.RectF;
+import net.whitegem.pixeldungeon.LanguageFactory;
 
 public class BitmapTextMultiline extends BitmapText {
 
@@ -68,7 +69,7 @@ public class BitmapTextMultiline extends BitmapText {
 		
 		for (int i=0; i < paragraphs.length; i++) {
 			
-			String[] words = WORD.split( paragraphs[i] );
+			String[] words = LanguageFactory.INSTANCE.splitWords(paragraphs[i]);
 			
 			for (int j=0; j < words.length; j++) {
 				

@@ -1,7 +1,6 @@
 package net.whitegem.pixeldungeon;
 
 import com.watabou.noosa.BitmapText;
-import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.utils.BitmapCache;
 
@@ -18,19 +17,19 @@ public class LanguageUtil
         PixelScene.font1x = BitmapText.Font.colorMarked(
                 BitmapCache.get("font1xc.png"), 0x00000000, BitmapText.Font.LATIN_FULL, "font1xc.fnt");
         PixelScene.font1x.baseLine = 7;
-        PixelScene.font1x.tracking = -1;
+        PixelScene.font1x.tracking = 0;
 
         // 5x8 (10)
         PixelScene.font15x = BitmapText.Font.colorMarked(
                 BitmapCache.get("font15xc.png"), 0x00000000, BitmapText.Font.LATIN_FULL, "font15xc.fnt");
         PixelScene.font15x.baseLine = 12;
-        PixelScene.font15x.tracking = -1;
+        PixelScene.font15x.tracking = 0;
 
         // 6x10 (12)
         PixelScene.font2x = BitmapText.Font.colorMarked(
                 BitmapCache.get("font2xc.png"), 0x00000000, BitmapText.Font.LATIN_FULL, "font2xc.fnt");
         PixelScene.font2x.baseLine = 15;
-        PixelScene.font2x.tracking = -1;
+        PixelScene.font2x.tracking = 0;
 
         // 7x12 (15)
         PixelScene.font25x = BitmapText.Font.colorMarked(
@@ -42,6 +41,6 @@ public class LanguageUtil
         PixelScene.font3x = BitmapText.Font.colorMarked(
                 BitmapCache.get("font3xc.png"), 0x00000000, BitmapText.Font.LATIN_FULL, "font3xc.fnt");
         PixelScene.font3x.baseLine = 22;
-        PixelScene.font3x.tracking = -2;
+        PixelScene.font3x.tracking = -1;
     }
 }

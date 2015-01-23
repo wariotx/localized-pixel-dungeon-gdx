@@ -7,17 +7,21 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.regex.Pattern;
 
 /**
  * Created by Carl-Station on 01/22/15.
  */
 public class Translator
 {
-    private HashMap<String, String> translation;
+    private String language;
+    private LinkedHashMap<String, String> translation;
 
     public Translator(String language)
     {
-        translation = new HashMap<String, String>();
+        this.language = language;
+        translation = new LinkedHashMap<String, String>();
         // THIS FILE MUST BE UTF8 WITHOUT BOM
         FileHandle file = Gdx.files.internal("translation/" + language + ".txt");
         BufferedReader reader = new BufferedReader(file.reader());
@@ -46,6 +50,15 @@ public class Translator
         {
             translation.put(lines.get(i), lines.get(i + 1));
         }
+    }
+
+    public String[] splitWords(String paragraph)
+    {
+        if (language.equals("en"))
+        {
+            return Pattern.compile("\\s+").split(paragraph);
+        }
+        return Pattern.compile("\\s+").split(paragraph);
     }
 
     public boolean hasKey(String key)

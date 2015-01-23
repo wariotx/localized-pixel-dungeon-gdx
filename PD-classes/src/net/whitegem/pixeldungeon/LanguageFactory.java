@@ -42,7 +42,7 @@ public class LanguageFactory
         return translator.hasKey(key);
     }
 
-    public void addFormatTranslation(String formattedText, String format, Object[] args)
+    public void addFormatTranslation(String formattedText, String format, Object...args)
     {
         if (!stored.containsKey(formattedText))
         {
@@ -58,5 +58,10 @@ public class LanguageFactory
                 stored.put(formattedText.toLowerCase(), String.format(translate(format), args));
             }
         }
+    }
+
+    public String[] splitWords(String paragraph)
+    {
+        return translator.splitWords(paragraph);
     }
 }

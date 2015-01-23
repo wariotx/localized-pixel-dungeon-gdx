@@ -29,22 +29,25 @@ import com.watabou.utils.Callback;
 
 public class WandOfTeleportation extends Wand {
 
+	private static final String TELEPORT_WAND_TEXT_0 = " teleported ";
+	private static final String TELEPORT_WAND_TEXT_1 = " to somewhere";
+
 	{
 		name = "Wand of Teleportation";
 	}
 
 	@Override
 	protected void onZap( int cell ) {
-		
+
 		Char ch = Actor.findChar( cell );
-		
+
 		if (ch == curUser) {
-			
+
 			setKnown();
 			ScrollOfTeleportation.teleportHero( curUser );
-			
+
 		} else if (ch != null) {
-			
+
 			int count = 10;
 			int pos;
 			do {
@@ -53,36 +56,36 @@ public class WandOfTeleportation extends Wand {
 					break;
 				}
 			} while (pos == -1);
-			
+
 			if (pos == -1) {
-				
+
 				GLog.w( ScrollOfTeleportation.TXT_NO_TELEPORT );
-				
+
 			} else {
-			
+
 				ch.pos = pos;
 				ch.sprite.place( ch.pos );
 				ch.sprite.visible = Dungeon.visible[pos];
-				GLog.i( curUser.name + " teleported " + ch.name + " to somewhere" );
-				
+				GLog.i( curUser.name + TELEPORT_WAND_TEXT_0 + ch.name + TELEPORT_WAND_TEXT_1);
+
 			}
 
 		} else {
-			
+
 			GLog.i( "nothing happened" );
-			
+
 		}
 	}
-	
+
 	protected void fx( int cell, Callback callback ) {
 		MagicMissile.coldLight( curUser.sprite.parent, curUser.pos, cell, callback );
 		Sample.INSTANCE.play( Assets.SND_ZAP );
 	}
-	
+
 	@Override
 	public String desc() {
 		return
-			"A blast from this wand will teleport a creature against " +
-			"its will to a random place on the current level.";
+				"A blast from this wand will teleport a creature against " +
+						"its will to a random place on the current level.";
 	}
 }
