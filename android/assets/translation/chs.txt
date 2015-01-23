@@ -964,6 +964,7 @@ crazy bandit
 疯狂强盗
 %s stole %s from you!
 %s偷走了你的%s!
+\n\n%s is carrying a _%s_. Stolen obviously.
 \n\n%s在拿着_%s_.毫无疑问是它偷来的赃物.
 Deeper levels of the dungeon have always been a hiding place for all kinds of criminals. Not all of them could keep a clear mind during their extended periods so far from daylight. Long ago, these crazy thieves and bandits have forgotten who they are and why they steal.
 地牢深处向来是藏污纳垢之所,各色罪犯在这里群聚.并非所有不法者都能在不见天日的漫长年月中保持理智.陷入癫狂的飞贼和强盗早已忘记了他们身份为何,为何掠夺.
@@ -2119,3 +2120,79 @@ Potion of Toxic Gas
 剧毒气体药水
 Uncorking or shattering this pressurized glass will cause its contents to explode into a deadly cloud of toxic green gas. You might choose to fling this potion at distant enemies instead of uncorking it by hand.
 开启或摔碎这个增压过的玻璃瓶会释放出它盛装的药水,使之爆裂成一团致命的绿色毒云.你应该试着将它远距离丢向敌人而非亲手拔开瓶塞.
+
+
+# Keys
+
+skeleton key
+骷髅钥匙
+This key looks serious: its head is shaped like a skull. Probably it can open some serious door.
+这把钥匙看起来非常肃穆:钥匙头部形如骷髅.或许它用于开启某些重要的门.
+
+iron key
+铁钥匙
+The notches on this ancient iron key are well worn; its leather lanyard is battered by age. What door might it open?
+这把古老的铁钥匙上的缺口磨损地相当厉害;年代久远它的皮绳也陈旧不堪.它能开启哪一扇门呢?
+iron key from depth %d
+用于第%d层的铁钥匙
+golden key
+金钥匙
+The notches on this golden key are tiny and intricate. Maybe it can open some chest lock?
+这把金钥匙上的缺口精细复杂.或许它能打开某个上锁的箱子?
+
+
+# Foods
+
+EAT
+吃下
+That food tasted delicious!
+这种食物非常美味!
+ration of food
+干粮
+Nothing fancy here: dried meat, some biscuits - things like that.
+没啥值得特别一提的:肉干,一些小饼干-诸如此类.
+
+pasty
+馅饼
+This is authentic Cornish pasty with traditional filling of beef and potato.
+正宗的康沃尔馅饼,按传统填满了牛肉和马铃薯.
+
+overpriced food ration
+昂贵干粮
+That food tasted ok.
+味道不错.
+It looks exactly like a standard ration of food but smaller.
+看起来很像标准的干粮但分量更少.
+
+mystery meat
+神秘肉
+That food tasted... strange.
+口感略...诡异.
+Oh it's hot!
+啊好烫!
+You can't feel your legs!
+你的腿动弹不得!
+You are not feeling well.
+你感觉不太舒服.
+You are stuffed.
+你感觉很涨.
+Eat at your own risk!
+不怕死你就吃!
+
+frozen carpaccio
+冻肉
+You see your hands turn invisible!
+你看见自己的手消失了!
+You feel your skin hardens!
+你感觉自己的皮肤变硬了!
+Refreshing!
+神清气爽!
+You feel better!
+你感觉好多了!
+It's a piece of frozen raw meat. The only way to eat it is by cutting thin slices of it. And this way it's suprisingly good.
+一片冻生肉.只能切成小条来吃.这么吃味道好极了.
+
+chargrilled meat
+炭烧肉排
+It looks like a decent steak.
+看起来蛮不错的肉排.
