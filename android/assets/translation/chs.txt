@@ -7,7 +7,7 @@ Play
 开始游戏
 
 Rankings
-排行榜
+排 行 榜
 
 Badges
 勋章
@@ -1710,7 +1710,7 @@ The rose has dried long ago, but it has kept all its petals somehow.
 dwarf token
 矮人标记
 Many dwarves and some of their larger creations carry these small pieces of metal of unknown purpose. Maybe they are jewelry or maybe some kind of ID. Dwarves are strange folk.
-等待补充……
+许多矮人和矮人出品的大块头造物都会随身携带这种意味不明的小金属片.或许是珠宝首饰,或许是身份证明.矮人真是一群奇怪的家伙.
 
 pickaxe
 矿镐
@@ -1725,3 +1725,139 @@ giant rat skull
 巨鼬骷髅
 It could be a nice hunting trophy, but it smells too bad to place it on a wall.
 它本可以作为很好的狩猎纪念物,可是闻起来太恶心不好挂在墙上.
+
+
+# Potions
+
+DRINK
+饮用
+Harmful potion!
+有害药水!
+Beneficial potion
+有益药水
+Yes, I know what I'm doing
+是的我知道自己在做什么
+No, I changed my mind
+不我改注意了
+Are you sure you want to drink it? In most cases you should throw such potions at your enemies.
+你确定想要喝下它吗?一般来说你应该将这种药水丢向你的敌人.
+Are you sure you want to throw it? In most cases it makes sense to drink it.
+你确定想要扔出它吗?一般来说喝下它才能发挥它的效果.
+The flask shatters and 
+药品碎开了,那
+ liquid splashes harmlessly
+色的液体溅射开来,并没有毒害
+ potion
+药水
+This flask contains a swirling 
+瓶里盛着打着漩涡的
+ liquid. 
+色液体.
+Who knows what it will do when drunk or thrown?
+谁知道饮用它或者扔出它会发生什么呢?
+
+turquoise
+翠绿
+crimson
+猩红
+azure
+蔚蓝
+jade
+翡翠
+golden
+黄金
+magenta
+品红
+charcoal
+炭黑
+ivory
+乳白
+amber
+琥珀
+bistre
+赭黄
+indigo
+靛蓝
+silver
+银白
+
+Potion of Experience
+经验药水
+The storied experiences of multitudes of battles reduced to liquid form, this draught will instantly raise your experience level.
+屡次上战场积累的经验凝聚成液态制成的药水,喝下它能够直接提升你的等级.
+
+Potion of Frost
+霜冻药水
+Upon exposure to open air this chemical will evaporate into a freezing cloud, causing any creature that contacts it to be frozen in place unable to act and move.
+一旦暴露在空气中这些化学物质会迅速挥发形成一片霜冻的气云,冰冻与之接触的生物,使之动弹不得.
+
+Potion of Healing
+治疗药水
+Your wounds heal completely.
+你的伤口完全愈合了.
+An elixir that will instantly return you to full health and cure poison.
+这种药水能够完全回复生命值并治愈中毒效果.
+
+Potion of Invisibility
+隐形药水
+You see your hands turn invisible!
+你看见自己的手消失了!
+Drinking this potion will render you temporarily invisible. While invisible, enemies will be unable to see you. Attacking an enemy, as well as using a wand or a scroll before enemy's eyes, will dispel the effect.
+喝下这瓶药水会隐形一段时间,隐形时敌人无法发现你.在敌人面前发起攻击或者使用卷轴会让隐形效果提前解除.
+
+Potion of Levitation
+悬浮药水
+You float into the air!
+你浮到了半空中!
+Drinking this curious liquid will cause you to hover in the air, able to drift effortlessly over traps. Flames and gases fill the air, however, and cannot be bypassed while airborne.
+喝下这瓶神奇的药水能够让你盘旋在半空中,不触发效果地越过陷阱.然而火焰和气体会弥漫到整个空间,因此在空中也不能豁免其效果.
+
+Potion of Liquid Flame
+液态火焰药水
+This flask contains an unstable compound which will burst violently into flame upon exposure to open air.
+瓶中盛放着不稳定的化合物,一旦暴露在空气中会剧烈地爆开燃起一团烈焰.
+
+Potion of Might
+根骨药水
++1 str, +5 ht
++1 力量, +5 生命
+Newfound strength surges through your body.
+力量源源不断涌向全身.
+This powerful liquid will course through your muscles, permanently increasing your strength by one point and health by five points.
+这瓶强大的药水能够渗入你的肌肉,永久提升你的力量1点,生命值5点.
+
+Potion of Mind Vision
+灵视药水
+You can somehow feel the presence of other creatures' minds!
+你似乎感觉到这里有别的生物的脑波.
+You can somehow tell that you are alone on this level at the moment.
+你似乎能够察觉到现在你并不是一个人在这一层中.
+After drinking this, your mind will become attuned to the psychic signature of distant creatures, enabling you to sense biological presences through walls. Also this potion will permit you to see through nearby walls and doors.
+喝下这瓶药水后,你的意识将能够与隔得很远的生物的精神烙印谐振,从而让你获得透过墙识别生物是否存在的能力.此外这瓶药水还赋予你透过墙壁和门感觉到后面东西的能力.
+
+Potion of Paralytic Gas
+麻痹气体药水
+Upon exposure to open air, the liquid in this flask will vaporize into a numbing yellow haze. Anyone who inhales the cloud will be paralyzed instantly, unable to move for some time after the cloud dissipates. This item can be thrown at distant enemies to catch them within the effect of the gas.
+一旦暴露在空气中,瓶中的液体就会蒸发掉变成一团黄色的麻痹气云.任何接触到气云的人都会立即被麻痹,一段时间内动弹不得,直到气体消散.可以远距离投掷该物品让敌人陷入气云的效果范围内.
+
+Potion of Purification
+净化药水
+You feel uncommon freshness in the air.
+你感觉到空气不同寻常的新鲜.
+You've stopped sensing any smells!
+你暂时失去了嗅觉!
+This reagent will quickly neutralize all harmful gases in the area of effect. Drinking it will give you a temporary immunity to such gases.
+这瓶药水能快速地中和效果范围内的所有有害气体.喝下它则能够暂时豁免所有的毒气效果.
+
+Potion of Strength
+力量药水
++1 str
+Newfound strength surges through your body.
+力量源源不断涌向全身.
+This powerful liquid will course through your muscles, permanently increasing your strength by one point.
+这瓶强大的药水能够渗入你的肌肉,永久提升你的力量1点.
+
+Potion of Toxic Gas
+剧毒气体药水
+Uncorking or shattering this pressurized glass will cause its contents to explode into a deadly cloud of toxic green gas. You might choose to fling this potion at distant enemies instead of uncorking it by hand.
+开启或摔碎这个增压过的玻璃瓶会释放出它盛装的药水,使之爆裂成一团致命的绿色毒云.你应该试着将它远距离丢向敌人而非亲手拔开瓶塞.
