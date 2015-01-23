@@ -74,13 +74,20 @@ public class GameLog extends Component implements Signal.Listener<String> {
 		if (lastEntry != null && color == lastColor) {
 			
 			String lastMessage = lastEntry.text();
-			lastEntry.text( lastMessage.length() == 0 ? text : lastMessage + " " + text );
+			if (lastMessage.length() == 0)
+			{
+				lastEntry.text(text);
+			}
+			else
+			{
+				lastEntry.text( lastMessage, text );
+			}
 			lastEntry.measure();
 			
 		} else {
 			
 			lastEntry = PixelScene.createMultiline( text, 6 );
-			lastEntry.maxWidth = (int)width;
+			lastEntry.maxWidth = (int) width;
 			lastEntry.measure();
 			lastEntry.hardlight( color );
 			lastColor = color;

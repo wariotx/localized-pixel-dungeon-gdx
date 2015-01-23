@@ -1,7 +1,5 @@
 package net.whitegem.pixeldungeon;
 
-import java.util.HashMap;
-
 /**
  * Created by Carl-Station on 01/22/15.
  */
@@ -10,7 +8,7 @@ public class LanguageFactory
     public static final LanguageFactory INSTANCE;
 
     private Translator translator;
-    public HashMap<String, String> stored = new HashMap<String, String>();
+    public StoredFormat stored = new StoredFormat();
 
     public String language;
 
@@ -49,19 +47,27 @@ public class LanguageFactory
 
     public void addFormatTranslation(String formattedText, String format, Object...args)
     {
-        if (!stored.containsKey(formattedText))
+        for (int i = 0; i < args.length; i++)
         {
-            if (hasKey(format))
+            if (args[i] instanceof String)
             {
-                for (int i = 0; i < args.length; i++)
+                if (stored.contains(args[i].toString().toLowerCase()))
                 {
-                    if (args[i] instanceof String && hasKey(args[i].toString()))
-                    {
-                        args[i] = translate(args[i].toString());
-                    }
+                    args[i] = stored.get(args[i].toString().toLowerCase());
                 }
-                stored.put(formattedText.toLowerCase(), String.format(translate(format), args));
+                else if (hasKey(args[i].toString()))
+                {
+                    args[i] = translate(args[i].toString());
+                }
             }
+        }
+        if (hasKey(format))
+        {
+            stored.put(formattedText.toLowerCase(), String.format(translate(format), args));
+        }
+        else
+        {
+            stored.put(formattedText.toLowerCase(), String.format(format, args));
         }
     }
 
