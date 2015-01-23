@@ -53,48 +53,59 @@ public class Translator
         }
     }
 
-    public String fixWrap(String trans)
+    public String fixWrap(String inText)
     {
-
         ArrayList<String> transAfter = new ArrayList<String>();
-        int start = 0;
-        int end = 1;
-        while (start != trans.length())
+
+        String[] paragraphs = inText.split("\\n");
+        for (String trans : paragraphs)
         {
-            String str = trans.substring(start, end);
-            if (str.length() == 1 && (isChinese(str.charAt(0)) || str.equals(" ")))
+            int start = 0;
+            int end = 1;
+            while (start != trans.length())
             {
-                transAfter.add(str);
-                start++;
-                end++;
-            }
-            else
-            {
-                if (end == trans.length())
+                String str = trans.substring(start, end);
+                if (str.length() == 1 && (isChinese(str.charAt(0)) || str.equals(" ")))
                 {
-                    transAfter.add(str.trim());
-                    start = end;
+                    transAfter.add(str);
+                    start++;
                     end++;
-                }
-                else
+                } else
                 {
-                    String endStr = trans.substring(end - 1, end);
-                    String endStrNext = trans.substring(end, end + 1);
-                    if (endStr.equals(" ") || (endStr.matches("\\p{P}") && !endStrNext.matches("[0-9]")) || (endStr.matches("[0-9]") && !endStrNext.matches("[0-9]")))
+                    if (end == trans.length())
                     {
                         transAfter.add(str.trim());
                         start = end;
+                        end++;
+                    } else
+                    {
+                        String endStr = trans.substring(end - 1, end);
+                        String endStrNext = trans.substring(end, end + 1);
+                        if (endStr.equals(" ") || (endStr.matches("\\p{P}") && !endStrNext.matches("[0-9]")) || (endStr.matches("[0-9]") && !endStrNext.matches("[0-9]")))
+                        {
+                            transAfter.add(str.trim());
+                            start = end;
+                        }
+                        end++;
                     }
-                    end++;
                 }
             }
+            transAfter.add("\n");
         }
+        transAfter.remove(transAfter.size() - 1);
+
         int c = 0;
         while (c < transAfter.size() - 1)
         {
             String next = transAfter.get(c + 1);
             String current = transAfter.get(c);
             String result = current;
+
+            if (current.equals("\n"))
+            {
+                c++;
+                continue;
+            }
 
             if (current.length() == 1 && isChinese(current.charAt(0))) // chinese
             {

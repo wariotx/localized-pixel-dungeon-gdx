@@ -129,7 +129,7 @@ public class BitmapTextMultiline extends BitmapText {
 				
 				// writer.addSpace( spaceSize );
 			}
-			
+
 			writer.newLine( 0, font.lineHeight );
 		}
 		
@@ -286,13 +286,13 @@ public class BitmapTextMultiline extends BitmapText {
 					}
 					
 					if (curLineWidth > 0 && curLineWidth + font.tracking + spaceSize > maxWidth / scale.x) {						
-						newLine( " ", 0 );
+						newLine( "", 0 );
 					} else {		
 						// append( " ", spaceSize );
 					}
 				}
 				
-				newLine( " ", 0 );
+				newLine( "", 0 );
 			}
 			
 			return lines;
