@@ -7,13 +7,13 @@ Play
 开始游戏
 
 Rankings
-排 行 榜
+排行榜
 
 Badges
-勋    章
+勋章
 
 About
-关    于
+关于
 
 Game Over
 游戏结束
@@ -28,7 +28,7 @@ To unlock "Challenges", win the game with any character class.
 
 WARRIOR
 战士
-warrior
+Warrior
 战士
 Warriors start with 11 points of Strength.
 战士起始拥有11点力量.
@@ -42,20 +42,20 @@ Potions of Strength are identified from the beginning.
 开局时力量药水就已经被鉴定过了.
 GLADIATOR
 角斗士
-gladiator
+Gladiator
 角斗士
 A successful attack with a melee weapon allows the _Gladiator_ to start a combo, in which every next successful hit inflicts more damage.
 使用近战模式成功命中目标能够让角斗士进入连击模式,每进行一次成功连击都能造成额外伤害.
 BERSERKER
 狂战士
-berserker
+Berserker
 狂战士
 When severely wounded, the _Berserker_ enters a state of wild fury significantly increasing his damage output.
 饱受伤害的狂战士会进入狂暴状态可观地提升他的伤害输出能力.
 
 MAGE
 法师
-mage
+Mage
 法师
 Mages start with a unique Wand of Magic Missile. This wand can be later "disenchanted" to upgrade another wand.
 法师开局时带有独特的魔弹法杖.这柄法杖稍后能够进行"祛魔"用于升级其他法杖.
@@ -69,20 +69,20 @@ Scrolls of Identify are identified from the beginning.
 开局时鉴定卷轴就已经鉴定过了.
 WARLOCK
 术士
-warlock
+Warlock
 术士
 After killing an enemy the _Warlock_ consumes its soul. It heals his wounds and satisfies his hunger.
 术士会将他杀死的敌人的魂魄收走用于治疗与果腹.
 BATTLEMAGE
 战法师
-battlemage
+Battlemage
 战法师
 When fighting with a wand in his hands, the _Battlemage_ inflicts additional damage depending on the current number of charges. Every successful hit restores 1 charge to this wand.
 手持法杖战斗时,战法师能够造成和法杖充能点数相关的额外伤害.每次命中敌人都能为法杖恢复一点充能.
 
 ROGUE
 游侠
-rogue
+Rogue
 游侠
 Rogues start with a Ring of Shadows+1.
 游侠开局时带有暗影指环+1.
@@ -98,20 +98,20 @@ Scrolls of Magic Mapping are identified from the beginning.
 开局时魔法地图卷轴就已经鉴定过了.
 ASSASSIN
 刺客
-assassin
+Assassin
 刺客
 When performing a surprise attack, the _Assassin_ inflicts additional damage to his target.
 刺客进行突袭时能够对目标造成额外伤害.
 FREERUNNER
 疾行客
-freerunner
+Freerunner
 疾行客
 The _Freerunner_ can move almost twice faster, than most of the monsters. When he is running, the Freerunner is much harder to hit. For that he must be unencumbered and not starving.
 疾行客移动速度差不多有大多数怪物的两倍快.他奔走如飞,很难被命中.但饿肚子或者被东西挡住的时候就不能发挥这种优势了.
 
 HUNTRESS
 女猎
-huntress
+Huntress
 女猎
 Huntresses start with 15 points of Health.
 女猎开局时生命只有15点.
@@ -125,13 +125,13 @@ Huntresses sense neighbouring monsters even if they are hidden behind obstacles.
 女猎能够侦测附近的怪物,即使它们藏在墙后.
 SNIPER
 狙击手
-sniper
+Sniper
 狙击手
 _Snipers_ are able to detect weak points in an enemy's armor, effectively ignoring it when using a missile weapon.
 狙击手能够侦测出敌人护甲的弱点,在使用投掷武器时无视护甲高效得进行攻击.
 WARDEN
 守望者
-warden
+Warden
 守望者
 Having a strong connection with forces of nature gives _Wardens_ an ability to gather dewdrops and seeds from plants. Also trampling a high grass grants them a temporary armor buff.
 与大自然强烈的联系赋予了守望者从草木中收集露珠和种子的能力.践踏草丛时她还会获得一个临时的防护效果.
@@ -695,7 +695,7 @@ ERROR
 Challenges
 挑战
 Rankings
-排行
+排行榜
 Start New Game
 重开游戏
 Main Menu
