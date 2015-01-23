@@ -77,6 +77,7 @@ public class BitmapText extends Visual {
 			if (text != null && (LanguageFactory.INSTANCE.hasKey(text) || s != null))
 			{
 				text = (text == null) ? "" : (s == null) ? LanguageFactory.INSTANCE.translate(text) : s;
+				text = LanguageFactory.INSTANCE.fixWrap(text);
 			}
 		}
 	}

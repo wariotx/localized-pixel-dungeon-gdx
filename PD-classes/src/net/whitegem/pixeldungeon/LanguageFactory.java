@@ -42,6 +42,11 @@ public class LanguageFactory
         return translator.hasKey(key);
     }
 
+    public String fixWrap(String inText)
+    {
+        return translator.fixWrap(inText);
+    }
+
     public void addFormatTranslation(String formattedText, String format, Object...args)
     {
         if (!stored.containsKey(formattedText))

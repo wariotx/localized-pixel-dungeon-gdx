@@ -117,7 +117,7 @@ public class BitmapTextMultiline extends BitmapText {
 						
 						vertices[14]	= rect.left;
 						vertices[15]	= rect.bottom;
-						
+
 						quads.put( vertices );
 						realLength++;
 					}
@@ -127,7 +127,7 @@ public class BitmapTextMultiline extends BitmapText {
 					pos++;
 				}
 				
-				writer.addSpace( spaceSize );
+				// writer.addSpace( spaceSize );
 			}
 			
 			writer.newLine( 0, font.lineHeight );
@@ -163,7 +163,7 @@ public class BitmapTextMultiline extends BitmapText {
 		
 		for (int i=0; i < paragraphs.length; i++) {
 			
-			String[] words = WORD.split( paragraphs[i] );
+			String[] words = LanguageFactory.INSTANCE.splitWords(paragraphs[i]);
 			
 			for (int j=0; j < words.length; j++) {
 				
@@ -174,7 +174,7 @@ public class BitmapTextMultiline extends BitmapText {
 				
 				getWordMetrics( word, metrics );	
 				writer.addSymbol( metrics.x, metrics.y );
-				writer.addSpace( spaceSize );
+				// writer.addSpace( spaceSize );
 			}
 			
 			writer.newLine( 0, font.lineHeight );
@@ -268,7 +268,7 @@ public class BitmapTextMultiline extends BitmapText {
 			
 			for (int i=0; i < paragraphs.length; i++) {
 				
-				String[] words = WORD.split( paragraphs[i] );
+				String[] words = LanguageFactory.INSTANCE.splitWords(paragraphs[i]);
 				
 				for (int j=0; j < words.length; j++) {
 					
@@ -286,13 +286,13 @@ public class BitmapTextMultiline extends BitmapText {
 					}
 					
 					if (curLineWidth > 0 && curLineWidth + font.tracking + spaceSize > maxWidth / scale.x) {						
-						newLine( "", 0 );				
+						newLine( " ", 0 );
 					} else {		
-						append( " ", spaceSize );
+						// append( " ", spaceSize );
 					}
 				}
 				
-				newLine( "", 0 );
+				newLine( " ", 0 );
 			}
 			
 			return lines;

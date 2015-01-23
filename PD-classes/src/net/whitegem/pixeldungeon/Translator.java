@@ -48,17 +48,149 @@ public class Translator
 
         for (int i = 0; i < lines.size(); i += 2)
         {
-            translation.put(lines.get(i), lines.get(i + 1));
+            String trans = lines.get(i + 1);
+            translation.put(lines.get(i), trans);
         }
+    }
+
+    public String fixWrap(String trans)
+    {
+
+        ArrayList<String> transAfter = new ArrayList<String>();
+        int start = 0;
+        int end = 1;
+        while (start != trans.length())
+        {
+            String str = trans.substring(start, end);
+            if (str.length() == 1 && (isChinese(str.charAt(0)) || str.equals(" ")))
+            {
+                transAfter.add(str);
+                start++;
+                end++;
+            }
+            else
+            {
+                if (end == trans.length())
+                {
+                    transAfter.add(str.trim());
+                    start = end;
+                    end++;
+                }
+                else
+                {
+                    String endStr = trans.substring(end - 1, end);
+                    String endStrNext = trans.substring(end, end + 1);
+                    if (endStr.equals(" ") || (endStr.matches("\\p{P}") && !endStrNext.matches("[0-9]")) || (endStr.matches("[0-9]") && !endStrNext.matches("[0-9]")))
+                    {
+                        transAfter.add(str.trim());
+                        start = end;
+                    }
+                    end++;
+                }
+            }
+        }
+        int c = 0;
+        while (c < transAfter.size() - 1)
+        {
+            String next = transAfter.get(c + 1);
+            String current = transAfter.get(c);
+            String result = current;
+
+            if (current.length() == 1 && isChinese(current.charAt(0))) // chinese
+            {
+                if (!isChinese(next.charAt(0)) && ! next.matches("\\p{P}"))
+                {
+                    result += " ";
+                }
+            }
+            else if (current.matches("\\p{P}"))
+            {
+
+                if (current.matches("[,.!?;:，。！？；：]"))
+                {
+                    result += " ";
+                }
+            }
+            else
+            {
+                result += " ";
+            }
+
+            transAfter.set(c, result);
+            c++;
+        }
+        String finalTrans = "";
+        for (String s : transAfter)
+            finalTrans += s;
+
+        return finalTrans;
+    }
+
+    private static boolean isChinese(char c)
+    {
+        Character.UnicodeBlock ub = Character.UnicodeBlock.of(c);
+        if (ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS
+                || ub == Character.UnicodeBlock.CJK_COMPATIBILITY_IDEOGRAPHS
+                || ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A
+                || ub == Character.UnicodeBlock.CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B
+                || ub == Character.UnicodeBlock.CJK_SYMBOLS_AND_PUNCTUATION
+                || ub == Character.UnicodeBlock.HALFWIDTH_AND_FULLWIDTH_FORMS
+                || ub == Character.UnicodeBlock.GENERAL_PUNCTUATION)
+        {
+            return true;
+        }
+        return false;
     }
 
     public String[] splitWords(String paragraph)
     {
         if (language.equals("en"))
         {
-            return Pattern.compile("\\s+").split(paragraph);
+            String[] pre = Pattern.compile("\\s+").split(paragraph);
+            ArrayList<String> tmp = new ArrayList<String>();
+            for (String s : pre)
+            {
+                tmp.add(s);
+                tmp.add(" ");
+            }
+            return tmp.toArray(new String[tmp.size()]);
         }
-        return Pattern.compile("\\s+").split(paragraph);
+
+        ArrayList<String> words = new ArrayList<String>();
+        int start = 0;
+        int end = 1;
+        while (start != paragraph.length())
+        {
+            String str = paragraph.substring(start, end);
+            if (str.length() == 1 && (isChinese(str.charAt(0)) || str.equals(" ")))
+            {
+                words.add(str);
+                start++;
+                end++;
+            }
+            else
+            {
+                if (end == paragraph.length())
+                {
+                    words.add(str.trim());
+                    start = end;
+                    end++;
+                }
+                else
+                {
+                    String endStr = paragraph.substring(end - 1, end);
+                    String endStrNext = paragraph.substring(end, end + 1);
+                    if (endStr.equals(" ") || (endStr.matches("\\p{P}") && !endStrNext.matches("[0-9]")) || (endStr.matches("[0-9]") && !endStrNext.matches("[0-9]")))
+                    {
+                        words.add(str);
+                        start = end;
+                    }
+                    end++;
+                }
+            }
+        }
+        return words.toArray(new String[words.size()]);
+        // return Pattern.compile("\\s+").split(paragraph);
     }
 
     public boolean hasKey(String key)
