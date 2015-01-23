@@ -70,9 +70,11 @@ public class BitmapText extends Visual {
 			String s = null;
 			if (text != null && LanguageFactory.INSTANCE.stored.contains(text.toLowerCase()))
 			{
-				// todo: search combined
-				// .replaceAll("\\.$", "")
 				s = LanguageFactory.INSTANCE.stored.get(text.toLowerCase());
+			}
+			else if (text != null && LanguageFactory.INSTANCE.stored.contains(text.toLowerCase().replaceAll("\\.$", "")))
+			{
+				s = LanguageFactory.INSTANCE.stored.get(text.toLowerCase().replaceAll("\\.$", "")) + ".";
 			}
 			if (text != null && (LanguageFactory.INSTANCE.hasKey(text) || s != null))
 			{

@@ -2,7 +2,6 @@ package net.whitegem.pixeldungeon;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
-import com.sun.media.sound.InvalidFormatException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -24,7 +23,7 @@ public class Translator
         translation = new LinkedHashMap<String, String>();
         // THIS FILE MUST BE UTF8 WITHOUT BOM
         FileHandle file = Gdx.files.internal("translation/" + language + ".txt");
-        BufferedReader reader = new BufferedReader(file.reader());
+        BufferedReader reader = new BufferedReader(file.reader("UTF8"));
         ArrayList<String> lines = new ArrayList<String>();
         try
         {
@@ -43,7 +42,7 @@ public class Translator
 
         if (lines.size() % 2 != 0)
         {
-            Gdx.app.log("Translator", "ERROR READING FILE" + " translation/" + language + ".txt", new InvalidFormatException("Lines of original texts and translated texts in the translation file do not match."));
+            Gdx.app.log("Translator", "ERROR READING FILE" + " translation/" + language + ".txt", new Exception("Lines of original texts and translated texts in the translation file do not match."));
         }
 
         for (int i = 0; i < lines.size(); i += 2)
