@@ -1122,6 +1122,124 @@ These brisk and tenacious inhabitants of cave domes may defeat much larger oppon
 这些栖息在洞穴顶部,敏捷难缠的蝙蝠能在成功命中目标时回复自己的生命,借此击败块头远大于它们的对手.
 
 
+# Npcs
+
+old wandmaker
+年迈的法杖匠人
+Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - a _Rotberry seed_. Being a magic user, I'm quite able to defend myself against local monsters, but I'm getting lost in no time, it's very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.
+哦,在这种地方预计一个这么好的人真是喜事一桩!我来这里寻找一种稀有药材-_堕落莓种子_.作为施法者,在这些怪物面前自保自然绰绰有余,但我老是迷路,太尴尬了.或许你能帮帮我?如果你能为我提供帮助我会很乐意送给你一支法杖作为回报.
+Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - _corpse dust_. It can be gathered from skeletal remains and there is an ample number of them in the dungeon. Being a magic user, I'm quite able to defend myself against local monsters, but I'm getting lost in no time, it's very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.
+哦,在这种地方预计一个这么好的人真是喜事一桩!我来这里寻找一种稀有药材-_黄泉土_.你需要从骨骸中采集它们,它们分布在这一层地牢的许多位置.作为施法者,在这些怪物面前自保自然绰绰有余,但我老是迷路,太尴尬了.或许你能帮帮我?如果你能为我提供帮助我会很乐意送给你一支法杖作为回报.
+Any luck with a Rotberry seed, %s? No? Don't worry, I'm not in a hurry.
+堕落莓种子搞定没,%s?不急的,我不着急.
+Any luck with corpse dust, %s? Bone piles are the most obvious places to look.
+堕落莓种子搞定没,%s?骨头堆应该还是蛮容易看到的.
+absorbed
+全神贯注
+This old but hale gentleman wears a slightly confused expression. He is protected by a magic shield.
+上了年纪但精神矍铄的绅士表情略微困惑.他撑着魔法盾作为防护.
+Berries of this shrub taste like sweet, sweet death.
+这种植物的浆果尝起来非常甜,甜到死.
+Rotberry
+堕落莓
+seed of Rotberry
+堕落莓种子
+The seed emits a roar that echoes throughout the dungeon!
+这枚种子发出刺耳的尖啸,久久回荡在地牢当中!
+
+shopkeeper
+店主
+This stout guy looks more appropriate for a trade district in some large city than for a dungeon. His prices explain why he prefers to do business here.
+这个勇敢的家伙看起来更适合在大城市而非地牢里做生意.他厚颜无耻的标价解释了为什么他选择来这里.
+Select an item to sell
+选择一件物品来出售
+
+rat king
+鼠王
+I'm not sleeping!
+我可没有打盹!
+What is it? I have no time for this nonsense. My kingdom won't rule itself!
+它谁?我没时间跟你说这些有的没的.我的王国需要我的统治!
+This rat is a little bigger than a regular marsupial rat and it's wearing a tiny crown on its head.
+这只袋鼬体型比普通袋鼬稍大,头上带着一顶小小的王冠.
+
+mirror image
+镜像
+This illusion bears a close resemblance to you, but it's paler and twitches a little.
+幻象看起来和你很相似,但会略微晃动,颜色也更加苍白.
+
+ambitious imp
+野心勃勃的小恶魔
+Hello, friend!
+朋友你好!
+Imps are lesser demons. They are notable for neither their strength nor their magic talent. But they are quite smart and sociable, and many of imps prefer to live and do business among non-demons.
+小恶魔是一种劣等恶魔.他们力量贫弱魔力也不强大,但却非常机灵,富有社交手腕,而且许多小恶魔喜欢生活在非恶魔中,与他们做生意.
+Are you an adventurer? I love adventurers! You can always rely on them if something needs to be killed. Am I right? For bounty of course ;)\nIn my case this is _golems_ who need to be killed. You see, I'm going to start a little business here, but these stupid golems are bad for business! It's very hard to negotiate with wandering lumps of granite, damn them! So please, kill... let's say _6 of them_ and a reward is yours.
+你是冒险者?我爱死冒险者了!如果你想杀死某些东西总是要靠冒险者出力的.我说得不错吧?酬劳当然不会少了你的. ;)\n这次咱要对付的是_魔像_.你看啊,我打算在这做点小生意什么的,可是这些蠢家伙对生意可没好影响!见鬼,很难不分神去留意这些晃来晃去的大岩块儿.所以我请你杀_6只魔像_,你会得到奖励的.
+Are you an adventurer? I love adventurers! You can always rely on them if something needs to be killed. Am I right? For bounty of course ;)\nIn my case this is _monks_ who need to be killed. You see, I'm going to start a little business here, but these lunatics don't buy anything themselves and will scare away other customers. So please, kill... let's say _8 of them_ and a reward is yours.
+你是冒险者?我爱死冒险者了!如果你想杀死某些东西总是要靠冒险者出力的.我说得不错吧?酬劳当然不会少了你的. ;)\n这次咱要对付的是_武僧_.你看啊,我打算在这做点小生意什么的,可是这些疯子非但不进行消费还把其他客人都给吓跑了.所以我请你杀_8名武僧_,你会得到奖励的.
+How is your golem safari going?
+魔像狩猎进展如何?
+Oh, you are still alive! I knew that your kung-fu is stronger ;) Just don't forget to grab these monks' tokens.
+啊,你还活着呢!我就知道你的功夫更好 ;) 别忘了把那些僧侣的标记给带回来.
+See you, %s!
+再会,%s!
+Psst, %s!
+喂喂,%s!
+Imps are lesser demons. They are notable for neither their strength nor their magic talent, but they are quite smart and sociable. Many imps prefer to live among non-demons.
+小恶魔是一种劣等恶魔.他们力量贫弱魔力也不强大,但却非常机灵,富有社交手腕,而且许多小恶魔喜欢生活在非恶魔中.
+
+sad ghost
+怨灵
+Hello adventurer... Once I was like you - strong and confident... And now I'm dead... But I can't leave this place... Not until I have my _dried rose_... It's very important to me... 
+你好冒险者...我曾经和你一样强壮自信...而我现在死了..但我依然无法离开这里,除非我找到我那朵_枯萎玫瑰_...它对我非常重要...
+Some monster stole it from my body...
+某只怪物从我尸体上偷走了它.
+Please... Help me... Find the rose...
+请...请帮助我...找到那束玫瑰...
+Hello adventurer... Once I was like you - strong and confident... And now I'm dead... But I can't leave this place... Not until I have my revenge... Slay the _fetid rat_, that has taken my life...
+你好冒险者...我曾经和你一样强壮自信...而我现在死了..但我依然无法离开这里,除非我完成我的复仇...杀死那只_腐臭鼠鼬_,它曾经夺走了我的性命.
+Please... Help me... Slay the abomination...
+请...请帮助我...杀死那只恶心的家伙...
+The ghost is barely visible. It looks like a shapeless spot of faint light with a sorrowful face.
+怨灵若隐若现.它无形无体,看起来好像一团模糊的光晕,依稀分辨出一张悲伤的面容.
+fetid rat
+腐臭袋鼬
+This marsupial rat is much larger, than a regular one. It is surrounded by a foul cloud.
+腐臭袋鼬体型比普通袋鼬更巨大.它周身蔓延着腐臭的毒雾.
+
+troll blacksmith
+巨魔铁匠
+your %s certainly looks better now
+你的%s看起来品质的确有所提高
+Hey human! Wanna be useful, eh? Take dis pickaxe and mine me some _dark gold ore_, _15 pieces_ should be enough. What do you mean, how am I gonna pay? You greedy...\nOk, ok, I don't have money to pay, but I can do some smithin' for you. Consider yourself lucky, I'm the only blacksmith around.
+嘿人类!你也想要多少派上点用场吧?拿走那只镐然后给我挖些_暗金矿_回来,_15块_足矣.你啥意思,我得付你报酬,你个小气鬼...\n好好我没钱给你,不过我能帮你做点铁匠活儿.你运气真是好到爆了啊,我可是附近唯一的铁匠. 
+Are you kiddin' me? Where is my pickaxe?!
+你在耍我吗?我的镐呢?
+Dark gold ore. 15 pieces. Seriously, is it dat hard?
+暗金矿,15块,真有那么难?
+I said I need bat blood on the pickaxe. Chop chop!
+我说了我要镐子上沾点蝙蝠血.快快!
+Oh, you have returned... Better late dan never.
+哦你已经回来了啊...真慢不过总比没来好.
+I'm busy. Get lost!
+我忙得很,滚远些!
+Select 2 different items, not the same item twice!
+选择两件物品,不要选择同一件物品两次.
+Select 2 items of the same type!
+选择2件同类型的物品.
+I need to know what I'm working with, identify them first!
+我需要知道我在加工什么,快去先把它们鉴定了!
+I don't work with cursed items!
+我可不负责加工诅咒物品!
+It's a junk, the quality is too poor!
+这垃圾,质量太差不能做材料!
+I can't reforge these items!
+我没办法重铸这些物品!
+This troll blacksmith looks like all trolls look: he is tall and lean, and his skin resembles stone in both color and texture. The troll blacksmith is tinkering with unproportionally small tools.
+巨魔铁匠和其他巨魔一般模样:高高瘦瘦,皮肤的纹理和颜色和石头都差不多.巨魔铁匠不太擅长加工小东西.
+
+
 # TradeItem
 
 FOR SALE: %s - %dg
@@ -2342,4 +2460,4 @@ This small velvet pouch allows you to store any number of seeds in it. Very conv
 scroll holder
 卷轴筒
 You can place any number of scrolls into this tubular container. It saves room in your backpack and protects scrolls from fire.
-你可以将任意类型的卷轴放入这个管状容器保存.它能够节约背包空间,并且能够让卷轴不会被火点燃.
+你可以将任意类型的卷轴放入这个管状容器保存.它能够节约背包空间,并且使卷轴不会被火点燃.
