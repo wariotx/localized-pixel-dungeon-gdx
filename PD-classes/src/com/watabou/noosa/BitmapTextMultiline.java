@@ -93,7 +93,7 @@ public class BitmapTextMultiline extends BitmapText {
 					float w = font.width( rect );
 					float h = font.height( rect );
 					
-					if (mask == null || mask[pos]) {
+					if (mask == null || (pos < mask.length && mask[pos])) {
 						vertices[0] 	= writer.x + shift;
 						vertices[1] 	= writer.y;
 						

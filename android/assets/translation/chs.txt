@@ -303,13 +303,13 @@ Welcome to level %d! Now you are healthier and more focused. It's easier for you
 欢迎升到第%d级！现在你生命值有所增加,专注力也提高了.你将更容易击中敌人并闪避它们的进攻.
 You now have %s
 你获得了%s
-There is something else here
+There is something else here.
 这里还有些别的东西
-This chest is locked and you don't have matching key
+This chest is locked and you don't have matching key.
 箱子上着锁,你没有匹配的钥匙
-You don't have a matching key
+You don't have a matching key.
 你没有匹配的钥匙
-You noticed something
+You noticed something.
 你留意到一些东西
 search
 搜寻
@@ -1851,7 +1851,6 @@ This reagent will quickly neutralize all harmful gases in the area of effect. Dr
 
 Potion of Strength
 力量药水
-+1 str
 Newfound strength surges through your body.
 力量源源不断涌向全身.
 This powerful liquid will course through your muscles, permanently increasing your strength by one point.

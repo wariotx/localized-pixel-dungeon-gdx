@@ -55,6 +55,20 @@ public class Translator
 
     public String fixWrap(String inText)
     {
+        boolean hasChinese = false;
+        for (char c : inText.toCharArray())
+        {
+            if (isChinese(c))
+            {
+                hasChinese = true;
+                break;
+            }
+        }
+        if (!hasChinese)
+        {
+            return inText;
+        }
+
         ArrayList<String> transAfter = new ArrayList<String>();
 
         String[] paragraphs = inText.split("\\n");
