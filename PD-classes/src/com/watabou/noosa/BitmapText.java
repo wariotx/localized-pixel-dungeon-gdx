@@ -103,7 +103,6 @@ public class BitmapText extends Visual {
 	
 	@Override
 	public void draw() {
-		
 		super.draw();
 		
 		NoosaScript script = NoosaScript.get();
@@ -199,7 +198,7 @@ public class BitmapText extends Visual {
 		int length = text.length();
 		for (int i=0; i < length; i++) {
 			RectF rect = font.get( text.charAt( i ) );
-	
+
 			float w = font.width( rect );
 			float h = font.height( rect );
 			
@@ -374,6 +373,8 @@ public class BitmapText extends Visual {
 				if (ch.c == ' ')
 				{
 					add(ch.c, new RectF(1 - (float)ch.height / 2 / width, 1 - (float)ch.height / height, 1, 1));
+					// add('\u007F', new RectF(1 - (float)ch.height / 2 / width, 1 - (float)ch.height / height, 1, 1));
+					// in case no such in font
 				}
 				else
 				{
