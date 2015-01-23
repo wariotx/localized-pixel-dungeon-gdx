@@ -5,16 +5,12 @@
 
 Play
 开始游戏
-
 Rankings
 排行榜
-
 Badges
 勋章
-
 About
 关于
-
 Game Over
 游戏结束
 
@@ -22,7 +18,6 @@ Game Over
 # Intro
 Many heroes of all kinds ventured into the Dungeon before you. Some of them have returned with treasures and magical artifacts, most have never been heard of since. But none have succeeded in retrieving the Amulet of Yendor, which is told to be hidden in the depths of the Dungeon.\n\nYou consider yourself ready for the challenge, but most importantly, you feel that fortune smiles on you. It's time to start your own adventure!
 你来这里之前各色英雄曾纷至沓来前往地牢冒险。有些人满载宝藏和魔法物品而归，绝大多数的人则从此杳无音信。但是从来没有一人能取回传闻中藏在地牢极深处的尼德罗护符。\n\n你认为自己已经准备好迎接挑战，但至为重要的是，你感觉幸运正眷顾着你。是时候出发开始属于自己的冒险了！
-
 To unlock "Challenges", win the game with any character class.
 要解锁"挑战模式",必须先使用任意角色通关一次.
 
@@ -138,12 +133,10 @@ Having a strong connection with forces of nature gives _Wardens_ an ability to g
 
 New Game
 开始新游戏
-
 Load Game
 载入游戏
-
 Depth: %d, level: %d
-第%d层，%d级
+第%d层，等级%d
 
 Erase current game
 覆盖现有存档
@@ -164,7 +157,7 @@ Your Badges
 你的勋章
 
 %s :%d
-%s :%d
+%s:%d
 
 # GameScene
 
@@ -206,7 +199,7 @@ Power of health radiates from the water of this well. Take a sip from it to heal
 Power of change radiates from the water of this well. Throw an item into the well to turn it into something else.
 井水中荡漾着变换的魔力.向井水投入物品会将它转变成另一件物品.
 Everything is covered with a thick web here.
-这里的所有东西都蒙着一层厚厚的蜘蛛网.
+这里所有东西都蒙着一层厚厚的蜘蛛网.
 
 
 # Win
@@ -2196,3 +2189,24 @@ chargrilled meat
 炭烧肉排
 It looks like a decent steak.
 看起来蛮不错的肉排.
+
+
+# Bags
+
+OPEN
+开启
+
+wand holster
+法杖皮套
+This slim holder is made of leather of some exotic animal. It allows to compactly carry up to 12 wands.
+这种柔软的皮套是用某种异域生物的皮做的.它能够紧凑地装入12支法杖.
+
+seed pouch
+种子袋
+This small velvet pouch allows you to store any number of seeds in it. Very convenient.
+这只天鹅绒的小口袋能够用于存放各类种子.非常方便.
+
+scroll holder
+卷轴筒
+You can place any number of scrolls into this tubular container. It saves room in your backpack and protects scrolls from fire.
+你可以将任意类型的卷轴放入这个管状容器保存.它能够节约背包空间,并且使卷轴不会被火点燃.
