@@ -7,17 +7,16 @@ Play
 开始游戏
 
 Rankings
-排行榜
+排 行 榜
 
 Badges
-勋章
+勋    章
 
 About
-关于
+关    于
 
 Game Over
 游戏结束
-
 
 
 # Intro
@@ -29,7 +28,7 @@ To unlock "Challenges", win the game with any character class.
 
 WARRIOR
 战士
-Warrior
+warrior
 战士
 Warriors start with 11 points of Strength.
 战士起始拥有11点力量.
@@ -49,17 +48,17 @@ A successful attack with a melee weapon allows the _Gladiator_ to start a combo,
 使用近战模式成功命中目标能够让角斗士进入连击模式,每进行一次成功连击都能造成额外伤害.
 BERSERKER
 狂战士
-Berserker
+berserker
 狂战士
 When severely wounded, the _Berserker_ enters a state of wild fury significantly increasing his damage output.
 饱受伤害的狂战士会进入狂暴状态可观地提升他的伤害输出能力.
 
 MAGE
 法师
-Mage
+mage
 法师
 Mages start with a unique Wand of Magic Missile. This wand can be later "disenchanted" to upgrade another wand.
-法师开局时带有独特的魔弹法杖.这柄法杖稍后能够进行\"祛魔\"用于升级其他法杖.
+法师开局时带有独特的魔弹法杖.这柄法杖稍后能够进行"祛魔"用于升级其他法杖.
 Mages recharge their wands faster.
 法师的法杖充能更加迅速.
 When eaten, any piece of food restores 1 charge for all wands in the inventory.
@@ -70,20 +69,20 @@ Scrolls of Identify are identified from the beginning.
 开局时鉴定卷轴就已经鉴定过了.
 WARLOCK
 术士
-Warlock
+warlock
 术士
 After killing an enemy the _Warlock_ consumes its soul. It heals his wounds and satisfies his hunger.
 术士会将他杀死的敌人的魂魄收走用于治疗与果腹.
 BATTLEMAGE
 战法师
-Battlemage
+battlemage
 战法师
 When fighting with a wand in his hands, the _Battlemage_ inflicts additional damage depending on the current number of charges. Every successful hit restores 1 charge to this wand.
 手持法杖战斗时,战法师能够造成和法杖充能点数相关的额外伤害.每次命中敌人都能为法杖恢复一点充能.
 
 ROGUE
 游侠
-Rogue
+rogue
 游侠
 Rogues start with a Ring of Shadows+1.
 游侠开局时带有暗影指环+1.
@@ -99,20 +98,20 @@ Scrolls of Magic Mapping are identified from the beginning.
 开局时魔法地图卷轴就已经鉴定过了.
 ASSASSIN
 刺客
-Assassin
+assassin
 刺客
 When performing a surprise attack, the _Assassin_ inflicts additional damage to his target.
 刺客进行突袭时能够对目标造成额外伤害.
 FREERUNNER
 疾行客
-Freerunner
+freerunner
 疾行客
 The _Freerunner_ can move almost twice faster, than most of the monsters. When he is running, the Freerunner is much harder to hit. For that he must be unencumbered and not starving.
 疾行客移动速度差不多有大多数怪物的两倍快.他奔走如飞,很难被命中.但饿肚子或者被东西挡住的时候就不能发挥这种优势了.
 
 HUNTRESS
 女猎
-Huntress
+huntress
 女猎
 Huntresses start with 15 points of Health.
 女猎开局时生命只有15点.
@@ -126,13 +125,13 @@ Huntresses sense neighbouring monsters even if they are hidden behind obstacles.
 女猎能够侦测附近的怪物,即使它们藏在墙后.
 SNIPER
 狙击手
-Sniper
+sniper
 狙击手
 _Snipers_ are able to detect weak points in an enemy's armor, effectively ignoring it when using a missile weapon.
 狙击手能够侦测出敌人护甲的弱点,在使用投掷武器时无视护甲高效得进行攻击.
 WARDEN
 守望者
-Warden
+warden
 守望者
 Having a strong connection with forces of nature gives _Wardens_ an ability to gather dewdrops and seeds from plants. Also trampling a high grass grants them a temporary armor buff.
 与大自然强烈的联系赋予了守望者从草木中收集露珠和种子的能力.践踏草丛时她还会获得一个临时的防护效果.
@@ -371,29 +370,31 @@ Falling...
 跌落中...
 	
 File not found. For some reason.
+未找到文件.出于某些原因.
 Something went wrong...
+出现问题了...
 
 # Result
 
 # mob
 Killed by %s on level %d
-被第%d层的%s残忍杀害
+被%s残忍杀害,尸体躺在第%d层冰冷的地板上.
 
 # boss
 Killed by the %s on level %d
-被第%d层的%s残忍杀害
+被%s残忍杀害,尸体躺在第%d层冰冷的地板上.
 
 # wand
 Killed by your own %s on level %d
-在第%d层捣鼓自己的%s时出了意外
+捣鼓自己的%s时出了意外,尸体躺在第%d层冰冷的地板上.
 
 # glyph
 Killed by the %s on level %d
-被第%d层的%s杀死
+被护甲上的%s杀死,尸体躺在第%d层冰冷的地板上.
 
 # trap
 Killed by discharge of %s on level %d
-因为触发第%d层的%s而死于非命
+因为触发%s而死于非命,尸体躺在第%d层冰冷的地板上.
 
 # burning
 Burned to death on level %d
@@ -694,7 +695,7 @@ ERROR
 Challenges
 挑战
 Rankings
-排行榜
+排行
 Start New Game
 重开游戏
 Main Menu
@@ -864,10 +865,10 @@ The caves, which stretch down under the abandoned prison, are sparcely populated
 废弃牢狱下方延伸出的洞穴人迹罕至.城市难以在这么深的地底进行开发,矿物贫瘠也无法勾起矮人的兴趣.过去这里曾一度是城邦之间驿道的贸易前哨,但自从矮人之都衰落后这里也就荒废了.如今只有那些无处不在的豺狼人和地下生物还在这里游荡.
 
 Dwarven Metropolis was once the greatest of dwarven city-states. In its heyday the mechanized army of dwarves has successfully repelled the invasion of the old god and his demon army. But it is said, that the returning warriors have brought seeds of corruption with them, and that victory was the beginning of the end for the underground kingdom.
-矮人之都曾经是最伟大的矮人城邦.在其全盛时期矮人的机械军团层成功地抵御古神和它的恶魔军团的入侵.但传闻凯旋的战士也带回了腐朽的种子,这场胜利也标志着这座地下王国衰败的开端.
+矮人之都曾经是最伟大的矮人城邦.在其全盛时期矮人的机械军团曾成功地抵御古神和它的恶魔军团的入侵.但传闻凯旋的战士也带回了腐朽的种子,这场胜利也标志着这座地下王国衰败的开端.
 
 In the past these levels were the outskirts of Metropolis. After the costly victory in the war with the old god dwarves were too weakened to clear them of remaining demons. Gradually demons have tightened their grip on this place and now it's called Demon Halls.\n\nVery few adventurers have ever descended this far...
-过去这里层是矮人之都的郊区.对抗古神获得代价高昂的胜利后,矮人国度太过虚弱,无法清除这里残留的恶魔.渐渐恶魔占据了这里,如今这里被称作恶魔大厅.\n\n罕有冒险者都到这么深处的地底来...
+过去这里曾是矮人之都的郊区.对抗古神获得代价高昂的胜利后,矮人国度太过虚弱,无法清除这里残留的恶魔.渐渐恶魔占据了这里,如今这里被称作恶魔大厅.\n\n罕有冒险者能抵达这么深处的地底来...
 
 
 # TradeItem
@@ -894,7 +895,7 @@ You've sold your %s for %dg
 你出售了%s并获得%d金
 
 You've bought %s for %dg
-你花费了%d金购买了%s
+你购买了%s花费了%d金
 
 
 # Wandmaker
@@ -1085,8 +1086,8 @@ Select an armor to upgrade
 选择一件防具来升级
 you applied the armor kit to upgrade your %s
 你使用防具升级工具改造了你的%s
-Using this kit of small tools and materials anybody can transform any armor into an \"epic armor\", which will keep all properties of the original armor, but will also provide its wearer a special ability depending on his class. No skills in tailoring, leatherworking or blacksmithing are required.
-使用这套工具和材料任何人都能够将任何防具改造成一件\"传奇装备\",它不但能保留原有防具的全部特性,还能使得穿戴者获得独特的职业技能.不需要任何裁剪,皮革加工和铁匠技能.
+Using this kit of small tools and materials anybody can transform any armor into an "epic armor", which will keep all properties of the original armor, but will also provide its wearer a special ability depending on his class. No skills in tailoring, leatherworking or blacksmithing are required.
+使用这套工具和材料任何人都能够将任何防具改造成一件"传奇装备",它不但能保留原有防具的全部特性,还能使得穿戴者获得独特的职业技能.不需要任何裁剪,皮革加工和铁匠技能.
 
 Ankh
 重生十字章
@@ -1097,7 +1098,7 @@ Amulet of Yendor
 尼德罗护符
 END THE GAME
 终结游戏
-The Amulet of Yendor is the most powerful known artifact of unknown origin. It is said that the amulet is able to fulfil any wish if its owner's will-power is strong enough to \"persuade\" it to do it.
+The Amulet of Yendor is the most powerful known artifact of unknown origin. It is said that the amulet is able to fulfil any wish if its owner's will-power is strong enough to "persuade" it to do it.
 尼德罗护符是最强大的已知神器,无人知道它的来历.据说如果它的主人拥有足够强烈的意愿就能说服这枚护符实现任何愿望.
 
 You are now familiar enough with your %s to identify it. It is %s.
@@ -1178,10 +1179,14 @@ It was balanced to make it more accurate.
 它被磨制得更加精准了.
 It is enchanted.
 它已被附魔.
-Because of your inadequate strength the accuracy and speed of your attack with this weapon is decreased.
-因为你力量过于孱弱这柄武器的攻击速度和精准都下降了.
-Because of your excess strength the damage of your attack with this weapon is increased.
-因为你力量超过需求这柄武器的攻击速度和精准都增加了.
+Because of your inadequate strength the accuracy and speed of your attack with 
+因为你力量过于孱弱这柄
+ is decreased.
+的攻击速度和精准都下降了.
+Because of your excess strength the damage of your attack with 
+因为你力量超过需求这柄
+ is increased.
+的攻击速度和精准都增加了.
 You hold the weapon at the ready
 你正握着这柄武器
 , and because it is cursed, you are powerless to let go.
@@ -1415,8 +1420,8 @@ The vile blast of this twisted bit of wood will imbue its target with a deadly v
 
 Wand of Regrowth
 草木法杖
-\"When life ceases new life always begins to grow... The eternal cycle always remains!\"
-\"生生不息,周而复始!\"
+"When life ceases new life always begins to grow... The eternal cycle always remains!"
+"生生不息,周而复始!"
 
 Wand of Slowness
 迟缓法杖
@@ -1438,3 +1443,146 @@ A blast from this wand will teleport a creature against its will to a random pla
 将
  to somewhere
 传送到了某处.
+
+# Scroll
+
+Select an item
+选择一个物品
+
+Do you really want to cancel this scroll usage? It will be consumed anyway.
+你真的想要撤销卷轴效果吗?即使如此它还是会被消耗掉.
+
+Yes, I'm positive
+是的我确定
+No, I changed my mind
+不我改主意了
+
+You can't read a scroll while blinded
+被致盲时你无法阅读卷轴
+READ
+阅读
+
+KAUNAN
+审判
+SOWILO
+太阳
+LAGUZ
+星星
+YNGVI
+命运之轮
+GYFU
+恋人
+RAIDO
+隐者
+ISAZ
+月亮
+MANNAZ
+愚者
+NAUDIZ
+恶魔
+BERKANAN
+教皇
+ODAL
+女祭司
+TIWAZ
+国王
+
+This parchment is covered with indecipherable writing, and bears a title of rune 
+这张卷轴上写满难以辨认的文字,并镌刻着卢恩符文:
+. Who knows what it will do when read aloud?
+.谁知道如果大声把它念出来会发生什么呢
+
+Scroll of Challenge
+挑战卷轴
+The scroll emits a challenging roar that echoes throughout the dungeon!
+When read aloud, this scroll will unleash a challenging roar that will awaken all monsters and alert them to the reader's location.
+
+Scroll of Identify
+鉴定卷轴
+Select an item to identify
+选择一件物品来鉴定
+It is 
+它其实是
+Permanently reveals all of the secrets of a single item.
+卷轴揭晓了这个物品所有的秘密.
+
+Scroll of Lullaby
+催眠卷轴
+The scroll utters a soothing melody.
+卷轴播放了一段柔美的乐音.
+The scroll utters a soothing melody and the 
+卷轴播放了一段柔美的乐音使得
+ falls asleep!
+陷入了昏睡.
+The scroll utters a soothing melody and the monsters fall asleep!
+卷轴播放了一段柔和的乐音,怪物都陷入了昏睡!
+A soothing melody will put all creatures in your field of view into a deep sleep, giving you a chance to flee or make a surprise attack on them.
+一段柔美的乐音会让你视野内出现的所有生物都陷入深度睡眠,让你有机会逃脱或者发起突袭.
+
+Scroll of Magic Mapping
+魔法地图卷轴
+You are now aware of the level layout.
+你现在知晓了这一层的房间布局.
+When this scroll is read, an image of crystal clarity will be etched into your memory, alerting you to the precise layout of the level and revealing all hidden secrets. The locations of items and creatures will remain unknown.
+阅读这张卷轴后,一段水晶印象会镌刻进你的记忆中,让你明了这一层房间的精确布局并洞察所有隐藏的秘密.生物和物品的位置依然保持未知.
+
+Scroll of Mirror Image
+镜像卷轴
+The incantation on this scroll will create illusionary twins of the reader, which will chase his enemies.
+这张卷轴上的咒语能够创作出阅读者的幻影分身,这些分身将会追逐敌人发起进攻.
+
+Scroll of Psionic Blast
+灵能爆破卷轴
+This scroll contains destructive energy, that can be psionically channeled to inflict a massive damage to all creatures within a field of view. An accompanying flash of light will temporarily blind everybody in the area of effect including the reader of the scroll.
+这张卷轴蕴含着毁灭性的能量,通过灵能引导能够对视野里的所有生物(除阅读者外)造成巨大的伤害,伴随而来的强烈闪光则会致盲范围内的所有生物,即使阅读者本身亦无法幸免.
+
+Scroll of Recharging
+充能卷轴
+a surge of energy courses through your pack, recharging your wand
+一股能量流涌向背包,为你的法杖恢复了充能
+a surge of energy courses through your pack, recharging your wands
+一股能量流涌向背包,为你的法杖恢复了充能
+a surge of energy courses through your pack, but nothing happens
+一股能量流涌向背包,但什么事也没有发生
+The raw magical power bound up in this parchment will, when released, recharge all of the reader's wands to full power.
+一股天然的魔力被束缚在卷轴之中,释放时它能够使得阅读者所有的法杖完全恢复充能.
+
+Scroll of Remove Curse
+祛除诅咒卷轴
+Your pack glows with a cleansing light, and a malevolent energy disperses.
+你的背包散发出净化的光芒,恶毒的魔力烟消云散.
+Your pack glows with a cleansing light, but nothing happens.
+你的背包散发出净化的光芒,但什么事也没有发生
+The incantation on this scroll will instantly strip from the reader's weapon, armor, rings and carried items any evil enchantments that might prevent the wearer from removing them.
+这张卷轴上的咒语能够直接净化阅读者所携带的武器,护甲,指环等所有物品所蕴含的邪恶魔力,使得穿戴它们的人可以轻易将它们脱下来.
+
+Scroll of Teleportation
+传送卷轴
+In a blink of an eye you were teleported to another location of the level.
+一眨眼你就被传送到了这一层的另外一处地方.
+Strong magic aura of this place prevents you from teleporting!
+这地方的强烈魔法波动让你无法进行传送!
+The spell on this parchment instantly transports the reader to a random location on the dungeon level. It can be used to escape a dangerous situation, but the unlucky reader might find himself in an even more dangerous place.
+卷轴上记录的技能能够直接将阅读者传送到这一层地牢的某个随机位置.它可以用于逃离危险的处境,但倒霉的话或许刚出狼穴又入虎口,发现自己到了更加危险的地方.
+
+Scroll of Terror
+恐慌卷轴
+The scroll emits a brilliant flash of red light
+这张卷轴释放出红色耀眼光芒
+The scroll emits a brilliant flash of red light and the 
+这张卷轴释放出红色耀眼光芒,吓得
+ flees!
+四处逃窜!
+The scroll emits a brilliant flash of red light and the monsters flee!
+这张卷轴释放出红色耀眼光芒,吓得怪物四处逃窜!
+A flash of red light will overwhelm all creatures in your field of view with terror, and they will turn and flee. Attacking a fleeing enemy will dispel the effect.
+那红色闪光能够压垮你视野内的所有生物,令它们陷入恐慌,掉头逃窜.攻击逃跑的生物会让它们从恐慌中恢复过来.
+
+Scroll of Upgrade
+升级卷轴
+Select an item to upgrade
+选择一件物品来升级
+your %s certainly looks better now
+你的%s的品质看上去确实有所提高
+This scroll will upgrade a single item, improving its quality. A wand will increase in power and in number of charges; a weapon will inflict more damage or find its mark more frequently; a suit of armor will deflect additional blows; the effect of a ring on its wearer will intensify. Weapons and armor will also require less strength to use, and any curses on the item will be lifted.
+这张卷轴会升级某件物品,提升它的品质.对法杖使用能够提升法杖的威力和充能次数;对武器使用能够提升它的伤害和命中率;对护甲使用能够提升其对伤害的吸收能力;对指环使用会增幅它的特殊效果.武器和护甲所需的力量也会降低,物品上的诅咒也会被祛除.
