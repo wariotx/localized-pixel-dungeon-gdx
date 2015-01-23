@@ -7,7 +7,7 @@ Play
 开始游戏
 
 Rankings
-排 行 榜
+排行榜
 
 Badges
 勋章
@@ -1689,3 +1689,39 @@ Ring of Thorns
 荆棘指环
 Though this ring doesn't provide real thorns, an enemy that attacks you will itself be wounded by a fraction of the damage that it inflicts. Upgrading this ring won't give any additional bonuses.
 尽管这枚指环并不会放出真正的荆棘,但当敌人攻击你时它自己也会受到一部分反伤.升级这枚戒指不会获得任何额外效果.
+
+# Quest
+
+corpse dust
+黄泉土
+The ball of corpse dust doesn't differ outwardly from a regular dust ball. However, you know somehow that it's better to get rid of it as soon as possible.
+这团黄泉土外表上很难和别的土球区分开来.然而你知道某种程度上来说这玩意儿应该丢得越远越好.
+
+dark gold ore
+暗金矿
+This metal is called dark not because of its color (it doesn't differ from the normal gold), but because it melts under the daylight, making it useless on the surface.
+这种金属名中虽然带暗字但并非指颜色(看起来它和普通的黄金一样),但由于它会在阳光下融化,因此在地表没什么用.
+
+dried rose
+枯萎玫瑰
+The rose has dried long ago, but it has kept all its petals somehow.
+昔者玫瑰以其名流芳,今人所持唯玫瑰之名.
+
+dwarf token
+矮人标记
+Many dwarves and some of their larger creations carry these small pieces of metal of unknown purpose. Maybe they are jewelry or maybe some kind of ID. Dwarves are strange folk.
+等待补充……
+
+pickaxe
+矿镐
+MINE
+挖掘
+There is no dark gold vein near you to mine
+这里没有暗金矿脉可挖
+This is a large and sturdy tool for breaking rocks. Probably it can be used as a weapon.
+这是一柄巨大而坚固的用于破坏岩石的工具.或许它也能当武器来用.
+
+giant rat skull
+巨鼬骷髅
+It could be a nice hunting trophy, but it smells too bad to place it on a wall.
+它本可以作为很好的狩猎纪念物,可是闻起来太恶心不好挂在墙上.
