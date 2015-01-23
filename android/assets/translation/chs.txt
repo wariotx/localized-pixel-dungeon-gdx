@@ -7,7 +7,7 @@ Play
 开始游戏
 
 Rankings
-排行榜
+排 行 榜
 
 Badges
 勋章
@@ -143,7 +143,7 @@ Load Game
 载入游戏
 
 Depth: %d, level: %d
-第%d层，第%d级
+第%d层，%d级
 
 Erase current game
 覆盖现有存档
@@ -443,7 +443,7 @@ Alchemy pot
 Garden
 花园
 Animated statue
-石像鬼
+石像兵
 Sad ghost
 怨灵
 Old wandmaker
@@ -1586,3 +1586,106 @@ your %s certainly looks better now
 你的%s的品质看上去确实有所提高
 This scroll will upgrade a single item, improving its quality. A wand will increase in power and in number of charges; a weapon will inflict more damage or find its mark more frequently; a suit of armor will deflect additional blows; the effect of a ring on its wearer will intensify. Weapons and armor will also require less strength to use, and any curses on the item will be lifted.
 这张卷轴会升级某件物品,提升它的品质.对法杖使用能够提升法杖的威力和充能次数;对武器使用能够提升它的伤害和命中率;对护甲使用能够提升其对伤害的吸收能力;对指环使用会增幅它的特殊效果.武器和护甲所需的力量也会降低,物品上的诅咒也会被祛除.
+
+
+# Ring
+
+you are now familiar enough with your %s to identify it. It is %s.
+你现在足够熟悉你的%s能够鉴定出它来了.它其实是%s.
+you can only wear 2 rings at a time
+你最多只能同时戴2枚指环.
+your 
+你的
+ tightens around your finger painfully
+紧紧箍在指头上,非常疼.
+This metal band is adorned with a large 
+金属环上镶着一颗巨大的
+ gem 
+,
+that glitters in the darkness. Who knows what effect it has when worn?
+在黑暗中闪闪发光.谁知道戴上会有什么效果呢?
+This is a %s
+这其实是
+
+diamond
+钻石
+opal
+蛋白石
+garnet
+石榴石
+ruby
+红宝石
+amethyst
+紫晶
+topaz
+黄玉
+onyx
+黑玛瑙
+tourmaline
+碧玺
+emerald
+祖母绿
+sapphire
+蓝宝石
+quartz
+石英
+
+Ring of Accuracy
+精准指环
+This ring increases your chance to hit the enemy.
+这枚指环能够提升你的命中率.
+
+Ring of Detection
+侦测指环
+Wearing this ring will allow the wearer to notice hidden secrets - traps and secret doors - without taking time to search. Degraded rings of detection will dull your senses, making it harder to notice secrets even when actively searching for them.
+戴上这枚指环的人能够无需花费时间搜查便能够更加容易地留意到隐藏的秘密-陷阱和秘密的门.降级的侦测指环会让感知变得迟钝,即使主动去搜寻,也会变得更难发现那些隐藏的秘密.
+
+Ring of Elements
+元素指环
+This ring provides resistance to different elements, such as fire, electricity, gases etc. Also it decreases duration of negative effects.
+这枚指环能够提供对不同类型的元素能量的抗性,例如火焰，闪电，毒气等.同时它会减少负面效果的持续时间.
+
+Ring of Evasion
+闪避指环
+This ring increases your chance to dodge enemy attack.
+这枚指环能够提升你的闪避率.
+
+Ring of Haggler
+折扣指环
+In fact this ring doesn't provide any magic effect, but it demonstrates to shopkeepers and vendors, that the owner of the ring is a member of The Thieves' Guild. Usually they are glad to give a discount in exchange for temporary immunity guarantee. Upgrading this ring won't give any additional bonuses.
+实际上这枚指环并没有什么魔法效果,但它可以用作向店主和供应商出示的凭证,证明它的主人隶属于盗贼公会.通常他们很乐于提供一些折扣来作为缴纳的保护费.升级这枚指环不会获得额外的效果.
+
+Ring of Haste
+迅疾指环
+This ring accelerates the wearer's flow of time, allowing one to perform all actions a little faster.
+这枚指环增加穿戴者身体周围的时间流速,让他的所有行动都变得稍快一些.
+
+Ring of Herbalism
+草木指环
+This ring increases your chance to gather dew and seeds from trampled grass.
+这枚指环提升你通过践踏草木获得露珠和种子的几率.
+
+Ring of Mending
+回复指环
+This ring increases the body's regenerative properties, allowing one to recover lost health at an accelerated rate. Degraded rings will decrease or even halt one's natural regeneration.
+这枚指环能够赋予身体愈合的能力,让穿戴者更快地回复生命值.降级的指环会让身体减慢甚至停止自然愈合.
+
+Ring of Power
+威能指环
+Your wands will become more powerful in the energy field that radiates from this ring. Degraded rings of power will instead weaken your wands.
+在指环释放的能量场中你的法杖威力将更加巨大.降级的指环则会虚弱法杖的威能.
+
+Ring of Satiety
+餍足指环
+Wearing this ring you can go without food longer. Degraded rings of satiety will cause the opposite effect.
+戴上这枚指环不吃东西可以坚持得更久.降级的餍足指环则会造成相反的效果.
+
+Ring of Shadows
+暗影指环
+Enemies will be less likely to notice you if you wear this ring. Degraded rings of shadows will alert enemies who might otherwise not have noticed your presence.
+戴上这枚指环能够让敌人很难留意到你,降级的暗影指环则会让本不会注意到你的敌人发现你.
+
+Ring of Thorns
+荆棘指环
+Though this ring doesn't provide real thorns, an enemy that attacks you will itself be wounded by a fraction of the damage that it inflicts. Upgrading this ring won't give any additional bonuses.
+尽管这枚指环并不会放出真正的荆棘,但当敌人攻击你时它自己也会受到一部分反伤.升级这枚戒指不会获得任何额外效果.
