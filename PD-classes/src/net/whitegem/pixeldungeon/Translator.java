@@ -2,11 +2,11 @@ package net.whitegem.pixeldungeon;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
+import com.sun.media.sound.InvalidFormatException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.regex.Pattern;
 
@@ -43,7 +43,7 @@ public class Translator
 
         if (lines.size() % 2 != 0)
         {
-            lines.add("error: please check translation.txt");
+            Gdx.app.log("Translator", "ERROR READING FILE" + " translation/" + language + ".txt", new InvalidFormatException("Lines of original texts and translated texts in the translation file do not match."));
         }
 
         for (int i = 0; i < lines.size(); i += 2)
