@@ -1710,6 +1710,7 @@ The rose has dried long ago, but it has kept all its petals somehow.
 dwarf token
 矮人标记
 Many dwarves and some of their larger creations carry these small pieces of metal of unknown purpose. Maybe they are jewelry or maybe some kind of ID. Dwarves are strange folk.
+等待补充……
 
 pickaxe
 矿镐
