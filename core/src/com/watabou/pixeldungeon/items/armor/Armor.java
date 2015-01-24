@@ -96,7 +96,7 @@ public class Armor extends EquipableItem {
 			cursedKnown = true;
 			if (cursed) {
 				equipCursed( hero );
-				GLog.n( TXT_EQUIP_CURSED, toString() );
+				GLog.n( Utils.format(TXT_EQUIP_CURSED, toString()) );
 			}
 			
 			((HeroSprite)hero.sprite).updateArmor();
