@@ -2060,18 +2060,19 @@ you are now familiar enough with your %s to identify it. It is %s.
 你现在足够熟悉你的%s能够鉴定出它来了.它其实是%s.
 you can only wear 2 rings at a time
 你最多只能同时戴2枚指环.
-your 
-你的
- tightens around your finger painfully
-紧紧箍在指头上,非常疼.
-This metal band is adorned with a large 
-金属环上镶着一颗巨大的
- gem 
-,
-that glitters in the darkness. Who knows what effect it has when worn?
-在黑暗中闪闪发光.谁知道戴上会有什么效果呢?
+your %s tightens around your finger painfully
+你的%s紧紧箍在指头上,非常疼.
+This metal band is adorned with a large %s gem that glitters in the darkness. Who knows what effect it has when worn?
+金属环上镶着一颗巨大的%s,在黑暗中闪闪发光.谁知道戴上会有什么效果呢?
+The %s is on your finger.
+你手指上戴着%s.
+The %s is on your finger, and because it is cursed, you are powerless to remove it.
+你手指上戴着%s,因为它被诅咒了,所以你无力摘下它.
 This is a %s
-这其实是
+这其实是%s
+
+%s ring
+%s指环
 
 diamond
 钻石
@@ -2095,9 +2096,6 @@ sapphire
 蓝宝石
 quartz
 石英
-
-%s ring
-%s指环
 
 Ring of Accuracy
 精准指环
