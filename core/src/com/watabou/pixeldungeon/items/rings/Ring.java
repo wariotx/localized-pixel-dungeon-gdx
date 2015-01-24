@@ -212,7 +212,7 @@ public class Ring extends EquipableItem {
 	
 	@Override
 	public String desc() {
-		return 
+		return
 			Utils.format("This metal band is adorned with a large %s gem " +
 			"that glitters in the darkness. Who knows what effect it has when worn?", gem);
 	}
@@ -221,8 +221,8 @@ public class Ring extends EquipableItem {
 	public String info() {
 		if (isEquipped( Dungeon.hero )) {
 			
-			return LanguageFactory.getTranslation(desc()) + "\n\n" + Utils.format("The %s is on your finger" +
-				(cursed ? ", and because it is cursed, you are powerless to remove it." : "."), name() );
+			return LanguageFactory.getTranslation(desc()) + "\n\n" + LanguageFactory.getTranslation(Utils.format("The %s is on your finger" +
+				(cursed ? ", and because it is cursed, you are powerless to remove it." : "."), name() ));
 			
 		} else if (cursed && cursedKnown) {
 			
