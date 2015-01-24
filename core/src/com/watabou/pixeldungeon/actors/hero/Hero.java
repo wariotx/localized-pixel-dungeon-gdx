@@ -164,7 +164,7 @@ public class Hero extends Char {
 		super();
 		name = "you";
 		
-		HP = HT = 20000;
+		HP = HT = 20;
 		STR = STARTING_STR;
 		awareness = 0.1f;
 		

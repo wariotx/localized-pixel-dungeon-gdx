@@ -134,7 +134,7 @@ public class Ring extends EquipableItem {
 			cursedKnown = true;
 			if (cursed) {
 				equipCursed( hero );
-				GLog.n( "your " + this + " tightens around your finger painfully" );
+				GLog.n( Utils.format("your %s tightens around your finger painfully", this) );
 			}
 			
 			hero.spendAndNext( TIME_TO_EQUIP );
@@ -297,7 +297,7 @@ public class Ring extends EquipableItem {
 
 			if (target instanceof Hero && ((Hero)target).heroClass == HeroClass.ROGUE && !isKnown()) {
 				setKnown();
-				GLog.i( TXT_KNOWN, name() );
+				GLog.i( Utils.format(TXT_KNOWN, name()) );
 				Badges.validateItemLevelAquired( Ring.this );
 			}
 			

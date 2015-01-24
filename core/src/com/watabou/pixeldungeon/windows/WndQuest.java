@@ -19,10 +19,11 @@ package com.watabou.pixeldungeon.windows;
 
 import com.watabou.pixeldungeon.actors.mobs.npcs.NPC;
 import com.watabou.pixeldungeon.utils.Utils;
+import net.whitegem.pixeldungeon.LanguageFactory;
 
 public class WndQuest extends WndTitledMessage {
 	
 	public WndQuest( NPC questgiver, String text ) {
-		super( questgiver.sprite(), Utils.capitalize( questgiver.name ), text );
+		super( questgiver.sprite(), Utils.capitalize( questgiver.name ), LanguageFactory.getTranslation(text) );
 	}
 }
