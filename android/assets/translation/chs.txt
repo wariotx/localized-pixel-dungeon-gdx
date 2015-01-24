@@ -136,7 +136,7 @@ New Game
 Load Game
 载入游戏
 Depth: %d, level: %d
-第%d层，等级%d
+%2$d级，%1$d层
 
 Erase current game
 覆盖现有存档
@@ -933,8 +933,8 @@ Tengu
 天狗忍者
 Free at last...
 终于解脱了...
-Gotcha, 
-搜噶斯内,
+Gotcha, %s!
+搜噶斯内, %s!
 Tengu are members of the ancient assassins clan, which is also called Tengu. These assassins are noted for extensive use of shuriken and traps.
 天狗忍者隶属古代刺客联盟,这个组织亦名天狗盟.这些刺客以擅长使用手里剑和陷阱而闻名.
 
@@ -1298,8 +1298,8 @@ Sungrass is renowned for its sap's healing properties.
 Herbal healing
 草药治愈
 
-Throw this seed to the place where you want to grow %s.\n\n%s
-将种子扔在你希望%s生长的地方.
+Throw this seed to the place where you want to grow the %s.\n\n%s
+将种子扔在你希望%s生长的地方.\n\n%s
 
 
 # Items
@@ -1956,10 +1956,8 @@ ODAL
 TIWAZ
 国王
 
-This parchment is covered with indecipherable writing, and bears a title of rune 
-这张卷轴上写满难以辨认的文字,并镌刻着卢恩符文:
-. Who knows what it will do when read aloud?
-.谁知道如果大声把它念出来会发生什么呢
+This parchment is covered with indecipherable writing, and bears a title of rune %s. Who knows what it will do when read aloud?
+这张卷轴上写满难以辨认的文字,并镌刻着卢恩符文:%s.谁知道如果大声把它念出来会发生什么呢?
 
 Scroll of Challenge
 挑战卷轴
@@ -2212,18 +2210,12 @@ Are you sure you want to drink it? In most cases you should throw such potions a
 你确定想要喝下它吗?一般来说你应该将这种药水丢向你的敌人.
 Are you sure you want to throw it? In most cases it makes sense to drink it.
 你确定想要扔出它吗?一般来说喝下它才能发挥它的效果.
-The flask shatters and 
-药品碎开了,那
- liquid splashes harmlessly
-色的液体溅射开来,并没有毒害
- potion
+The flask shatters and %s liquid splashes harmlessly
+药品碎开了,那%s色的液体溅射开来,并没有毒害
+potion
 药水
-This flask contains a swirling 
-瓶里盛着打着漩涡的
- liquid. 
-色液体.
-Who knows what it will do when drunk or thrown?
-谁知道饮用它或者扔出它会发生什么呢?
+This flask contains a swirling %s liquid. Who knows what it will do when drunk or thrown?
+瓶里盛着打着漩涡的%s色液体.谁知道饮用它或者扔出它会发生什么呢?
 
 turquoise
 翠绿
@@ -2594,3 +2586,49 @@ Pillar
 柱子
 The pillar is made of real humanoid skulls. Awesome.
 用类人生物的骸骨搭建的柱子,好酷.
+
+# Wand
+Wand
+法杖
+%s wand
+%s法杖
+
+# Plant
+PLANT
+种植
+
+# INSCRIBE
+scroll
+卷轴
+scroll "%s"
+%s卷轴
+INSCRIBE
+镌刻
+
+Select a cell to examine
+选择一个方块检查
+Scroll of Weapon Upgrade
+武器升级卷轴
+Mystery meat burns up!
+神秘肉烧着了！
+
+# Bage
+Badge endorsed: %s
+获得勋章：%s
+New super badge: %s
+新超级勋章：%s
+New badge: %s
+新勋章：%s
+
+# Pots
+%s potion
+%s药水
+
+# backpack
+backpack
+背包
+Settings
+设置
+
+You don't know what is there.
+你不知道那边有什么

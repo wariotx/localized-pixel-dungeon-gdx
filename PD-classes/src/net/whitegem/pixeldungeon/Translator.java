@@ -141,7 +141,7 @@ public class Translator
                     result += " ";
                 }
             }
-            else
+            else if (!((current.charAt(current.length() - 1) + "").matches("[0-9]") && (next.charAt(0) + "").matches("[\\./\\)\\(]")))
             {
                 result += " ";
             }
@@ -153,6 +153,7 @@ public class Translator
         for (String s : transAfter)
             finalTrans += s;
 
+        System.out.println(finalTrans);
         return finalTrans;
     }
 
@@ -210,7 +211,7 @@ public class Translator
                 {
                     String endStr = paragraph.substring(end - 1, end);
                     String endStrNext = paragraph.substring(end, end + 1);
-                    if (endStr.equals(" ") || (endStr.matches("\\p{P}") && !endStrNext.matches("[0-9]")) || (endStr.matches("[0-9]") && !endStrNext.matches("[0-9]")))
+                    if (endStr.equals(" ") || (endStr.matches("\\p{P}") && !endStrNext.matches("[0-9]")) || (endStr.matches("[0-9]") && (!endStrNext.matches("[0-9]") && !endStrNext.matches("\\p{P}"))))
                     {
                         words.add(str);
                         start = end;

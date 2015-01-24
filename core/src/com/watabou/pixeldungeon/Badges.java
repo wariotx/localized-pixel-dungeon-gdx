@@ -45,6 +45,7 @@ import com.watabou.pixeldungeon.items.scrolls.Scroll;
 import com.watabou.pixeldungeon.items.wands.Wand;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 public class Badges {
@@ -858,7 +859,7 @@ public class Badges {
 		if (global.contains( badge )) {
 			
 			if (!badge.meta) {
-				GLog.h( "Badge endorsed: %s", badge.description );
+				GLog.h(Utils.format("Badge endorsed: %s", badge.description) );
 			}
 			
 		} else {
@@ -867,9 +868,9 @@ public class Badges {
 			saveNeeded = true;
 			
 			if (badge.meta) {
-				GLog.h( "New super badge: %s", badge.description );
+				GLog.h( Utils.format("New super badge: %s", badge.description) );
 			} else {
-				GLog.h( "New badge: %s", badge.description );
+				GLog.h( Utils.format("New badge: %s", badge.description) );
 			}	
 			PixelScene.showBadge( badge );
 		}

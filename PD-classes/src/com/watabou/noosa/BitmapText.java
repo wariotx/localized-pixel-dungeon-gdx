@@ -65,6 +65,7 @@ public class BitmapText extends Visual {
 
 	private String getTranslation(String text)
 	{
+		System.out.println("getTrans >>> " + text);
 		if (!LanguageFactory.INSTANCE.language.equals("en"))
 		{
 			String s = null;
@@ -76,7 +77,7 @@ public class BitmapText extends Visual {
 			{
 				s = LanguageFactory.INSTANCE.stored.get(text.toLowerCase().replaceAll("\\.$", "")) + ".";
 			}
-			if (text != null && (LanguageFactory.INSTANCE.hasKey(text) || s != null))
+			if (text != null)
 			{
 				text = (text == null) ? "" : (s == null) ? LanguageFactory.INSTANCE.translate(text) : s;
 				text = LanguageFactory.INSTANCE.fixWrap(text);

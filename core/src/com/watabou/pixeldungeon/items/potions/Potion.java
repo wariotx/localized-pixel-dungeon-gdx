@@ -34,6 +34,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndOptions;
 import com.watabou.utils.Bundle;
 
@@ -213,7 +214,7 @@ public class Potion extends Item {
 	}
 	
 	protected void shatter( int cell ) {
-		GLog.i( "The flask shatters and " + color() + " liquid splashes harmlessly" );
+		GLog.i( Utils.format("The flask shatters and %s liquid splashes harmlessly", color()) );
 		Sample.INSTANCE.play( Assets.SND_SHATTER );
 		splash( cell );
 	}
@@ -242,15 +243,14 @@ public class Potion extends Item {
 	
 	@Override
 	public String name() {
-		return isKnown() ? name : color + " potion";
+		return isKnown() ? name : Utils.format("%s potion", color);
 	}
 	
 	@Override
 	public String info() {
 		return isKnown() ?
-			desc() :
-			"This flask contains a swirling " + color + " liquid. " +
-			"Who knows what it will do when drunk or thrown?";
+			desc() : Utils.format("This flask contains a swirling %s liquid. " +
+				"Who knows what it will do when drunk or thrown?", color);
 	}
 	
 	@Override

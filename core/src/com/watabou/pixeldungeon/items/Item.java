@@ -180,7 +180,7 @@ public class Item implements Bundlable {
 			
 		} else {
 			
-			GLog.n( TXT_PACK_FULL, name() );
+			GLog.n( Utils.format(TXT_PACK_FULL, name()) );
 			return false;
 			
 		}

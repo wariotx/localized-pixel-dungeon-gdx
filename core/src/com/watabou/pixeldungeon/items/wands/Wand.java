@@ -41,6 +41,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
@@ -236,31 +237,29 @@ public abstract class Wand extends KindOfWeapon {
 	
 	@Override
 	public String toString() {
-		
-		StringBuilder sb = new StringBuilder( super.toString() );
-		
 		String status = status();
+
 		if (status != null) {
-			sb.append( " (" + status +  ")" );
+			return Utils.format("%s %s", super.toString(), "(" + status +  ")" );
 		}
 		
-		return sb.toString();
+		return super.toString();
 	}
 	
 	@Override
 	public String name() {
-		return isKnown() ? name : wood + " wand";
+		return isKnown() ? name : Utils.format("%s wand", wood);
 	}
 	
 	@Override
 	public String info() {
-		StringBuilder info = new StringBuilder( isKnown() ? desc() : String.format( TXT_WOOD, wood ) );
+		StringBuilder info = new StringBuilder( isKnown() ? desc() : Utils.format(TXT_WOOD, wood) );
 		if (Dungeon.hero.heroClass == HeroClass.MAGE) {
 			info.append( "\n\n" );
 			if (levelKnown) {
-				info.append( String.format( TXT_DAMAGE, MIN + (MAX - MIN) / 2 ) );
+				info.append( Utils.format( TXT_DAMAGE, MIN + (MAX - MIN) / 2 ) );
 			} else {
-				info.append(  String.format( TXT_WEAPON ) );
+				info.append(  Utils.format( TXT_WEAPON ) );
 			}
 		}
 		return info.toString();

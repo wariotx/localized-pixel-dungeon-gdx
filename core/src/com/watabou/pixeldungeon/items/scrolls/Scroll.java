@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 
 public abstract class Scroll extends Item {
@@ -144,15 +145,15 @@ public abstract class Scroll extends Item {
 	
 	@Override
 	public String name() {
-		return isKnown() ? name : "scroll \"" + rune + "\"";
+		return isKnown() ? name : Utils.format("scroll \"%s\"", rune);
 	}
 	
 	@Override
 	public String info() {
 		return isKnown() ?
 			desc() :
-			"This parchment is covered with indecipherable writing, and bears a title " +
-			"of rune " + rune + ". Who knows what it will do when read aloud?";
+			Utils.format("This parchment is covered with indecipherable writing, and bears a title " +
+			"of rune %s. Who knows what it will do when read aloud?", rune);
 	}
 	
 	@Override

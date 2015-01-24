@@ -97,7 +97,7 @@ public class Plant implements Bundlable {
 		
 		public static final String AC_PLANT	= "PLANT";
 		
-		private static final String TXT_INFO = "Throw this seed to the place where you want to grow %s.\n\n%s";
+		private static final String TXT_INFO = "Throw this seed to the place where you want to grow the %s.\n\n%s";
 		
 		private static final float TIME_TO_PLANT = 1f;
 		
@@ -172,7 +172,7 @@ public class Plant implements Bundlable {
 		
 		@Override
 		public String info() {
-			return String.format( TXT_INFO, Utils.indefinite( plantName ), desc() );
+			return Utils.format( TXT_INFO, plantName, desc() );
 		}
 	}
 }
