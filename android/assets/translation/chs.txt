@@ -137,19 +137,26 @@ Load Game
 载入游戏
 Depth: %d, level: %d
 等级%2$d,第%1$d层
-
 Erase current game
 覆盖现有存档
-
 Top Rankings
 排行榜
 
+Do you really want to start new game?
+你真的想要重开新游戏吗?
+Your current game progress will be erased.
+你当前的游戏进程将被覆盖.
+Yes, start new game
+是的,开始新游戏
+No, return to main menu
+不,返回主菜单
+To unlock this character class, slay the 3rd boss with any other class
+解锁该职业需要使用任意其他职业杀死第三层的Boss
+
 Total games played: %d
 进行游戏次数: %d
-
 No games have been played yet.
 尚无任何游戏记录.
-
 No additional information
 无额外信息
 
@@ -164,6 +171,9 @@ a %s
 
 an %s
 %s
+
+%s, %s
+%s,%s
 
 # GameScene
 
@@ -1429,7 +1439,7 @@ Your dew vial is full!
 Your dew vial is empty!
 露水瓶是空的!
 You can store excess dew in this tiny vessel for drinking it later. If the vial is full, in a moment of deadly peril the dew will be consumed automatically.
-你能够将额外的露珠存放进这个小瓷瓶中以供将来使用.如果装满它,在承受致命伤害的刹那会自动消耗露水来治愈伤口.
+你能够将额外的露珠存放进这个小瓶子中以供将来使用.如果装满它,在承受致命伤害的刹那会自动消耗露水来治愈伤口.
 
 armor kit
 防具升级工具
