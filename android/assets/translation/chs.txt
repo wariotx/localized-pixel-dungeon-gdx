@@ -1494,16 +1494,12 @@ Wild %s
 
 # Weapon 
 
-a
-一
-an
-一
 upgraded
 升级后的
 degraded
-降级后的.
+降级后的
 This %s is %s tier-%d melee weapon. 
-这柄%s是%s柄第%d阶近战武器.
+这柄%s是一柄第%d阶近战武器.
 Its average damage is %d points per hit. 
 它的平均伤害为每击%d点.
 Its typical average damage is %d points per hit and usually it requires %d points of strength. 
