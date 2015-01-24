@@ -387,19 +387,14 @@ pixeldungeon.watabou.ru
 
 Descending...
 正在下楼梯...
-
 Ascending...
 正在上楼梯...
-
 Loading...
 载入中...
-
 Resurrecting...
 复活中...
-
 Returning...
 返回中...
-
 Falling...
 跌落中...
 	
@@ -413,52 +408,39 @@ Something went wrong...
 # mob
 Killed by %s on level %d
 被%s残忍杀害,尸体躺在第%d层冰冷的地板上.
-
 # boss
 Killed by the %s on level %d
 被%s残忍杀害,尸体躺在第%d层冰冷的地板上.
-
 # wand
 Killed by your own %s on level %d
 捣鼓自己的%s时出了意外,尸体躺在第%d层冰冷的地板上.
-
 # glyph
 Killed by the %s on level %d
 被护甲上的%s杀死,尸体躺在第%d层冰冷的地板上.
-
 # trap
 Killed by discharge of %s on level %d
 因为触发%s而死于非命,尸体躺在第%d层冰冷的地板上.
-
 # burning
 Burned to death on level %d
 在第%d层焚烧至死
-
 # starving
 Starved to death on level %d
 在第%d层活活饿死
-
 # poison
 Died from poison on level %d
 在第%d层毒发身亡
-
-
 # toxicgas
 Died from toxic gas on level %d
 在第%d层长眠于毒气中
-
 # bleeding
 Bled to death on level %d
 在第%d层因失血过多而致死
-
 # ooze
 Killed by a caustic ooze on level %d
 在第%d层死在腐蚀泥浆中
-
 # fall
 Fell to death on level %d
 在第%d层尝试信仰之跃失败.
-
 # win
 Obtained the Amulet of Yendor
 得到了尼德罗护符
@@ -466,6 +448,8 @@ Obtained the Amulet of Yendor
 
 # Journal
 
+Journal
+日志
 Well of Health
 健康之井
 Well of Awareness
@@ -744,7 +728,6 @@ Return to Game
 
 Oh yes! You are my hero!\nRegarding your reward, I don't have cash with me right now, but I have something better for you. This is my family heirloom ring: my granddad took it off a dead paladin's finger.
 哦好的!你是我的大英雄!\n关于你报酬的问题,我目前没有太多现金,不过我有更好的东西给你.这可是我家族祖传的指环:是我祖父从一名死掉的圣骑士的指头上扳下来的.
-
 Take the ring
 拿走指环
 
@@ -756,31 +739,24 @@ There is nothing here.
 
 Chest
 箱子
-
 Locked chest
 上锁箱子
-
 Crystal chest
 水晶箱子
 
 Tomb
 墓碑
-
 Skeletal remains
 骨骸
 
 You won't know what's inside until you open it!
 你打开它才会知道里面有什么!
-
 You won't know what's inside until you open it! But to open it you need a golden key.
 你打开它才会知道里面有什么!但首先你需要一柄金钥匙.
-
 You can see %s inside, but to open the chest you need a golden key.
 你看见箱子里放着%s,但你需要一柄金钥匙才能打开它.
-
 This ancient tomb may contain something useful, but its owner will most certainly object to checking.
 古老的墓碑下也许埋着有用的东西,但它的主人肯定不会希望有人挖坟.
-
 This is all that's left from one of your predecessors. Maybe it's worth checking for any valuables.
 这是从前的冒险者唯一留下的东西.或许应该检查下里面有没有什么值得带走的东西.
 
@@ -858,31 +834,22 @@ Farewell, adventurer!
 
 Default Zoom
 默认缩放
-
 Scale up UI
 缩放UI
-
 Music
 音乐
-
 Sound FX
 声效
-
 Key bindings
 按键绑定
-
 Brightness
 亮度
-
 Switch to portrait
 切至竖屏
-
 Switch to landscape
 切至横屏
-
 Switch to fullscreen
 切至全屏
-
 Switch to windowed
 切至窗口
 
