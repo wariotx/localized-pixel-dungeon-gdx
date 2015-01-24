@@ -31,7 +31,7 @@ public class LanguageFactory
     public String translate(String originalText)
     {
         System.out.println("Translating >>> " + originalText);
-        String textTemp = originalText.replace("\n", "\\n");
+        String textTemp = originalText.replace("\n", "\\n").trim().toLowerCase();
         if (translator.hasKey(textTemp))
         {
             return translator.translate(textTemp).replace("\\n", "\n");
@@ -45,7 +45,7 @@ public class LanguageFactory
 
     public boolean hasKey(String key)
     {
-        key = key.replace("\n", "\\n");
+        key = key.trim().replace("\n", "\\n");
         return translator.hasKey(key) || translator.hasKey(key.replaceAll("\\.$", ""));
     }
 
@@ -70,10 +70,10 @@ public class LanguageFactory
                 {
                     args[i] = stored.get(args[i].toString().toLowerCase().replaceAll("\\.$", ""));
                 }
-                else if (hasKey(args[i].toString().toLowerCase()))
+                else if (hasKey(args[i].toString().trim().toLowerCase()))
                 {
                     System.out.println(translate(args[i].toString()));
-                    args[i] = translate(args[i].toString());
+                    args[i] = translate(args[i].toString().trim());
                 }
             }
         }

@@ -98,7 +98,7 @@ public class Blacksmith extends NPC {
 					
 					Pickaxe pick = new Pickaxe();
 					if (pick.doPickUp( Dungeon.hero )) {
-						GLog.i( Hero.TXT_YOU_NOW_HAVE, pick.name() );
+						GLog.i( Utils.format(Hero.TXT_YOU_NOW_HAVE, pick.name() ));
 					} else {
 						Dungeon.level.drop( pick, Dungeon.hero.pos ).sprite.drop();
 					}

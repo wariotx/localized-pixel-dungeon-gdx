@@ -88,14 +88,14 @@ public class MeleeWeapon extends Weapon {
 
 		String quality = levelKnown && level != 0 ? (level > 0 ? "upgraded" : "degraded") : "";
 		info.append( p );
-		info.append( Utils.format("This %s is %s tier-%d melee weapon. ", name, Utils.indefinite( quality ), tier) );
+		info.append( LanguageFactory.getTranslation(Utils.format("This %s is %s tier-%d melee weapon. ", name, Utils.indefinite( quality ), tier)) );
 
 		if (levelKnown) {
-			info.append( Utils.format("Its average damage is %d points per hit. ", (MIN + (MAX - MIN) / 2)) );
+			info.append( LanguageFactory.getTranslation(Utils.format("Its average damage is %d points per hit. ", (MIN + (MAX - MIN) / 2))));
 		} else {
 			info.append(
-					Utils.format("Its typical average damage is %d points per hit " +
-							"and usually it requires %d points of strength. ", (min() + (max() - min()) / 2), typicalSTR()) );
+					LanguageFactory.getTranslation(Utils.format("Its typical average damage is %d points per hit " +
+							"and usually it requires %d points of strength. ", (min() + (max() - min()) / 2), typicalSTR())));
 			if (typicalSTR() > Dungeon.hero.STR()) {
 				info.append( LanguageFactory.getTranslation("Probably this weapon is too heavy for you. ") );
 			}
@@ -158,14 +158,14 @@ public class MeleeWeapon extends Weapon {
 			if (STR > Dungeon.hero.STR()) {
 				info.append( p );
 				info.append(
-						Utils.format("Because of your inadequate strength the accuracy and speed " +
-								"of your attack with this %s is decreased.", name) );
+						LanguageFactory.getTranslation(Utils.format("Because of your inadequate strength the accuracy and speed " +
+								"of your attack with this %s is decreased.", name)));
 			}
 			if (STR < Dungeon.hero.STR()) {
 				info.append( p );
 				info.append(
-						Utils.format("Because of your excess strength the damage " +
-								"of your attack with this %s is increased.", name) );
+						LanguageFactory.getTranslation(Utils.format("Because of your excess strength the damage " +
+								"of your attack with this %s is increased.", name)));
 			}
 		}
 
@@ -173,16 +173,16 @@ public class MeleeWeapon extends Weapon {
 			info.append( p );
 			if (cursed)
 			{
-				info.append( Utils.format("You hold the %s at the ready, and because it is cursed, you are powerless to let go.", name));
+				info.append( LanguageFactory.getTranslation(Utils.format("You hold the %s at the ready, and because it is cursed, you are powerless to let go.", name)));
 			}
 			else
 			{
-				info.append( Utils.format("You hold the %s at the ready.", name));
+				info.append( LanguageFactory.getTranslation(Utils.format("You hold the %s at the ready.", name)));
 			}
 		} else {
 			if (cursedKnown && cursed) {
 				info.append( p );
-				info.append( Utils.format("You can feel a malevolent magic lurking within %s.", name) );
+				info.append( LanguageFactory.getTranslation(Utils.format("You can feel a malevolent magic lurking within %s.", name)));
 			}
 		}
 

@@ -207,27 +207,27 @@ public class Armor extends EquipableItem {
 		StringBuilder info = new StringBuilder( LanguageFactory.getTranslation(desc()) );
 		
 		if (levelKnown) {
-			info.append( 
-				Utils.format("\n\nThis %s provides damage absorption up to " +
-				"%d points per attack. ", name, Math.max( DR, 0 )) );
+			info.append(
+					"\n\n" +LanguageFactory.getTranslation(Utils.format("This %s provides damage absorption up to " +
+						"%d points per attack. ", name, Math.max(DR, 0))));
 			
 			if (STR > Dungeon.hero.STR()) {
 				
 				if (isEquipped( Dungeon.hero )) {
 					info.append(
-							LanguageFactory.getTranslation("\n\nBecause of your inadequate strength your " +
+							"\n\n" +LanguageFactory.getTranslation("Because of your inadequate strength your " +
 						"movement speed and defense skill is decreased. ") );
 				} else {
 					info.append(
-							LanguageFactory.getTranslation("\n\nBecause of your inadequate strength wearing this armor " +
+							"\n\n" +LanguageFactory.getTranslation("Because of your inadequate strength wearing this armor " +
 						"will decrease your movement speed and defense skill. ") );
 				}
 				
 			}
 		} else {
-			info.append( 
-				Utils.format("\n\nTypical %s provides damage absorption up to %d points per attack " +
-				" and requires %d points of strength. ", name, typicalDR() ) );
+			info.append(
+					"\n\n" +LanguageFactory.getTranslation(Utils.format("Typical %s provides damage absorption up to %d points per attack " +
+						"and requires %d points of strength. ", name, typicalDR(), typicalSTR())));
 			if (typicalSTR() > Dungeon.hero.STR()) {
 				info.append( LanguageFactory.getTranslation("Probably this armor is too heavy for you. ") );
 			}
@@ -238,11 +238,11 @@ public class Armor extends EquipableItem {
 		}
 		
 		if (isEquipped( Dungeon.hero )) {
-			info.append( Utils.format("\n\nYou are wearing the %s" +
-				(cursed ? ", and because it is cursed, you are powerless to remove it." : "."), name) );
+			info.append( "\n\n" + LanguageFactory.getTranslation(Utils.format("You are wearing the %s" +
+					(cursed ? ", and because it is cursed, you are powerless to remove it." : "."), name)));
 		} else {
 			if (cursedKnown && cursed) {
-				info.append( Utils.format("\n\nYou can feel a malevolent magic lurking within the %s.", name) );
+				info.append( "\n\n" +LanguageFactory.getTranslation(Utils.format("You can feel a malevolent magic lurking within the %s.", name)));
 			}
 		}
 		

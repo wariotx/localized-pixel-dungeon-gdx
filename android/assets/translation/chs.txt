@@ -1646,24 +1646,24 @@ your %s constricts around you painfully
 你感到你的%s紧紧包在身上,疼痛难忍.
 
 
-\n\nThis %s provides damage absorption up to %d points per attack.
-\n\n这件%s在每次抵挡攻击时能够吸收点%d伤害.
-\n\nBecause of your inadequate strength your movement speed and defense skill is decreased. 
-\n\n由于你的力量不足因此移动速度和防御技巧都下降了.
-\n\nBecause of your inadequate strength wearing this armor will decrease your movement speed and defense skill. 
-\n\n由于你的力量不足这件护甲会使你的移动速度和防御技巧下降.
-\n\nTypical %s provides damage absorption up to %d points per attack and requires %d points of strength. 
-\n\n一般来说%s在每次抵挡攻击时能够吸收点%d伤害,并且穿戴它需要%d点力量.
+This %s provides damage absorption up to %d points per attack.
+这件%s在每次抵挡攻击时能够吸收点%d伤害.
+Because of your inadequate strength your movement speed and defense skill is decreased. 
+由于你的力量不足因此移动速度和防御技巧都下降了.
+Because of your inadequate strength wearing this armor will decrease your movement speed and defense skill. 
+由于你的力量不足这件护甲会使你的移动速度和防御技巧下降.
+Typical %s provides damage absorption up to %d points per attack and requires %d points of strength. 
+一般来说%s在每次抵挡攻击时能够吸收点%d伤害,并且穿戴它需要%d点力量.
 Probably this armor is too heavy for you. 
 或许这件护甲对你来说过于沉重.
 It is inscribed.
 它上面镌刻着符文.
-\n\nYou are wearing the %s, and because it is cursed, you are powerless to remove it.
-\n\n你正穿着%s,由于它被诅咒了,所以你没办法脱下它.
-\n\nYou are wearing the %s.
-\n\n你正穿着%s.
-\n\nYou can feel a malevolent magic lurking within the %s
-\n\n你感到%s中蕴藏着恶毒的魔法
+You are wearing the %s, and because it is cursed, you are powerless to remove it.
+你正穿着%s,由于它被诅咒了,所以你没办法脱下它.
+You are wearing the %s.
+你正穿着%s.
+You can feel a malevolent magic lurking within the %s
+你感到%s中蕴藏着恶毒的魔法
 
 Your health is too low!
 你的生命值过低!

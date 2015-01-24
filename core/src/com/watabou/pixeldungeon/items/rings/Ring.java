@@ -30,8 +30,10 @@ import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.ItemStatusHandler;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+import net.whitegem.pixeldungeon.LanguageFactory;
 
 public class Ring extends EquipableItem {
 
@@ -205,30 +207,30 @@ public class Ring extends EquipableItem {
 	
 	@Override
 	public String name() {
-		return isKnown() ? name : gem + " ring";
+		return isKnown() ? name : Utils.format("%s ring", gem);
 	}
 	
 	@Override
 	public String desc() {
 		return 
-			"This metal band is adorned with a large " + gem + " gem " +
-			"that glitters in the darkness. Who knows what effect it has when worn?";
+			Utils.format("This metal band is adorned with a large %s gem " +
+			"that glitters in the darkness. Who knows what effect it has when worn?", gem);
 	}
 	
 	@Override
 	public String info() {
 		if (isEquipped( Dungeon.hero )) {
 			
-			return desc() + "\n\n" + "The " + name() + " is on your finger" + 
-				(cursed ? ", and because it is cursed, you are powerless to remove it." : "." );
+			return LanguageFactory.getTranslation(desc()) + "\n\n" + Utils.format("The %s is on your finger" +
+				(cursed ? ", and because it is cursed, you are powerless to remove it." : "."), name() );
 			
 		} else if (cursed && cursedKnown) {
 			
-			return desc() + "\n\nYou can feel a malevolent magic lurking within the " + name() + ".";
+			return LanguageFactory.getTranslation(desc()) + "\n\n" + LanguageFactory.getTranslation(Utils.format("You can feel a malevolent magic lurking within the %s.", name));
 			
 		} else {
 			
-			return desc();
+			return LanguageFactory.getTranslation(desc());
 			
 		}
 	}
@@ -308,7 +310,7 @@ public class Ring extends EquipableItem {
 			if (!isIdentified() && --ticksToKnow <= 0) {
 				String gemName = name();
 				identify();
-				GLog.w( TXT_IDENTIFY, gemName, Ring.this.toString() );
+				GLog.w( Utils.format(TXT_IDENTIFY, gemName, Ring.this.toString()) );
 				Badges.validateItemLevelAquired( Ring.this );
 			}
 			

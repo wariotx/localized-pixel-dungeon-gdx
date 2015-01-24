@@ -164,7 +164,7 @@ public class Hero extends Char {
 		super();
 		name = "you";
 		
-		HP = HT = 20;
+		HP = HT = 20000;
 		STR = STARTING_STR;
 		awareness = 0.1f;
 		
@@ -572,7 +572,7 @@ public class Hero extends Char {
 					} else {
 						if ((item instanceof ScrollOfUpgrade && ((ScrollOfUpgrade)item).isKnown()) ||
 							(item instanceof PotionOfStrength && ((PotionOfStrength)item).isKnown())) {
-							GLog.p( TXT_YOU_NOW_HAVE, item.name() );
+							GLog.p( Utils.format(TXT_YOU_NOW_HAVE, item.name()) );
 						} else {
 							GLog.i(Utils.format(TXT_YOU_NOW_HAVE, item.name()) );
 						}

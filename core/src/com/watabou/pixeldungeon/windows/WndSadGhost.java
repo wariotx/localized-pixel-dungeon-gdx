@@ -91,7 +91,7 @@ public class WndSadGhost extends Window {
 		item.detach( Dungeon.hero.belongings.backpack );
 		
 		if (reward.doPickUp( Dungeon.hero )) {
-			GLog.i( Hero.TXT_YOU_NOW_HAVE, reward.name() );
+			GLog.i( Utils.format(Hero.TXT_YOU_NOW_HAVE, reward.name() ));
 		} else {
 			Dungeon.level.drop( reward, ghost.pos ).sprite.drop();
 		}
