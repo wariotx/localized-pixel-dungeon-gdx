@@ -40,7 +40,7 @@ GLADIATOR
 Gladiator
 角斗士
 A successful attack with a melee weapon allows the _Gladiator_ to start a combo, in which every next successful hit inflicts more damage.
-使用近战模式成功命中目标能够让_角斗士_进入连击模式,每进行一次成功连击都能造成额外伤害.
+使用近战武器成功命中目标能够让_角斗士_进入连击模式,每进行一次成功连击都能造成额外伤害.
 BERSERKER
 狂战士
 Berserker
@@ -67,13 +67,13 @@ WARLOCK
 Warlock
 术士
 After killing an enemy the _Warlock_ consumes its soul. It heals his wounds and satisfies his hunger.
-术士会将他杀死的敌人的魂魄收走用于治疗与果腹.
+_术士_会将他杀死的敌人的魂魄收走用于治疗与果腹.
 BATTLEMAGE
 战法师
 Battlemage
 战法师
 When fighting with a wand in his hands, the _Battlemage_ inflicts additional damage depending on the current number of charges. Every successful hit restores 1 charge to this wand.
-手持法杖战斗时,战法师能够造成和法杖充能点数相关的额外伤害.每次命中敌人都能为法杖恢复一点充能.
+手持法杖战斗时,_战法师_能够造成和法杖充能点数相关的额外伤害.每次命中敌人都能为法杖恢复一点充能.
 
 ROGUE
 游侠
@@ -88,7 +88,7 @@ Rogues are proficient with light armor, dodging better while wearing one.
 Rogues are proficient in detecting hidden doors and traps.
 游侠擅长侦测隐藏的门和陷阱.
 Rogues can go without food longer.
-游侠不吃东西的情况下能够跑得更久.
+游侠不吃东西的情况下能够撑得更久.
 Scrolls of Magic Mapping are identified from the beginning.
 开局时魔法地图卷轴就已经鉴定过了.
 ASSASSIN
@@ -96,13 +96,13 @@ ASSASSIN
 Assassin
 刺客
 When performing a surprise attack, the _Assassin_ inflicts additional damage to his target.
-刺客进行突袭时能够对目标造成额外伤害.
+_刺客_进行突袭时能够对目标造成额外伤害.
 FREERUNNER
 疾行客
 Freerunner
 疾行客
 The _Freerunner_ can move almost twice faster, than most of the monsters. When he is running, the Freerunner is much harder to hit. For that he must be unencumbered and not starving.
-疾行客移动速度差不多有大多数怪物的两倍快.他奔走如飞,很难被命中.但饿肚子或者被东西挡住的时候就不能发挥这种优势了.
+_疾行客_移动速度差不多有大多数怪物的两倍快.他奔跑起来脚步如飞,敌人很难命中..但饿肚子或者负重的时候就无法发挥这种优势了.
 
 HUNTRESS
 女猎
@@ -136,7 +136,7 @@ New Game
 Load Game
 载入游戏
 Depth: %d, level: %d
-%2$d级，%1$d层
+等级%2$d,第%1$d层
 
 Erase current game
 覆盖现有存档
@@ -158,6 +158,12 @@ Your Badges
 
 %s :%d
 %s:%d
+
+a %s
+%s
+
+an %s
+%s
 
 # GameScene
 
@@ -547,6 +553,13 @@ Darkness
 
 
 # Badges
+
+Badge endorsed: %s
+获得勋章:%s
+New super badge: %s
+新的超级勋章:%s
+New badge: %s
+新勋章:%s
 
 10 enemies slain
 10敌斩
@@ -1009,7 +1022,7 @@ Marsupial rats are aggressive, but rather weak denizens of the sewers. They can 
 giant piranha
 巨型食人鱼
 These carnivorous fish are not natural inhabitants of underground pools. They were bred specifically to protect flooded treasure vaults.
-地下水域并非这些肉食鱼类的天然栖息地.它们是专门被养在这里用来看守宝箱的.
+地下水域并非这些肉食鱼类的天然栖息地.它们专门被放养在此用来看守被淹没的宝库.
 
 King of Dwarves
 矮人国王
@@ -1018,7 +1031,7 @@ parried
 You cannot kill me, 
 汝杀不死朕,
 ... I am... immortal...
-...朕将...永垂不朽...
+...朕将...永恒不朽...
 Arise, slaves!
 平身,朕的奴才们!
 How dare you!
@@ -1028,7 +1041,7 @@ The last king of dwarves was known for his deep understanding of processes of li
 undead dwarf
 矮人亡灵
 These undead dwarves, risen by the will of the King of Dwarves, were members of his court. They appear as skeletons with a stunning amount of facial hair.
-由矮人国王的意志唤醒的矮人亡灵,前议会成员.它们外观形如骷髅,面部还残留着稀疏的毛发.
+由矮人国王的意志唤醒的矮人亡灵,前议会成员.它们外观形如满脸胡须的骷髅.
 
 Goo
 黏咕
@@ -1094,13 +1107,13 @@ These brisk and tenacious inhabitants of cave domes may defeat much larger oppon
 old wandmaker
 年迈的法杖匠人
 Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - a _Rotberry seed_. Being a magic user, I'm quite able to defend myself against local monsters, but I'm getting lost in no time, it's very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.
-哦,在这种地方预计一个这么好的人真是喜事一桩!我来这里寻找一种稀有药材-_堕落莓种子_.作为施法者,在这些怪物面前自保自然绰绰有余,但我老是迷路,太尴尬了.或许你能帮帮我?如果你能为我提供帮助我会很乐意送给你一支法杖作为回报.
+哦,在这种地方遇见一个这么好的人真是喜事一桩!我来这里寻找一种稀有药材-_堕落莓种子_.作为施法者,在这些怪物面前自保自然绰绰有余,但我老是迷路,太尴尬了.或许你能帮帮我?如果你能为我提供帮助我会很乐意送给你一支法杖作为回报.
 Oh, what a pleasant surprise to meet a decent person in such place! I came here for a rare ingredient - _corpse dust_. It can be gathered from skeletal remains and there is an ample number of them in the dungeon. Being a magic user, I'm quite able to defend myself against local monsters, but I'm getting lost in no time, it's very embarrassing. Probably you could help me? I would be happy to pay for your service with one of my best wands.
-哦,在这种地方预计一个这么好的人真是喜事一桩!我来这里寻找一种稀有药材-_黄泉土_.你需要从骨骸中采集它们,它们分布在这一层地牢的许多位置.作为施法者,在这些怪物面前自保自然绰绰有余,但我老是迷路,太尴尬了.或许你能帮帮我?如果你能为我提供帮助我会很乐意送给你一支法杖作为回报.
+哦,在这种地方遇见一个这么好的人真是喜事一桩!我来这里寻找一种稀有药材-_黄泉土_.你需要从骨骸中采集它们,它们分布在这一层地牢的许多位置.作为施法者,在这些怪物面前自保自然绰绰有余,但我老是迷路,太尴尬了.或许你能帮帮我?如果你能为我提供帮助我会很乐意送给你一支法杖作为回报.
 Any luck with a Rotberry seed, %s? No? Don't worry, I'm not in a hurry.
 堕落莓种子搞定没,%s?不急的,我不着急.
 Any luck with corpse dust, %s? Bone piles are the most obvious places to look.
-堕落莓种子搞定没,%s?骨头堆应该还是蛮容易看到的.
+黄泉土搞定没,%s?骨头堆应该还是蛮容易看到的.
 absorbed
 全神贯注
 This old but hale gentleman wears a slightly confused expression. He is protected by a magic shield.
@@ -1142,9 +1155,9 @@ Hello, friend!
 Imps are lesser demons. They are notable for neither their strength nor their magic talent. But they are quite smart and sociable, and many of imps prefer to live and do business among non-demons.
 小恶魔是一种劣等恶魔.他们力量贫弱魔力也不强大,但却非常机灵,富有社交手腕,而且许多小恶魔喜欢生活在非恶魔中,与他们做生意.
 Are you an adventurer? I love adventurers! You can always rely on them if something needs to be killed. Am I right? For bounty of course ;)\nIn my case this is _golems_ who need to be killed. You see, I'm going to start a little business here, but these stupid golems are bad for business! It's very hard to negotiate with wandering lumps of granite, damn them! So please, kill... let's say _6 of them_ and a reward is yours.
-你是冒险者?我爱死冒险者了!如果你想杀死某些东西总是要靠冒险者出力的.我说得不错吧?酬劳当然不会少了你的. ;)\n这次咱要对付的是_魔像_.你看啊,我打算在这做点小生意什么的,可是这些蠢家伙对生意可没好影响!见鬼,很难不分神去留意这些晃来晃去的大岩块儿.所以我请你杀_6只魔像_,你会得到奖励的.
+你是冒险者?我爱死冒险者了!如果你想杀死某些东西总是要靠冒险者出力的.我说得不错吧?酬劳当然不会少了你的. ;)\n这次咱要对付的是_魔像_.你看啊,我打算在这做点小生意什么的,可是这些蠢家伙对生意可没好影响!见鬼,和这些晃来晃去的大岩块根本说不通话.所以我请你杀_6只魔像_,你会得到奖励的.
 Are you an adventurer? I love adventurers! You can always rely on them if something needs to be killed. Am I right? For bounty of course ;)\nIn my case this is _monks_ who need to be killed. You see, I'm going to start a little business here, but these lunatics don't buy anything themselves and will scare away other customers. So please, kill... let's say _8 of them_ and a reward is yours.
-你是冒险者?我爱死冒险者了!如果你想杀死某些东西总是要靠冒险者出力的.我说得不错吧?酬劳当然不会少了你的. ;)\n这次咱要对付的是_武僧_.你看啊,我打算在这做点小生意什么的,可是这些疯子非但不进行消费还把其他客人都给吓跑了.所以我请你杀_8名武僧_,你会得到奖励的.
+你是冒险者?我爱死冒险者了!如果你想杀死某些东西总是要靠冒险者出力的.我说得不错吧?酬劳当然不会少了你的. ;)\n这次咱要对付的是_武僧_.你看啊,我打算在这做点小生意什么的,可是这些疯子非但不消费还把其他客人都给吓跑了.所以我请你杀_8名武僧_,你会得到奖励的.
 How is your golem safari going?
 魔像狩猎进展如何?
 Oh, you are still alive! I knew that your kung-fu is stronger ;) Just don't forget to grab these monks' tokens.
@@ -1159,7 +1172,7 @@ Imps are lesser demons. They are notable for neither their strength nor their ma
 sad ghost
 怨灵
 Hello adventurer... Once I was like you - strong and confident... And now I'm dead... But I can't leave this place... Not until I have my _dried rose_... It's very important to me... 
-你好冒险者...我曾经和你一样强壮自信...而我现在死了..但我依然无法离开这里,除非我找到我那朵_枯萎玫瑰_...它对我非常重要...
+你好冒险者...我曾经和你一样强壮自信...而我现在死了..但我依然无法离开这里,除非我找到我那束_枯萎玫瑰_...它对我非常重要...
 Some monster stole it from my body...
 某只怪物从我尸体上偷走了它.
 Please... Help me... Find the rose...
@@ -1173,7 +1186,7 @@ The ghost is barely visible. It looks like a shapeless spot of faint light with 
 fetid rat
 腐臭袋鼬
 This marsupial rat is much larger, than a regular one. It is surrounded by a foul cloud.
-腐臭袋鼬体型比普通袋鼬更巨大.它周身蔓延着腐臭的毒雾.
+腐臭袋鼬体型比普通袋鼬更巨大.它周身弥漫着腐臭的毒雾.
 
 troll blacksmith
 巨魔铁匠
@@ -1204,7 +1217,7 @@ It's a junk, the quality is too poor!
 I can't reforge these items!
 我没办法重铸这些物品!
 This troll blacksmith looks like all trolls look: he is tall and lean, and his skin resembles stone in both color and texture. The troll blacksmith is tinkering with unproportionally small tools.
-巨魔铁匠和其他巨魔一般模样:高高瘦瘦,皮肤的纹理和颜色和石头都差不多.巨魔铁匠不太擅长加工小东西.
+巨魔铁匠和其他巨魔一般模样:高高瘦瘦,皮肤的纹理和颜色和石头都差不多.巨魔铁匠操弄着和他体型极不相称的小工具.
 
 
 # TradeItem
@@ -1241,11 +1254,13 @@ Oh, I see you have succeeded! I do hope it hasn't troubled you too much. As I pr
 
 Battle wand
 战斗法杖
-
 Non-battle wand
 辅助法杖
 
 # Plants
+
+PLANT
+种植
 
 Dreamweed
 幻梦草
@@ -1467,68 +1482,52 @@ Chilling %s
 Wild %s
 狂野%s
 
-# Weapon
+# Weapon 
 
-This 
-这柄
- is 
-是一柄
 upgraded
 升级后的
 degraded
 降级后的
- tier-
-第
- melee weapon.
-阶近战武器. 
-Its average damage is 
-它的平均伤害为每击
- points per hit. 
-点.
-Its typical average damage is 
-它一般的平均伤害为每击
-and usually it requires
-此外它通常需要 
- points of strength.
-点力量. 
+This %s is %s tier-%d melee weapon. 
+这柄%s是一柄%s第%d阶近战武器.
+Its average damage is %d points per hit. 
+它的平均伤害为每击%d点.
+Its typical average damage is %d points per hit and usually it requires %d points of strength. 
+一般来说它的平均伤害为每击%d点,此外想要自如地使用它通常需要%d点力量.
 Probably this weapon is too heavy for you. 
 或许这柄武器对你来说过于沉重.
-This is a rather 
-这是一柄相当
-fast
-快速
-slow
-缓慢
- and
-且 
- but
-但却 
-accurate
-精准
-inaccurate
-不精准
- weapon. 
-的武器
+This is a rather fast and accurate weapon. 
+这是一柄相当快速且精准的武器.
+This is a rather fast but inaccurate weapon. 
+这是一柄相当快速但却不精准的武器.
+This is a rather slow but accurate weapon. 
+这是一柄相当缓慢但却精准的武器.
+This is a rather slow and inaccurate weapon. 
+这是一柄相当缓慢且不精准的武器.
+This is a rather fast weapon. 
+这是一柄相当快速的武器.
+This is a rather slow weapon. 
+这是一柄相当缓慢的武器.
+This is a rather accurate weapon. 
+这是一柄相当精准的武器.
+This is a rather inaccurate weapon. 
+这是一柄相当不精准的武器.
 It was balanced to make it faster. 
 它被磨制得更加快速了.
 It was balanced to make it more accurate. 
 它被磨制得更加精准了.
 It is enchanted.
 它已被附魔.
-Because of your inadequate strength the accuracy and speed of your attack with 
-因为你力量过于孱弱这柄
- is decreased.
-的攻击速度和精准都下降了.
-Because of your excess strength the damage of your attack with 
-因为你力量超过需求这柄
- is increased.
-的攻击速度和精准都增加了.
-You hold the weapon at the ready
-你正握着这柄武器
-, and because it is cursed, you are powerless to let go.
-,由于它被诅咒了,所以你没办法放手.
-You can feel a malevolent magic lurking within 
-你感到武器中蕴藏着恶毒的魔法,啊,那恶毒的
+Because of your inadequate strength the accuracy and speed of your attack with this %s is decreased.
+因为你力量过于孱弱这柄的攻击速度和精准都下降了.
+Because of your excess strength the damage of your attack with this %s is increased.
+因为你力量超过需求这柄%s的攻击速度和精准都增加了.
+You hold the %s at the ready.
+你正握着%s.
+You hold the %s at the ready, and because it is cursed, you are powerless to let go.
+你正握着%s,由于它被诅咒了,所以你没办法放手.
+You can feel a malevolent magic lurking within %s.
+你感到%s中蕴藏着恶毒的魔法.
 
 battle axe
 战斧
@@ -1646,32 +1645,25 @@ Interaction of different types of magic has erased the glyph on this armor!
 your %s constricts around you painfully
 你感到你的%s紧紧包在身上,疼痛难忍.
 
-\n\nThis 
-这件
- provides damage absorption up to 
-能够吸收
-  points per attack. 
-点伤害,
+
+\n\nThis %s provides damage absorption up to %d points per attack.
+\n\n这件%s在每次抵挡攻击时能够吸收点%d伤害.
 \n\nBecause of your inadequate strength your movement speed and defense skill is decreased. 
 \n\n由于你的力量不足因此移动速度和防御技巧都下降了.
 \n\nBecause of your inadequate strength wearing this armor will decrease your movement speed and defense skill. 
 \n\n由于你的力量不足这件护甲会使你的移动速度和防御技巧下降.
-\n\nTypical
-\n\n一般来说 
- and requires 
-并且需要
- points of strength. 
-点力量.
+\n\nTypical %s provides damage absorption up to %d points per attack and requires %d points of strength. 
+\n\n一般来说%s在每次抵挡攻击时能够吸收点%d伤害,并且穿戴它需要%d点力量.
 Probably this armor is too heavy for you. 
 或许这件护甲对你来说过于沉重.
 It is inscribed.
 它上面镌刻着符文.
-\n\nYou are wearing the 
-\n\n你正穿着这件
-, and because it is cursed, you are powerless to remove it.
-,由于它被诅咒了,所以你没办法脱下它.
-\n\nYou can feel a malevolent magic lurking within the 
-\n\n你感到护甲中蕴藏着恶毒的魔法,啊,那恶毒的
+\n\nYou are wearing the %s, and because it is cursed, you are powerless to remove it.
+\n\n你正穿着%s,由于它被诅咒了,所以你没办法脱下它.
+\n\nYou are wearing the %s.
+\n\n你正穿着%s.
+\n\nYou can feel a malevolent magic lurking within the %s
+\n\n你感到%s中蕴藏着恶毒的魔法
 
 Your health is too low!
 你的生命值过低!
@@ -1788,6 +1780,11 @@ your wand fizzles; it must be out of charges for now
 你的法杖嘶嘶作响;一定是现在耗光了能量.
 You can't target yourself
 你不能以自己为目标
+
+Wand
+法杖
+%s wand
+%s法杖
 
 holly
 冬青
@@ -1962,7 +1959,9 @@ This parchment is covered with indecipherable writing, and bears a title of rune
 Scroll of Challenge
 挑战卷轴
 The scroll emits a challenging roar that echoes throughout the dungeon!
+这张卷轴发出了挑衅的咆哮声,久久回荡在地牢中!
 When read aloud, this scroll will unleash a challenging roar that will awaken all monsters and alert them to the reader's location.
+大声阅读这张卷轴会发出挑衅的咆哮欢迎这一层所有的怪物并吸引它们前往阅读者的位置.
 
 Scroll of Identify
 鉴定卷轴
@@ -2097,6 +2096,9 @@ sapphire
 quartz
 石英
 
+%s ring
+%s指环
+
 Ring of Accuracy
 精准指环
 This ring increases your chance to hit the enemy.
@@ -2216,6 +2218,9 @@ potion
 药水
 This flask contains a swirling %s liquid. Who knows what it will do when drunk or thrown?
 瓶里盛着打着漩涡的%s色液体.谁知道饮用它或者扔出它会发生什么呢?
+
+%s potion
+%s药水
 
 turquoise
 翠绿
@@ -2520,10 +2525,10 @@ Summoning trap
 召唤陷阱
 Triggered trap
 已触发陷阱
-A hidden pressure plate clicks!
-一块隐藏的压力盘响了！
 Stepping onto a hidden pressure plate will activate the trap.
 踩中隐藏的压力盘就会触发陷阱.
+A hidden pressure plate clicks!
+一块隐藏压力盘咔咔作响！
 The trap has been triggered before and it's not dangerous anymore.
 陷阱已经被触发过了,不再危险.
 Bookshelf
@@ -2589,15 +2594,6 @@ Pillar
 The pillar is made of real humanoid skulls. Awesome.
 用类人生物的骸骨搭建的柱子,好酷.
 
-# Wand
-Wand
-法杖
-%s wand
-%s法杖
-
-# Plant
-PLANT
-种植
 
 # INSCRIBE
 scroll
@@ -2614,18 +2610,6 @@ Scroll of Weapon Upgrade
 Mystery meat burns up!
 神秘肉烧着了！
 
-# Bage
-Badge endorsed: %s
-获得勋章：%s
-New super badge: %s
-新超级勋章：%s
-New badge: %s
-新勋章：%s
-
-# Pots
-%s potion
-%s药水
-
 # backpack
 backpack
 背包
@@ -2633,9 +2617,4 @@ Settings
 设置
 
 You don't know what is there.
-你不知道那边有什么
-
-a %s
-%s
-an %s
-%s
+你不知道那边有什么.
