@@ -227,7 +227,7 @@ public class Armor extends EquipableItem {
 		} else {
 			info.append( 
 				Utils.format("\n\nTypical %s provides damage absorption up to %d points per attack " +
-				" and requires " + typicalSTR() + " points of strength. ", name, typicalDR() ) );
+				" and requires %d points of strength. ", name, typicalDR() ) );
 			if (typicalSTR() > Dungeon.hero.STR()) {
 				info.append( LanguageFactory.getTranslation("Probably this armor is too heavy for you. ") );
 			}
