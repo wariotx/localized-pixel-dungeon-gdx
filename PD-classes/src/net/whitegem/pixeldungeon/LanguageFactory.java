@@ -30,16 +30,14 @@ public class LanguageFactory
 
     public String translate(String originalText)
     {
-        System.out.println("t: " + originalText);
+        System.out.println("Translating >>> " + originalText);
         String textTemp = originalText.replace("\n", "\\n");
         if (translator.hasKey(textTemp))
         {
-            System.out.println("t haskey");
             return translator.translate(textTemp).replace("\\n", "\n");
         }
         if (translator.hasKey(textTemp.replaceAll("\\.$", "")))
         {
-            System.out.println("t haskey.");
             return translator.translate(textTemp.replaceAll("\\.$", "")).replace("\\n", "\n") + ".";
         }
         return originalText;
@@ -58,7 +56,7 @@ public class LanguageFactory
 
     public void addFormatTranslation(String formattedText, String format, Object...args)
     {
-        System.out.println("Util.format >>> " + formattedText + " ||| " + format);
+        System.out.println("Utils.format >>> " + formattedText + " ||| " + format + " ||| " + args);
         for (int i = 0; i < args.length; i++)
         {
             if (args[i] instanceof String)
@@ -66,17 +64,14 @@ public class LanguageFactory
                 System.out.println(args[i]);
                 if (stored.contains(args[i].toString().toLowerCase()))
                 {
-                    System.out.println("in stored");
                     args[i] = stored.get(args[i].toString().toLowerCase());
                 }
                 else if (stored.contains(args[i].toString().toLowerCase().replaceAll("\\.$", "")))
                 {
-                    System.out.println("in stored.");
                     args[i] = stored.get(args[i].toString().toLowerCase().replaceAll("\\.$", ""));
                 }
                 else if (hasKey(args[i].toString().toLowerCase()))
                 {
-                    System.out.println("haskey");
                     System.out.println(translate(args[i].toString()));
                     args[i] = translate(args[i].toString());
                 }
@@ -88,7 +83,6 @@ public class LanguageFactory
         }
         else
         {
-            System.out.println("store original");
             stored.put(formattedText.toLowerCase(), String.format(format, args));
         }
     }
@@ -100,8 +94,8 @@ public class LanguageFactory
 
     public static String getTranslation(String text)
     {
-        System.out.println("getTrans >>> " + text);
-        if (INSTANCE.language.equals("en"))
+        System.out.println("Getting translation for >>> " + text);
+        if (!INSTANCE.language.equals("en"))
         {
             String s = null;
             if (text != null && INSTANCE.stored.contains(text.toLowerCase()))

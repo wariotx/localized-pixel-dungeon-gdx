@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
+import net.whitegem.pixeldungeon.LanguageFactory;
 
 public class Armor extends EquipableItem {
 	
@@ -203,45 +204,45 @@ public class Armor extends EquipableItem {
 	@Override
 	public String info() {
 		String name = name();
-		StringBuilder info = new StringBuilder( desc() );
+		StringBuilder info = new StringBuilder( LanguageFactory.getTranslation(desc()) );
 		
 		if (levelKnown) {
 			info.append( 
-				"\n\nThis " + name + " provides damage absorption up to " +
-				"" + Math.max( DR, 0 ) + " points per attack. " );
+				Utils.format("\n\nThis %s provides damage absorption up to " +
+				"%d points per attack. ", name, Math.max( DR, 0 )) );
 			
 			if (STR > Dungeon.hero.STR()) {
 				
 				if (isEquipped( Dungeon.hero )) {
-					info.append( 
-						"\n\nBecause of your inadequate strength your " +
-						"movement speed and defense skill is decreased. " );
+					info.append(
+							LanguageFactory.getTranslation("\n\nBecause of your inadequate strength your " +
+						"movement speed and defense skill is decreased. ") );
 				} else {
-					info.append( 
-						"\n\nBecause of your inadequate strength wearing this armor " +
-						"will decrease your movement speed and defense skill. " );
+					info.append(
+							LanguageFactory.getTranslation("\n\nBecause of your inadequate strength wearing this armor " +
+						"will decrease your movement speed and defense skill. ") );
 				}
 				
 			}
 		} else {
 			info.append( 
-				"\n\nTypical " + name + " provides damage absorption up to " + typicalDR() + " points per attack " +
-				" and requires " + typicalSTR() + " points of strength. " );
+				Utils.format("\n\nTypical %s provides damage absorption up to %d points per attack " +
+				" and requires " + typicalSTR() + " points of strength. ", name, typicalDR() ) );
 			if (typicalSTR() > Dungeon.hero.STR()) {
-				info.append( "Probably this armor is too heavy for you. " );
+				info.append( LanguageFactory.getTranslation("Probably this armor is too heavy for you. ") );
 			}
 		}
 		
 		if (glyph != null) {
-			info.append( "It is inscribed." );
+			info.append( LanguageFactory.getTranslation("It is inscribed.") );
 		}
 		
 		if (isEquipped( Dungeon.hero )) {
-			info.append( "\n\nYou are wearing the " + name + 
-				(cursed ? ", and because it is cursed, you are powerless to remove it." : ".") ); 
+			info.append( Utils.format("\n\nYou are wearing the %s" +
+				(cursed ? ", and because it is cursed, you are powerless to remove it." : "."), name) );
 		} else {
 			if (cursedKnown && cursed) {
-				info.append( "\n\nYou can feel a malevolent magic lurking within the " + name + "." );
+				info.append( Utils.format("\n\nYou can feel a malevolent magic lurking within the %s.", name) );
 			}
 		}
 		

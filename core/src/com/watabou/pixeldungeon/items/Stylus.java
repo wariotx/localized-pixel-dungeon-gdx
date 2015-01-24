@@ -27,6 +27,7 @@ import com.watabou.pixeldungeon.items.armor.Armor;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 
 public class Stylus extends Item {
@@ -86,7 +87,7 @@ public class Stylus extends Item {
 			glyph = Armor.Glyph.random();
 		}
 		
-		GLog.w( TXT_INSCRIBED, glyph.name(), armor.name() );
+		GLog.w(Utils.format(TXT_INSCRIBED, glyph.name(), armor.name()) );
 		
 		armor.inscribe( glyph );
 		

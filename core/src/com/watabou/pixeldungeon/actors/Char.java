@@ -177,11 +177,11 @@ public abstract class Char extends Actor {
 								Utils.indefinite( name ), Dungeon.depth ) );
 						}
 						
-						GLog.n( TXT_KILL, name );
+						GLog.n( Utils.format(TXT_KILL, name) );
 					}
 					
 				} else {
-					GLog.i( TXT_DEFEAT, name, enemy.name );
+					GLog.i( Utils.format(TXT_DEFEAT, name, enemy.name) );
 				}
 			}
 			

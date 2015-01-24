@@ -64,7 +64,7 @@ public class Weapon extends KindOfWeapon {
 		if (!levelKnown) {
 			if (--hitsToKnow <= 0) {
 				levelKnown = true;
-				GLog.i( TXT_IDENTIFY, name(), toString() );
+				GLog.i( Utils.format(TXT_IDENTIFY, name(), toString()) );
 				Badges.validateItemLevelAquired( this );
 			}
 		}

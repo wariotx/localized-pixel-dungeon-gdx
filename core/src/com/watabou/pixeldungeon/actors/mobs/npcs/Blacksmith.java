@@ -37,6 +37,7 @@ import com.watabou.pixeldungeon.levels.Room.Type;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.BlacksmithSprite;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBlacksmith;
 import com.watabou.pixeldungeon.windows.WndQuest;
 import com.watabou.utils.Bundle;
@@ -209,7 +210,7 @@ public class Blacksmith extends NPC {
 			((EquipableItem)first).doUnequip( Dungeon.hero, true );
 		}
 		first.upgrade();
-		GLog.p( TXT_LOOKS_BETTER, first.name() );
+		GLog.p(Utils.format(TXT_LOOKS_BETTER, first.name()) );
 		Dungeon.hero.spendAndNext( 2f );
 		Badges.validateItemLevelAquired( first );
 		

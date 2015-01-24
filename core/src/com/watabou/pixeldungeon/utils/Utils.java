@@ -39,7 +39,8 @@ public class Utils {
 		if (noun.length() == 0) {
 			return "a";
 		} else {
-			return (VOWELS.indexOf( Character.toLowerCase( noun.charAt( 0 ) ) ) != -1 ? "an " : "a ") + noun;
+			String prefix = VOWELS.indexOf( Character.toLowerCase( noun.charAt( 0 ) ) ) != -1 ? "an " : "a ";
+			return format(prefix + "%s", noun);
 		}
 	}
 }
