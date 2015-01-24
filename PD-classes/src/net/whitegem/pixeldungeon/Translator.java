@@ -68,6 +68,7 @@ public class Translator
             return inText;
         }
 
+        /*
         ArrayList<String> transAfter = new ArrayList<String>();
 
         String[] paragraphs = inText.split("\\n");
@@ -130,7 +131,7 @@ public class Translator
             {
                 if (!isChinese(next.charAt(0)) && !(next.charAt(0) + "").matches("\\p{P}"))
                 {
-                    result += " ";
+                    //result += " ";
                 }
             }
             else if (current.matches("\\p{P}"))
@@ -138,12 +139,12 @@ public class Translator
 
                 if (current.matches("[,.!?;:]") && isChinese(next.charAt(0)))
                 {
-                    result += " ";
+                    //result += " ";
                 }
             }
             else if (!((current.charAt(current.length() - 1) + "").matches("[0-9]") && (next.charAt(0) + "").matches("[\\./\\)\\(]")))
             {
-                result += " ";
+                //result += " ";
             }
 
             transAfter.set(c, result);
@@ -152,9 +153,9 @@ public class Translator
         String finalTrans = "";
         for (String s : transAfter)
             finalTrans += s;
+            */
 
-        System.out.println(finalTrans);
-        return finalTrans;
+        return inText;
     }
 
     private static boolean isChinese(char c)

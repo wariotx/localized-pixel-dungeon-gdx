@@ -40,13 +40,13 @@ GLADIATOR
 Gladiator
 角斗士
 A successful attack with a melee weapon allows the _Gladiator_ to start a combo, in which every next successful hit inflicts more damage.
-使用近战模式成功命中目标能够让角斗士进入连击模式,每进行一次成功连击都能造成额外伤害.
+使用近战模式成功命中目标能够让_角斗士_进入连击模式,每进行一次成功连击都能造成额外伤害.
 BERSERKER
 狂战士
 Berserker
 狂战士
 When severely wounded, the _Berserker_ enters a state of wild fury significantly increasing his damage output.
-饱受伤害的狂战士会进入狂暴状态可观地提升他的伤害输出能力.
+饱受伤害的_狂战士_会进入狂暴状态可观地提升他的伤害输出能力.
 
 MAGE
 法师

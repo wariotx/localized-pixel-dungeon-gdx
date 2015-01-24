@@ -63,9 +63,10 @@ public class BitmapText extends Visual {
 		this.font = font;
 	}
 
-	private String getTranslation(String text)
+	public static String getTranslation(String text)
 	{
 		System.out.println("getTrans >>> " + text);
+		String original = text;
 		if (!LanguageFactory.INSTANCE.language.equals("en"))
 		{
 			String s = null;
@@ -79,10 +80,11 @@ public class BitmapText extends Visual {
 			}
 			if (text != null)
 			{
-				text = (text == null) ? "" : (s == null) ? LanguageFactory.INSTANCE.translate(text) : s;
+				text = (s == null) ? LanguageFactory.INSTANCE.translate(text) : s;
 				text = LanguageFactory.INSTANCE.fixWrap(text);
 			}
 		}
+
 		return text;
 	}
 	
