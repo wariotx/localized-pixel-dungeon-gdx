@@ -2461,3 +2461,169 @@ scroll holder
 卷轴筒
 You can place any number of scrolls into this tubular container. It saves room in your backpack and protects scrolls from fire.
 你可以将任意类型的卷轴放入这个管状容器保存.它能够节约背包空间,并且使卷轴不会被火点燃.
+
+
+# Terrains
+
+Chasm
+深渊
+You can't see the bottom.
+深不见底
+Do you really want to jump into the chasm? You can probably die.
+你真的想要跳下深渊?可能会摔死的.
+You fell to death...
+你摔死了...
+Floor
+地板
+Grass
+草地
+Water
+水塘
+In case of burning step into the water to extinguish the fire.
+万一着火了可以跳进水里扑灭火焰.
+Wall
+墙壁
+Closed door
+紧闭的门
+Open door
+敞开的门
+Depth entrance
+本层入口
+Depth exit
+本层出口
+Stairs lead up to the upper depth.
+通向上一层地牢的楼梯.
+Stairs lead down to the lower depth.
+通向下一层地牢的楼梯.
+The ladder leads up to the upper depth.
+通往上一层地牢的梯子.
+The ladder leads down to the lower depth.
+通往下一层地牢的梯子.
+A ramp leads up to the upper depth.
+通往上一层地牢的斜坡.
+A ramp leads down to the lower depth.
+通往下一层地牢的斜坡.
+Embers
+余烬
+Embers cover the floor.
+地板上铺满灰烬.
+Locked door
+上锁的门
+This door is locked, you need a matching key to unlock it.
+门锁着,需要匹配的钥匙才能打开.
+Pedestal
+底座
+Barricade
+路障
+The wooden barricade is firmly set but has dried over the years. Might it burn?
+木质路障非常牢靠,但过了这么多年也非常干燥.或许能把它点燃?
+High grass
+草丛
+Dense vegetation blocks the view.
+茂密的草木遮挡了视线.
+Locked depth exit
+Boss层上锁出口
+Heavy bars block the stairs leading down.
+铁栅栏挡住了通往下层的楼梯.
+Unlocked depth exit
+Boss层出口
+Sign
+牌子
+You can't read the text from here.
+站在这里无法读牌子.
+Well
+井水
+Empty well
+枯井
+The well has run dry.
+井水已经干涸了.
+Statue
+雕像
+Someone wanted to adorn this place, but failed, obviously.
+有人曾想要装饰下这个地方,但效果明显很差.
+The statue depicts some dwarf standing in a heroic stance.
+雕像展现的是一些矮人摆着英雄造型的情景.
+Toxic gas trap
+剧毒气体陷阱
+Fire trap
+火焰陷阱
+Paralytic gas trap
+麻痹气体陷阱
+Poison dart trap
+毒镖陷阱
+Alarm trap
+警报陷阱
+Lightning trap
+闪电陷阱
+Gripping trap
+兽夹陷阱
+Summoning trap
+召唤陷阱
+Triggered trap
+已触发陷阱
+Stepping onto a hidden pressure plate will activate the trap.
+踩中隐藏的压力盘就会触发陷阱.
+The trap has been triggered before and it's not dangerous anymore.
+陷阱已经被触发过了,不再危险.
+Bookshelf
+书架
+The bookshelf is packed with cheap useless books. Might it burn?
+书架上放满了各种便宜没用的书籍.能不能把它点燃呢?
+This is probably a vestige of a prison library. Might it burn?
+这里或许是监狱图书馆的遗迹.能不能把它点燃呢?
+The rows of books on different disciplines fill the bookshelf.
+书架上放满了不同学科的书籍.
+Books in ancient languages smoulder in the bookshelf.
+书架上摆满古代语写成的书.
+Alchemy pot
+炼药釜
+Drop some seeds here to cook a potion.
+把种子丢进去可以炼药.
+Select a seed to throw
+选择一颗种子扔出
+Dark cold water.
+黑暗冰冷的水
+There are old blood stains on the floor.
+地板上有一滩陈旧的血迹.
+Murky water
+泥浆
+Wet yellowish moss covers the floor.
+地板上覆盖着淡黄色的潮湿苔藓.
+The trap emits a piercing sound that echoes throughout the dungeon!
+陷阱发出了尖锐的啸声久久回荡在地牢中!
+lightning trap
+闪电陷阱
+You were killed by a discharge of a lightning trap...
+你被闪电陷阱释放的闪电杀死了...
+Fluorescent moss
+荧光藓
+Fluorescent mushrooms
+荧光菇
+Freezing cold water.
+结冰的冷水
+Huge mushrooms block the view.
+高大的蘑菇遮住了视线.
+A vein of some ore is visible on the wall. Gold?
+矿脉裸露在岩壁表面.黄金?
+Who would need a bookshelf in a cave?
+山洞里谁还需要书架呢?
+Suspiciously colored water
+颜色可疑的水
+High blooming flowers
+高大的鲜花
+Several tiles are missing here.
+这里有些砖块不见了.
+Thick carpet covers the floor.
+地板上铺着厚厚的地毯.
+Cold lava
+冷却岩浆
+It looks like lava, but it's cold and probably safe to touch.
+看起来很像岩浆,但已经凉下来可以安全地触碰了.
+Embermoss
+余烬藓
+Emberfungi
+余烬菇
+Pillar
+柱子
+The pillar is made of real humanoid skulls. Awesome.
+用类人生物的骸骨搭建的柱子,好酷.
