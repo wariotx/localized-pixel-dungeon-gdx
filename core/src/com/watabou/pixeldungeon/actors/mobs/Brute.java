@@ -26,6 +26,7 @@ import com.watabou.pixeldungeon.items.Gold;
 import com.watabou.pixeldungeon.sprites.BruteSprite;
 import com.watabou.pixeldungeon.sprites.CharSprite;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 
@@ -80,7 +81,7 @@ public class Brute extends Mob {
 			enraged = true;
 			spend( TICK );
 			if (Dungeon.visible[pos]) {
-				GLog.w( TXT_ENRAGED, name );
+				GLog.w(Utils.format(TXT_ENRAGED, name) );
 				sprite.showStatus( CharSprite.NEGATIVE, "enraged" );
 			}
 		}

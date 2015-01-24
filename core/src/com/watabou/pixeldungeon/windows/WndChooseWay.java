@@ -17,7 +17,6 @@
  */
 package com.watabou.pixeldungeon.windows;
 
-import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.BitmapTextMultiline;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.items.TomeOfMastery;
@@ -26,6 +25,7 @@ import com.watabou.pixeldungeon.sprites.ItemSprite;
 import com.watabou.pixeldungeon.ui.RedButton;
 import com.watabou.pixeldungeon.ui.Window;
 import com.watabou.pixeldungeon.utils.Utils;
+import net.whitegem.pixeldungeon.LanguageFactory;
 
 public class WndChooseWay extends Window {
 	
@@ -46,7 +46,7 @@ public class WndChooseWay extends Window {
 		titlebar.setRect( 0, 0, WIDTH, 0 );
 		add( titlebar );
 		
-		Highlighter hl = new Highlighter( BitmapText.getTranslation(way1.desc()) + "\n\n" + BitmapText.getTranslation(way2.desc()) + "\n\n" + BitmapText.getTranslation(TXT_MESSAGE));
+		Highlighter hl = new Highlighter( LanguageFactory.getTranslation(way1.desc()) + "\n\n" + LanguageFactory.getTranslation(way2.desc()) + "\n\n" + LanguageFactory.getTranslation(TXT_MESSAGE));
 		
 		BitmapTextMultiline normal = PixelScene.createMultiline( hl.text, 6 );
 		normal.maxWidth = WIDTH;

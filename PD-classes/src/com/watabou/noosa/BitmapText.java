@@ -59,33 +59,8 @@ public class BitmapText extends Visual {
 		super( 0, 0, 0, 0 );
 		
 		this.text = text;
-		this.text = getTranslation(text);
+		this.text = LanguageFactory.getTranslation(text);
 		this.font = font;
-	}
-
-	public static String getTranslation(String text)
-	{
-		System.out.println("getTrans >>> " + text);
-		String original = text;
-		if (!LanguageFactory.INSTANCE.language.equals("en"))
-		{
-			String s = null;
-			if (text != null && LanguageFactory.INSTANCE.stored.contains(text.toLowerCase()))
-			{
-				s = LanguageFactory.INSTANCE.stored.get(text.toLowerCase());
-			}
-			else if (text != null && LanguageFactory.INSTANCE.stored.contains(text.toLowerCase().replaceAll("\\.$", "")))
-			{
-				s = LanguageFactory.INSTANCE.stored.get(text.toLowerCase().replaceAll("\\.$", "")) + ".";
-			}
-			if (text != null)
-			{
-				text = (s == null) ? LanguageFactory.INSTANCE.translate(text) : s;
-				text = LanguageFactory.INSTANCE.fixWrap(text);
-			}
-		}
-
-		return text;
 	}
 	
 	@Override
@@ -235,13 +210,13 @@ public class BitmapText extends Visual {
 	}
 
 	public void text( String str1, String str2 ) {
-		text = str1 + " " + getTranslation(str2);
+		text = str1 + " " + LanguageFactory.getTranslation(str2);
 		dirty = true;
 	}
 
 	public void text( String str ) {
 		text = str;
-		text = getTranslation(text);
+		text = LanguageFactory.getTranslation(text);
 		dirty = true;
 	}
 	

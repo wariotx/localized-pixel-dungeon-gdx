@@ -97,4 +97,27 @@ public class LanguageFactory
     {
         return translator.splitWords(paragraph);
     }
+
+    public static String getTranslation(String text)
+    {
+        System.out.println("getTrans >>> " + text);
+        if (INSTANCE.language.equals("en"))
+        {
+            String s = null;
+            if (text != null && INSTANCE.stored.contains(text.toLowerCase()))
+            {
+                s = INSTANCE.stored.get(text.toLowerCase());
+            }
+            else if (text != null && INSTANCE.stored.contains(text.toLowerCase().replaceAll("\\.$", "")))
+            {
+                s = INSTANCE.stored.get(text.toLowerCase().replaceAll("\\.$", "")) + ".";
+            }
+            if (text != null)
+            {
+                text = (s == null) ? INSTANCE.translate(text) : s;
+                text = INSTANCE.fixWrap(text);
+            }
+        }
+        return text;
+    }
 }

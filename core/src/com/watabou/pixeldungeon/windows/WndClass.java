@@ -25,6 +25,7 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.actors.hero.HeroSubClass;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.utils.Utils;
+import net.whitegem.pixeldungeon.LanguageFactory;
 
 public class WndClass extends WndTabbed {
 	
@@ -156,16 +157,16 @@ public class WndClass extends WndTabbed {
 			String text = null;
 			switch (cl) {
 			case WARRIOR:
-				text = HeroSubClass.GLADIATOR.desc() + "\n\n" + HeroSubClass.BERSERKER.desc();
+				text = LanguageFactory.getTranslation(HeroSubClass.GLADIATOR.desc()) + "\n\n" + LanguageFactory.getTranslation(HeroSubClass.BERSERKER.desc());
 				break;
 			case MAGE:
-				text = HeroSubClass.BATTLEMAGE.desc() + "\n\n" + HeroSubClass.WARLOCK.desc();
+				text = LanguageFactory.getTranslation(HeroSubClass.BATTLEMAGE.desc()) + "\n\n" + LanguageFactory.getTranslation(HeroSubClass.WARLOCK.desc());
 				break;
 			case ROGUE:
-				text = HeroSubClass.FREERUNNER.desc() + "\n\n" + HeroSubClass.ASSASSIN.desc();
+				text = LanguageFactory.getTranslation(HeroSubClass.FREERUNNER.desc()) + "\n\n" + LanguageFactory.getTranslation(HeroSubClass.ASSASSIN.desc());
 				break;
 			case HUNTRESS:
-				text = HeroSubClass.SNIPER.desc() + "\n\n" + HeroSubClass.WARDEN.desc();
+				text = LanguageFactory.getTranslation(HeroSubClass.SNIPER.desc()) + "\n\n" + LanguageFactory.getTranslation(HeroSubClass.WARDEN.desc());
 				break;
 			}
 			

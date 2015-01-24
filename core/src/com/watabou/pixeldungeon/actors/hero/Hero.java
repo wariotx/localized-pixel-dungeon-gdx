@@ -1030,7 +1030,7 @@ public class Hero extends Char {
 		
 		if (levelUp) {
 			
-			GLog.p( TXT_NEW_LEVEL, lvl );
+			GLog.p( Utils.format(TXT_NEW_LEVEL, lvl) );
 			sprite.showStatus( CharSprite.POSITIVE, TXT_LEVEL_UP );
 			Sample.INSTANCE.play( Assets.SND_LEVELUP );
 			
