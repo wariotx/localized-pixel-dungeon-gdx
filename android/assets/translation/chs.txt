@@ -309,9 +309,9 @@ Weakened
 %s defeated %s
 %s击败了%s
 %s %s your attack
-%s%s你的进攻
+%s%s了你的进攻
 %s %s %s's attack
-%s%s%s的进攻
+%s%s了%s的进攻
 The pain snapped %s out of paralysis
 解除了麻痹的%s重新感觉到了疼痛
 
@@ -1494,12 +1494,16 @@ Wild %s
 
 # Weapon 
 
+a
+一
+an
+一
 upgraded
 升级后的
 degraded
-降级后的
+降级后的.
 This %s is %s tier-%d melee weapon. 
-这柄%s是一柄%s第%d阶近战武器.
+这柄%s是%s柄第%d阶近战武器.
 Its average damage is %d points per hit. 
 它的平均伤害为每击%d点.
 Its typical average damage is %d points per hit and usually it requires %d points of strength. 
