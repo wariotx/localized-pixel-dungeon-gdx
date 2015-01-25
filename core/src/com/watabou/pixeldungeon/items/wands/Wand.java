@@ -45,6 +45,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.Callback;
 import com.watabou.utils.Random;
+import net.whitegem.pixeldungeon.LanguageFactory;
 
 public abstract class Wand extends KindOfWeapon {
 
@@ -253,13 +254,13 @@ public abstract class Wand extends KindOfWeapon {
 	
 	@Override
 	public String info() {
-		StringBuilder info = new StringBuilder( isKnown() ? desc() : Utils.format(TXT_WOOD, wood) );
+		StringBuilder info = new StringBuilder( isKnown() ? LanguageFactory.getTranslation(desc()) : Utils.format(TXT_WOOD, wood) );
 		if (Dungeon.hero.heroClass == HeroClass.MAGE) {
 			info.append( "\n\n" );
 			if (levelKnown) {
-				info.append( Utils.format( TXT_DAMAGE, MIN + (MAX - MIN) / 2 ) );
+				info.append(LanguageFactory.getTranslation(Utils.format( TXT_DAMAGE, MIN + (MAX - MIN) / 2 )) );
 			} else {
-				info.append(  Utils.format( TXT_WEAPON ) );
+				info.append(LanguageFactory.getTranslation(TXT_WEAPON));
 			}
 		}
 		return info.toString();

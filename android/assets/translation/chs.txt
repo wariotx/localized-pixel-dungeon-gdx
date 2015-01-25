@@ -1541,6 +1541,8 @@ You hold the %s at the ready, and because it is cursed, you are powerless to let
 你正握着%s,由于它被诅咒了,所以你没办法放手.
 You can feel a malevolent magic lurking within %s.
 你感到%s中蕴藏着恶毒的魔法.
+Average damage of this weapon equals to %d points per hit.
+此武器的平均伤害为每击%d点.
 
 battle axe
 战斧

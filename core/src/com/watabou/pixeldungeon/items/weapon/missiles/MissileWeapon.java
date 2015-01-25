@@ -27,7 +27,9 @@ import com.watabou.pixeldungeon.actors.hero.HeroClass;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.items.weapon.Weapon;
 import com.watabou.pixeldungeon.scenes.GameScene;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndOptions;
+import net.whitegem.pixeldungeon.LanguageFactory;
 
 public class MissileWeapon extends Weapon {
 
@@ -36,12 +38,6 @@ public class MissileWeapon extends Weapon {
 	private static final String TXT_NO			= "No, I changed my mind";
 	private static final String TXT_R_U_SURE	=
 			"Do you really want to equip it as a melee weapon?";
-
-	private static final String MW_TEXT_8 = "Its typical average damage is ";
-	private static final String MW_TEXT_9 = " points per hit. ";
-	private static final String MW_TEXT_26 = "Because of your inadequate strength the accuracy and speed of your attack with this weapon is decreased.";
-	private static final String MW_TEXT_27 = "Because of your excess strength the damage of your attack with this weapon is increased.";
-	private static final String MW_TEXT_28 = "You hold the weapon at the ready";
 
 	{
 		stackable = true;
@@ -124,23 +120,25 @@ public class MissileWeapon extends Weapon {
 	@Override
 	public String info() {
 
-		StringBuilder info = new StringBuilder( desc() );
+		StringBuilder info = new StringBuilder(LanguageFactory.getTranslation(desc()) );
 
-		info.append( "\n\n" + MW_TEXT_8 + (MIN + (MAX - MIN) / 2) + MW_TEXT_9);
+		info.append( "\n\n" + LanguageFactory.getTranslation(Utils.format("Average damage of this weapon equals to %d points per hit. ", (MIN + (MAX - MIN) / 2))) );
 
 		if (Dungeon.hero.belongings.backpack.items.contains( this )) {
 			if (STR > Dungeon.hero.STR()) {
 				info.append(
-						MW_TEXT_26);
+						LanguageFactory.getTranslation(Utils.format("Because of your inadequate strength the accuracy and speed " +
+								"of your attack with this %s is decreased.", name)) );
 			}
 			if (STR < Dungeon.hero.STR()) {
 				info.append(
-						MW_TEXT_27);
+						LanguageFactory.getTranslation(Utils.format("Because of your excess strength the damage " +
+								"of your attack with this %s is increased.", name)) );
 			}
 		}
 
 		if (isEquipped( Dungeon.hero )) {
-			info.append(MW_TEXT_28);
+			info.append( "\n\n" + LanguageFactory.getTranslation(Utils.format("You hold the %s at the ready.", name)) );
 		}
 
 		return info.toString();
