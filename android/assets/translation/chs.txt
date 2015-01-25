@@ -1372,7 +1372,9 @@ arcane stylus
 Select an armor to inscribe on
 选择一件护甲来进行蚀刻
 you inscribed the %s on your %s
-你将%s符文蚀刻在了你的%s上.
+你将%s蚀刻在了你的%s上.
+glyph
+符文
 This arcane stylus is made of some dark, very hard stone. Using it you can inscribe a magical glyph on your armor, but you have no power over choosing what glyph it will be, the stylus will decide it for you.
 奥术蚀笔是用一些黑色的非常坚硬的石料做成的.使用它能够在护甲上蚀刻魔法符文,但你无力去选择蚀刻哪一种符文,蚀刻出的符文是由蚀笔替你选择的.
 
