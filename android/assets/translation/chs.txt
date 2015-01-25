@@ -1555,7 +1555,7 @@ A simple iron dagger with a well worn wooden handle.
 glaive
 大刀
 A polearm consisting of a sword blade on the end of a pole.
-由刀刃和末端的杆构成的长柄武器.
+由一把长柄和末端的刀刃构成的长杆武器.
 
 knuckleduster
 指虎
@@ -1568,7 +1568,7 @@ This towering blade inflicts heavy damage by investing its heft into every cut.
 这柄长刃发挥它沉重的优势每一次劈砍都能造成大量伤害.
 
 mace
-权杖
+铁槌
 The iron head of this weapon inflicts substantial damage.
 这柄武器的铁头能够造成大量伤害.
 
@@ -1724,10 +1724,12 @@ Only mages can use this armor!
 MOLTEN EARTH
 业火地幔
 Wearing this gorgeous robe, a mage can cast a spell of molten earth: all the enemies in his field of view will be set on fire and unable to move at the same time.
+穿上这件奢华的法袍的法师能够放出业火地幔:他视野中所有的怪物都会动弹不得,烈火焚身.
 
 rogue garb
 游侠套装
 You can only jump to an empty location in your field of view
+你只能跳往视野中的空地
 Only rogues can use this armor!
 只有游侠才能穿上这种护甲!
 SMOKE BOMB
@@ -1735,7 +1737,7 @@ SMOKE BOMB
 Wearing this dark garb, a rogue can perform a trick, that is called "smoke bomb" (though no real explosives are used): he blinds enemies who could see him and jumps aside.
 穿上套装后的游侠能够耍一个名为烟雾弹的小把戏(尽管确实会造成真正的爆炸):他会弄瞎所有看见他的人并跳往其他地方.
 Choose a location to jump to
-选择跳跃方向
+选择跳跃位置
 
 huntress cloak
 女猎披风
@@ -1841,12 +1843,12 @@ When a discharge of this wand hits a wall (or any other solid obstacle) it cause
 Wand of Blink
 闪现法杖
 This wand will allow you to teleport in the chosen direction. Creatures and inanimate obstructions will block the teleportation.
-这柄法杖能够将你传送到选定的位置.生物或者无法移动的屏障会阻挡传送.
+这柄法杖能够将你朝指定方向传送.生物或无法移动的屏障会阻挡传送.
 
 Wand of Disintegration
 解离法杖
 This wand emits a beam of destructive energy, which pierces all creatures in its way. The more targets it hits, the more damage it inflicts to each of them.
-这柄法杖发出一道毁灭性的能量,穿透所有途径的生物.它击中的目标越多,对每个目标造成的伤害就越大.
+这柄法杖发出一道毁灭性的能量,穿透所有途经的生物.它击中的目标越多,对每个目标造成的伤害就越大.
 
 Wand of Firebolt
 火球法杖
@@ -1870,7 +1872,7 @@ Baa.
 Baa...
 咩...
 This is a magic sheep. What's so magical about it? You can't kill it. It will stand there until it magcially fades away, all the while chewing cud with a blank stare.
-这是一只魔法山羊.它有什么神奇的地方呢?你无法杀死它.它将会一直存在到魔力消失,一边咀嚼反刍的食物一边用那茫然的眼神盯着你.
+这是一只魔法山羊.它有什么神奇的地方呢?你无法杀死它,直到它自己神奇地消失,一边咀嚼反刍的食物一边用那茫然的眼神盯着你.
 
 Wand of Lightning
 雷霆法杖
@@ -1965,14 +1967,14 @@ TIWAZ
 国王
 
 This parchment is covered with indecipherable writing, and bears a title of rune %s. Who knows what it will do when read aloud?
-这张卷轴上写满难以辨认的文字,并镌刻着卢恩符文:%s.谁知道如果大声把它念出来会发生什么呢?
+这张卷轴上写满难以辨认的文字,并镌刻着象征着%s的卢恩符文.谁知道如果大声把它念出来会发生什么呢?
 
 Scroll of Challenge
 挑战卷轴
 The scroll emits a challenging roar that echoes throughout the dungeon!
 这张卷轴发出了挑衅的咆哮声,久久回荡在地牢中!
 When read aloud, this scroll will unleash a challenging roar that will awaken all monsters and alert them to the reader's location.
-大声阅读这张卷轴会发出挑衅的咆哮欢迎这一层所有的怪物并吸引它们前往阅读者的位置.
+大声阅读这张卷轴会发出挑衅的咆哮唤醒这一层所有的怪物并吸引它们前往阅读者的位置.
 
 Scroll of Identify
 鉴定卷轴
@@ -2038,7 +2040,7 @@ In a blink of an eye you were teleported to another location of the level.
 Strong magic aura of this place prevents you from teleporting!
 这地方的强烈魔法波动让你无法进行传送!
 The spell on this parchment instantly transports the reader to a random location on the dungeon level. It can be used to escape a dangerous situation, but the unlucky reader might find himself in an even more dangerous place.
-卷轴上记录的技能能够直接将阅读者传送到这一层地牢的某个随机位置.它可以用于逃离危险的处境,但倒霉的话或许刚出狼穴又入虎口,发现自己到了更加危险的地方.
+卷轴上记录的咒语能够直接将阅读者传送到这一层地牢的某个随机位置.它可以用于逃离危险的处境,但倒霉的话或许刚出狼穴又入虎口,发现自己到了更加危险的地方.
 
 Scroll of Terror
 恐慌卷轴
@@ -2302,7 +2304,7 @@ Potion of Mind Vision
 You can somehow feel the presence of other creatures' minds!
 你似乎感觉到这里有别的生物的脑波.
 You can somehow tell that you are alone on this level at the moment.
-你似乎能够察觉到现在你并不是一个人在这一层中.
+你似乎能够察觉到现在这一层只有你独自一人.
 After drinking this, your mind will become attuned to the psychic signature of distant creatures, enabling you to sense biological presences through walls. Also this potion will permit you to see through nearby walls and doors.
 喝下这瓶药水后,你的意识将能够与隔得很远的生物的精神烙印谐振,从而让你获得透过墙识别生物是否存在的能力.此外这瓶药水还赋予你透过墙壁和门感觉到后面东西的能力.
 
@@ -2429,7 +2431,7 @@ This small velvet pouch allows you to store any number of seeds in it. Very conv
 scroll holder
 卷轴筒
 You can place any number of scrolls into this tubular container. It saves room in your backpack and protects scrolls from fire.
-你可以将任意类型的卷轴放入这个管状容器保存.它能够节约背包空间,并且使卷轴不会被火点燃.
+你可以把许多卷轴放进这个管状容器保存.它能够节约背包空间,并且让卷轴不会被火点燃.
 
 
 # Terrains
