@@ -1662,7 +1662,7 @@ your %s constricts around you painfully
 
 
 This %s provides damage absorption up to %d points per attack.
-这件%s在每次抵挡攻击时能够吸收点%d伤害.
+这件%s在每次抵挡攻击时能够吸收%d点伤害.
 Because of your inadequate strength your movement speed and defense skill is decreased. 
 由于你的力量不足因此移动速度和防御技巧都下降了.
 Because of your inadequate strength wearing this armor will decrease your movement speed and defense skill. 
