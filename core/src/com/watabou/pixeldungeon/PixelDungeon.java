@@ -100,7 +100,7 @@ public class PixelDungeon extends Game<GameAction> {
 		super.create();
 
 		// set language
-		LanguageUtil.setLanguage("chs");
+		LanguageUtil.setLanguage();
 
 		boolean landscape = Gdx.graphics.getWidth() > Gdx.graphics.getHeight();
 

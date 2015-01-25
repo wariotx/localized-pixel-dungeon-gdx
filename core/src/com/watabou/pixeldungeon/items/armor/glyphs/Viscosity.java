@@ -128,7 +128,7 @@ public class Viscosity extends Glyph {
 					// FIXME
 					Glyph glyph = new Viscosity();
 					Dungeon.fail( Utils.format( ResultDescriptions.GLYPH, glyph.name(), Dungeon.depth ) );
-					GLog.n( "%s killed you...", glyph.name() );
+					GLog.n(Utils.format( "%s killed you...", glyph.name() ));
 					
 					Badges.validateDeathFromGlyph();
 				}

@@ -1,0 +1,7 @@
+lang=chs
+# filename,baseline,scale,pngfile
+font1x=font1x_chs,7
+font15x=font15x_chs,10
+font2x=font2x_chs,12
+font25x=font15x_chs,20,2,font25x_chs
+font3x=font2x_chs,24,2,font3x_chs

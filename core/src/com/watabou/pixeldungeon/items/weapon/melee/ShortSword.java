@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.items.weapon.missiles.Boomerang;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 
 public class ShortSword extends MeleeWeapon {
@@ -115,7 +116,7 @@ public class ShortSword extends MeleeWeapon {
 			} else {
 				
 				if (item instanceof Boomerang) {
-					GLog.w( TXT_NOT_BOOMERANG );
+					GLog.w(Utils.format(TXT_NOT_BOOMERANG ));
 				}
 				
 				if (equipped) {

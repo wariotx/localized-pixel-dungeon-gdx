@@ -232,19 +232,19 @@ public abstract class Game<GameActionType> implements ApplicationListener {
 	}
 
 	public boolean deleteFile(String fileName) {
-		final FileHandle fh = Gdx.files.external(basePath != null ? basePath + fileName : fileName);
+		final FileHandle fh = Gdx.files.local(basePath != null ? basePath + fileName : fileName);
 		return fh.exists() && fh.delete();
 	}
 
 	public InputStream openFileInput(String fileName) throws IOException {
-		final FileHandle fh = Gdx.files.external(basePath != null ? basePath + fileName : fileName);
+		final FileHandle fh = Gdx.files.local(basePath != null ? basePath + fileName : fileName);
 		if (!fh.exists())
 			throw new IOException("File " + fileName + " doesn't exist");
 		return fh.read();
 	}
 
 	public OutputStream openFileOutput(String fileName) {
-		final FileHandle fh = Gdx.files.external(basePath != null ? basePath + fileName : fileName);
+		final FileHandle fh = Gdx.files.local(basePath != null ? basePath + fileName : fileName);
 		return fh.write(false);
 	}
 

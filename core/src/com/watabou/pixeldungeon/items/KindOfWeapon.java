@@ -23,6 +23,7 @@ import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.ui.QuickSlot;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class KindOfWeapon extends EquipableItem {
@@ -61,7 +62,7 @@ public class KindOfWeapon extends EquipableItem {
 			cursedKnown = true;
 			if (cursed) {
 				equipCursed( hero );
-				GLog.n( TXT_EQUIP_CURSED, name() );
+				GLog.n(Utils.format(TXT_EQUIP_CURSED, name()));
 			}
 			
 			hero.spendAndNext( TIME_TO_EQUIP );

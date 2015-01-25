@@ -35,6 +35,8 @@ import com.watabou.utils.Bundle;
 import com.watabou.utils.Random;
 import net.whitegem.pixeldungeon.LanguageFactory;
 
+import javax.rmi.CORBA.Util;
+
 public class Armor extends EquipableItem {
 	
 	private static final String TXT_EQUIP_CURSED	= "your %s constricts around you painfully";
@@ -183,7 +185,7 @@ public class Armor extends EquipableItem {
 		if (!levelKnown) {
 			if (--hitsToKnow <= 0) {
 				levelKnown = true;
-				GLog.w( TXT_IDENTIFY, name(), toString() );
+				GLog.w(Utils.format(TXT_IDENTIFY, name(), toString()) );
 				Badges.validateItemLevelAquired( this );
 			}
 		}

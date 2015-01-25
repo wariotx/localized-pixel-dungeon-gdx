@@ -6,7 +6,7 @@ import com.badlogic.gdx.files.FileHandle;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 import java.util.regex.Pattern;
 
 /**
@@ -15,12 +15,12 @@ import java.util.regex.Pattern;
 public class Translator
 {
     private String language;
-    private LinkedHashMap<String, String> translation;
+    private HashMap<String, String> translation;
 
     public Translator(String language)
     {
         this.language = language;
-        translation = new LinkedHashMap<String, String>();
+        translation = new HashMap<String, String>();
         // THIS FILE MUST BE UTF8 WITHOUT BOM
         FileHandle file = Gdx.files.internal("translation/" + language + ".txt");
         BufferedReader reader = new BufferedReader(file.reader("UTF8"));

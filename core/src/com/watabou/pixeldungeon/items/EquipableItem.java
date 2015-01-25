@@ -23,6 +23,7 @@ import com.watabou.pixeldungeon.Dungeon;
 import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.particles.ShadowParticle;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 public abstract class EquipableItem extends Item {
 
@@ -75,7 +76,7 @@ public abstract class EquipableItem extends Item {
 	public boolean doUnequip( Hero hero, boolean collect, boolean single ) {
 		
 		if (cursed) {
-			GLog.w( TXT_UNEQUIP_CURSED, name() );
+			GLog.w( Utils.format(TXT_UNEQUIP_CURSED, name()));
 			return false;
 		}
 		

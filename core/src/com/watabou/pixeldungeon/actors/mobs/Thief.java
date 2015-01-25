@@ -121,7 +121,7 @@ public class Thief extends Mob {
 		Item item = hero.belongings.randomUnequipped();
 		if (item != null) {
 			
-			GLog.w( TXT_STOLE, this.name, item.name() );
+			GLog.w(Utils.format( TXT_STOLE, this.name, item.name() ));
 			
 			item.detachAll( hero.belongings.backpack );
 			this.item = item;

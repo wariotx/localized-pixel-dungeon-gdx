@@ -20,6 +20,7 @@ public class DesktopLauncher {
 		}
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
 
+		/*
 		if (SharedLibraryLoader.isMac) {
 			config.preferencesDirectory = "Library/Application Support/Pixel Dungeon/";
 		} else if (SharedLibraryLoader.isLinux) {
@@ -27,6 +28,9 @@ public class DesktopLauncher {
 		} else if (SharedLibraryLoader.isWindows) {
 			config.preferencesDirectory = "Saved Games/";
 		}
+		*/
+		// store to the same dir (also changed Game.java in PD-classes)
+		config.preferencesDirectory = "Saved Games/";
 		// FIXME: This is a hack to get access to the preferences before we have an application setup
 		com.badlogic.gdx.Preferences prefs = new LwjglPreferences(Preferences.FILE_NAME, config.preferencesDirectory);
 

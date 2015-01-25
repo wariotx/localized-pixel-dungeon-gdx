@@ -292,7 +292,7 @@ public class BitmapText extends Visual {
 			}
 		}
 
-		private ArrayList<FntFileChar> processFntFile(String fntFile)
+		private ArrayList<FntFileChar> processFntFile(String fntFile, int scale)
 		{
 			ArrayList<FntFileChar> chars = new ArrayList<FntFileChar>();
 
@@ -333,16 +333,16 @@ public class BitmapText extends Visual {
 				int xoi = Integer.parseInt(xo);
 				int yoi = Integer.parseInt(yo);
 				char idc = (char)idi;
-				FntFileChar ffc = new FntFileChar(idc, xi, yi, wi, hi, xoi, yoi);
+				FntFileChar ffc = new FntFileChar(idc, xi * scale, yi * scale, wi * scale, hi * scale, xoi * scale, yoi * scale);
 				chars.add(ffc);
 			}
 			return chars;
 		}
 
-		protected void splitBy( GdxTexture bitmap, int height, int color, String chars, String fntFile ) {
+		protected void splitBy( GdxTexture bitmap, int height, int color, String chars, String fntFile, int scale ) {
 			autoUppercase = false;
 
-			ArrayList<FntFileChar> realChars = processFntFile(fntFile);
+			ArrayList<FntFileChar> realChars = processFntFile(fntFile, scale);
 
 			int width = bitmap.getWidth();
 			int length = realChars.size();
@@ -446,15 +446,15 @@ public class BitmapText extends Visual {
 			return font;
 		}
 
-		public static Font colorMarked( GdxTexture bmp, int color, String chars, String fntFile ) {
+		public static Font colorMarked( GdxTexture bmp, int color, String chars, String fntFile, int scale ) {
 			Font font = new Font( TextureCache.get( bmp ) );
-			font.splitBy( bmp, bmp.getHeight(), color, chars, fntFile );
+			font.splitBy( bmp, bmp.getHeight(), color, chars, fntFile, scale );
 			return font;
 		}
 
-		public static Font colorMarked( GdxTexture bmp, int height, int color, String chars, String fntFile ) {
+		public static Font colorMarked( GdxTexture bmp, int height, int color, String chars, String fntFile, int scale ) {
 			Font font = new Font( TextureCache.get( bmp ) );
-			font.splitBy( bmp, height, color, chars, fntFile );
+			font.splitBy( bmp, height, color, chars, fntFile, scale );
 			return font;
 		}
 		

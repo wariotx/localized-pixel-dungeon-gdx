@@ -172,6 +172,9 @@ a %s
 an %s
 %s
 
+a%s
+%s
+
 %s, %s
 %s,%s
 
@@ -1915,10 +1918,8 @@ Wand of Teleportation
 传送法杖
 A blast from this wand will teleport a creature against its will to a random place on the current level.
 这柄法杖释放出的魔力能够将生物不受意志驱使地随机传送到当前层的某个地方.
- teleported 
-将
- to somewhere
-传送到了某处.
+%s teleported %s to somewhere
+%s将%s传送到了某处.
 
 # Scroll
 
@@ -1977,8 +1978,8 @@ Scroll of Identify
 鉴定卷轴
 Select an item to identify
 选择一件物品来鉴定
-It is 
-它其实是
+It is %s
+它其实是%s
 Permanently reveals all of the secrets of a single item.
 永久揭晓某个物品的全部秘密.
 
@@ -1986,10 +1987,8 @@ Scroll of Lullaby
 催眠卷轴
 The scroll utters a soothing melody.
 卷轴播放了一段柔美的乐音.
-The scroll utters a soothing melody and the 
-卷轴播放了一段柔美的乐音使得
- falls asleep!
-陷入了昏睡.
+The scroll utters a soothing melody and the %s falls asleep!
+卷轴播放了一段柔美的乐音使得%s陷入了昏睡!
 The scroll utters a soothing melody and the monsters fall asleep!
 卷轴播放了一段柔和的乐音,怪物都陷入了昏睡!
 A soothing melody will put all creatures in your field of view into a deep sleep, giving you a chance to flee or make a surprise attack on them.
@@ -2045,10 +2044,8 @@ Scroll of Terror
 恐慌卷轴
 The scroll emits a brilliant flash of red light
 这张卷轴释放出红色耀眼光芒
-The scroll emits a brilliant flash of red light and the 
-这张卷轴释放出红色耀眼光芒,吓得
- flees!
-四处逃窜!
+The scroll emits a brilliant flash of red light and the %s flees!
+这张卷轴释放出红色耀眼光芒,吓得%s四处逃窜!
 The scroll emits a brilliant flash of red light and the monsters flee!
 这张卷轴释放出红色耀眼光芒,吓得怪物四处逃窜!
 A flash of red light will overwhelm all creatures in your field of view with terror, and they will turn and flee. Attacking a fleeing enemy will dispel the effect.

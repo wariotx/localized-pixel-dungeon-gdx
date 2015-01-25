@@ -21,6 +21,7 @@ import com.watabou.pixeldungeon.Badges;
 import com.watabou.pixeldungeon.actors.Char;
 import com.watabou.pixeldungeon.ui.BuffIndicator;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 
 public class Combo extends Buff {
 	
@@ -46,7 +47,7 @@ public class Combo extends Buff {
 			
 			Badges.validateMasteryCombo( count );
 			
-			GLog.p( TXT_COMBO, count );
+			GLog.p( Utils.format(TXT_COMBO, count));
 			postpone( 1.41f - count / 10f );
 			return (int)(damage * (count - 2) / 5f);
 			

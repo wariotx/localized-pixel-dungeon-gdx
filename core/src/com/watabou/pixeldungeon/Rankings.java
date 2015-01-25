@@ -30,6 +30,7 @@ import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundlable;
 import com.watabou.utils.Bundle;
 import com.watabou.utils.SystemTime;
+import net.whitegem.pixeldungeon.LanguageFactory;
 
 public enum Rankings {
 	
@@ -50,7 +51,7 @@ public enum Rankings {
 		
 		Record rec = new Record();
 		
-		rec.info	= Dungeon.resultDescription;
+		rec.info	= LanguageFactory.getTranslation(Dungeon.resultDescription);
 		rec.win		= win;
 		rec.heroClass	= Dungeon.hero.heroClass;
 		rec.armorTier	= Dungeon.hero.tier();

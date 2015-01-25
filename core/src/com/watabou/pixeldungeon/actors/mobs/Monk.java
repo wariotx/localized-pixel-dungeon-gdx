@@ -30,6 +30,7 @@ import com.watabou.pixeldungeon.items.food.Food;
 import com.watabou.pixeldungeon.items.weapon.melee.Knuckles;
 import com.watabou.pixeldungeon.sprites.MonkSprite;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Random;
 
 public class Monk extends Mob {
@@ -93,7 +94,7 @@ public class Monk extends Mob {
 			if (weapon != null && !(weapon instanceof Knuckles) && !weapon.cursed) {
 				hero.belongings.weapon = null;
 				Dungeon.level.drop( weapon, hero.pos ).sprite.drop();
-				GLog.w( TXT_DISARM, name, weapon.name() );
+				GLog.w(Utils.format(TXT_DISARM, name, weapon.name()));
 			}
 		}
 		

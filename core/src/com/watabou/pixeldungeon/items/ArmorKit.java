@@ -29,6 +29,7 @@ import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.sprites.HeroSprite;
 import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 
 public class ArmorKit extends Item {
@@ -86,7 +87,7 @@ public class ArmorKit extends Item {
 		curUser.spend( TIME_TO_UPGRADE );
 		curUser.busy();
 		
-		GLog.w( TXT_UPGRADED, armor.name() );
+		GLog.w(Utils.format(TXT_UPGRADED, armor.name()));
 		
 		ClassArmor classArmor = ClassArmor.upgrade( curUser, armor );
 		if (curUser.belongings.armor == armor) {

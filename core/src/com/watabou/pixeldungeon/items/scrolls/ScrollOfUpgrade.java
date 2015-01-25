@@ -23,6 +23,7 @@ import com.watabou.pixeldungeon.actors.hero.Hero;
 import com.watabou.pixeldungeon.effects.Speck;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.pixeldungeon.windows.WndBag;
 
 public class ScrollOfUpgrade extends InventoryScroll {
@@ -41,7 +42,7 @@ public class ScrollOfUpgrade extends InventoryScroll {
 		ScrollOfRemoveCurse.uncurse( Dungeon.hero, item );
 		item.upgrade();
 		
-		GLog.p( TXT_LOOKS_BETTER, item.name() );
+		GLog.p(Utils.format(TXT_LOOKS_BETTER, item.name()) );
 		
 		Badges.validateItemLevelAquired( item );
 		

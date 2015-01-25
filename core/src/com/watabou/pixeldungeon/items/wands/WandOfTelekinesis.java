@@ -36,6 +36,7 @@ import com.watabou.pixeldungeon.levels.Terrain;
 import com.watabou.pixeldungeon.mechanics.Ballistica;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.utils.GLog;
+import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Callback;
 
 public class WandOfTelekinesis extends Wand {
@@ -139,7 +140,7 @@ public class WandOfTelekinesis extends Wand {
 
 				if ((item instanceof ScrollOfUpgrade && ((ScrollOfUpgrade)item).isKnown()) ||
 					(item instanceof PotionOfStrength && ((PotionOfStrength)item).isKnown())) {
-					GLog.p( TXT_YOU_NOW_HAVE, item.name() );
+					GLog.p( Utils.format(TXT_YOU_NOW_HAVE, item.name()) );
 				} else {
 					GLog.i( TXT_YOU_NOW_HAVE, item.name() );
 				}
