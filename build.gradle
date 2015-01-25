@@ -14,12 +14,12 @@ allprojects {
     apply plugin: "eclipse"
     apply plugin: "idea"
 
-    version = '1.7.2a-1 cn0.4'
+    version = '1.7.2a-1-cn0.4'
     ext {
         versionCode = 59
         appName = 'pixel-dungeon'
 	    appTitle = 'Pixel Dungeon'
-	    appId = 'com.watabou.pixeldungeon'
+	    appId = 'net.whitegem.pixeldungeon.android'
         gdxVersion = '1.4.1'
         roboVMVersion = '0.0.14'
     }
