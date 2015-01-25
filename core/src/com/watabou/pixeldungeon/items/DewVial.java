@@ -30,6 +30,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
+import net.whitegem.pixeldungeon.LanguageFactory;
 
 public class DewVial extends Item {
 
@@ -182,6 +183,6 @@ public class DewVial extends Item {
 	
 	@Override
 	public String toString() {
-		return super.toString() + " (" + status() +  ")" ;
+		return LanguageFactory.getTranslation(super.toString()) + " (" + status() +  ")" ;
 	}
 }

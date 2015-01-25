@@ -207,7 +207,7 @@ public class Ring extends EquipableItem {
 	
 	@Override
 	public String name() {
-		return isKnown() ? name : Utils.format("%s ring", gem);
+		return isKnown() ? name : LanguageFactory.getTranslation(Utils.format("%s ring", gem));
 	}
 	
 	@Override
