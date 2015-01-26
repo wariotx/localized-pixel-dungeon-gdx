@@ -46,14 +46,14 @@ BERSERKER
 Berserker
 狂战士
 When severely wounded, the _Berserker_ enters a state of wild fury significantly increasing his damage output.
-饱受伤害的_狂战士_会进入狂暴状态可观地提升他的伤害输出能力.
+当承受一定程度的伤害后,_狂战士_会进入狂暴状态,可观地提升伤害输出能力.
 
 MAGE
 法师
 Mage
 法师
 Mages start with a unique Wand of Magic Missile. This wand can be later "disenchanted" to upgrade another wand.
-法师开局时带有独特的魔弹法杖.这柄法杖稍后能够进行"祛魔"用于升级其他法杖.
+法师开局时带有一柄独特的魔弹法杖.这柄法杖稍后能够进行"祛魔"用于升级其他法杖.
 Mages recharge their wands faster.
 法师的法杖充能更加迅速.
 When eaten, any piece of food restores 1 charge for all wands in the inventory.
@@ -196,15 +196,15 @@ The atmosphere hints that this floor hides many secrets.
 这种氛围暗示着这一层地牢藏着许多秘密.
 
 A cloud of confusion gas is swirling here.
-一团致幻的混乱毒气在此处回旋蔓延.
+一团致幻的毒气在此处回旋弥漫.
 A fire is raging here.
 烈火肆虐.
 Shafts of light pierce the gloom of the underground garden.
 光柱刺透黑暗中的地下花园.
 A cloud of paralytic gas is swirling here.
-一团致人麻痹的气体在此处回旋蔓延.
+一团致人麻痹的气体在此处回旋弥漫.
 A greenish cloud of toxic gas is swirling here.
-绿森森的毒气在此回旋蔓延.
+绿森森的毒气在此回旋弥漫.
 You died from a toxic gas..
 你死在了毒气中...
 As you take a sip, you feel the knowledge pours into your mind. Now you know everything about your equipped items. Also you sense all items on the level and know all its secrets.
@@ -405,9 +405,9 @@ pixeldungeon.watabou.ru
 # levelScene
 
 Descending...
-正在下楼梯...
+正在下楼...
 Ascending...
-正在上楼梯...
+正在上楼...
 Loading...
 载入中...
 Resurrecting...
@@ -496,33 +496,33 @@ Ambitious imp
 The text  is indecipherable...
 字迹难以辨认...
 Don't overestimate your strength, use weapons and armor you can handle.
-别过分高估自己的力量,使用那些你能够掌控的装备和武器.
+别过分高估自己的力量,使用那些你能够掌控的武器和装备.
 Not all doors in the dungeon are visible at first sight. If you are stuck, search for hidden doors.
-地牢中有些门一开始会是隐形的.如果你被困住了,找找看有没有隐藏门.
+地牢中有些门一开始会是隐形的.如果被困住了,找找看有没有隐藏门.
 Remember, that raising your strength is not the only way to access better equipment, you can go the other way lowering its strength requirement with Scrolls of Upgrade.
 务必记住,提升力量并不是穿戴更好装备的唯一方法,你还可以使用升级卷轴来降低它们的力量需求.
 You can spend your gold in shops on deeper levels of the dungeon. The first one is on the 6th level.
-你会在地牢更深的地方找到可以花钱买东西的商店,第一个商店位于第6层处.	
+你会在地牢更深处找到可以花钱买东西的商店,第一个商店位于第6层.	
 Beware of Goo!
 当心黏咕!
 Pixel-Mart - all you need for successful adventure!
 像素玛连锁超市 - 成功冒险所需的装备这里应有尽有.
 Identify your potions and scrolls as soon as possible. Don't put it off to the moment when you actually need them.
-尽快鉴定你的药水和卷轴.不要拖延到你真的需要使用它们的时候.
+尽快鉴定你的药水和卷轴.不要拖到你真的需要使用它们的时候.
 Being hungry doesn't hurt, but starving does hurt.
 饥饿不会造成伤害,但饥肠辘辘则会损害你的健康.
 Surprise attack has a better chance to hit. For example, you can ambush your enemy behind a closed door when you know it is approaching.
-突袭会提高命中率.比方说,你可以在敌人快要靠近的时候埋伏在关闭的门后.
+突袭会提高命中率.比方说,你可以在敌人快要靠近时埋伏在关闭的门后.
 Don't let The Tengu out!
 别让天狗忍者跑了!
 Pixel-Mart. Spend money. Live longer.
-像素玛连锁超市 - 破财求生.
+像素玛连锁超市 - 破财免灾.
 When you're attacked by several monsters at the same time, try to retreat behind a door.
-当被许多怪物同时围攻,试着撤退到门后.
+遭遇围攻时试着撤退到门后.
 If you are burning, you can't put out the fire in the water while levitating.
-如果你被点燃了,悬浮在水面上可无法将火扑灭.
+如果你着火了,悬浮在水面上可无法将火扑灭.
 There is no sense in possessing more than one Ankh at the same time, because you will lose them upon resurrecting.
-同时携带超过一个重生十字章没什么意义,因为一旦重生你会失去身上携带的所有物品.
+同时携带超过一个重生十字章没什么意义,因为一旦重生你会丢失身上携带的所有物品.
 DANGER! Heavy machinery can cause injury, loss of limbs or death!
 警告!重型机械可能导致伤残甚至死亡.
 Pixel-Mart. A safer life in dungeon.
@@ -530,17 +530,13 @@ Pixel-Mart. A safer life in dungeon.
 When you upgrade an enchanted weapon, there is a chance to destroy that enchantment.
 当升级附魔武器时,会有一定几率丢失掉附魔效果.
 In a Well of Transmutation you can get an item, that cannot be obtained otherwise.
-你能通过嬗变之井获得一样通过其他方法都得不到的物品.
+你能通过嬗变之井获得通过其他方法都得不到的物品.
 The only way to enchant a weapon is by upgrading it with a Scroll of Weapon Upgrade.
-附魔武器的唯一方法是对其使用武器升级卷轴.
+附魔武器的唯一方法是对武器使用武器升级卷轴.
 No weapons allowed in the presence of His Majesty!
 在陛下面前不准亮出武器!
 Pixel-Mart. Special prices for demon hunters!
-像素玛连锁超市 - 针对恶魔猎人的特价!
-The text is written in demonic language.
-牌子上的文字是用恶魔语写的.
-The text is written in demonic language.
-牌子上的文字是用恶魔语写的.
+像素玛连锁超市 - 恶魔猎人专售特价!
 The text is written in demonic language.
 牌子上的文字是用恶魔语写的.
 What are you doing here?!
@@ -915,7 +911,7 @@ This %s is hunting
 This %s is fleeing
 %s正在逃窜
 This %s is passive
-%s陷入被动
+%s是被动型生物
 
 Yog-Dzewa
 犹格-达兹瓦
@@ -976,10 +972,8 @@ The succubi are demons that look like seductive (in a slightly gothic way) girls
 
 animated statue
 石像兵
-You would think that it's just another ugly statue of this dungeon, but its red glowing eyes give itself away. While the statue itself is made of stone, the _
-你或许会误以为这只是地下城里又一具丑陋的雕像,双眼里的红芒却出卖了它.雕像本身是石制的,但它手中的
-_, it's wielding, looks real.
-看起来却好像是真的.
+You would think that it's just another ugly statue of this dungeon, but its red glowing eyes give itself away. While the statue itself is made of stone, the _%s_, it's wielding, looks real.
+你或许会误以为这只是地下城里又一尊丑陋雕像,但双眼里的红芒却出卖了它.雕像本身是石制的,但它手中的%s看起来却好像是真的.
 
 cave spinner
 洞穴蜘蛛
@@ -1006,17 +1000,16 @@ gnoll shaman
 %s's lightning bolt killed you...
 %s的闪电球杀死了你...
 The most intelligent gnolls can master shamanistic magic. Gnoll shamans prefer battle spells to compensate for lack of might, not hesitating to use them on those who question their status in a tribe.
-那些最聪明的豺狼人能够精通萨满法术.豺狼萨满喜欢通过战斗咒术来弥补力量上的不足,面对胆敢质疑它们的同族也能毫不迟疑地施术.
+那些最聪明的豺狼人精擅萨满法术.豺狼萨满喜欢用战斗咒术来弥补力量上的不足,即使面对胆敢质疑它们的同族它也会毫不迟疑地施术.
 
 dwarf monk
 矮人武僧
+senior monk
+圣武僧
 %s has knocked the %s from your hands!
 %s击落了你手中的%s!
 These monks are fanatics, who devoted themselves to protecting their city's secrets from all aliens. They don't use any armor or weapons, relying solely on the art of hand-to-hand combat.
-这些僧侣皆为狂信者,倾其所能从一切异族手中保护他们城市的秘密.他们既不披甲亦不执械,所凭唯有他们的徒手格斗技艺。
-
-senior monk
-圣武僧
+这些僧侣皆为狂信者,倾其所能从一切异族手中保护他们城市的秘密.他们不披甲亦不执械,所凭唯有他们的徒手格斗技艺。
 
 scorpio
 毒蝎
@@ -1070,19 +1063,19 @@ Little known about The Goo. It's quite possible that it is not even a creature, 
 golem
 魔像
 The Dwarves tried to combine their knowledge of mechanisms with their newfound power of elemental binding. They used spirits of earth as the "soul" for the mechanical bodies of golems, which were believed to be most controllable of all. Despite this, the tiniest mistake in the ritual could cause an outbreak.
-矮人们曾经尝试将它们最新发现的元素力量应用于机械设计中.它们抽取地魄作为驱动魔像机械躯体的灵魂,相信这就足以控制好一切.尽管如此,这项仪式哪怕出现差之毫厘的错误都会导致魔像疯狂暴走.
+矮人们曾经尝试将它们最新发现的元素力量应用于机械设计中.它们抽取地魄作为驱动魔像机械躯体的灵魂,相信这就足以控制好一切.尽管如此,这项仪式哪怕差之毫厘都会导致魔像疯狂暴走.
 
 evil eye
 邪眼
 %s's deathgaze killed you...
 %s的死亡射线杀死了你...
 One of this demon's other names is "orb of hatred", because when it sees an enemy, it uses its deathgaze recklessly, often ignoring its allies and wounding them.
-这种恶魔的别名之一为"憎恶之球",因为当它看到敌人,就会不分青红皂白,不顾友军伤亡地释放它的死亡射线.
+这种恶魔有着"憎恶之球"的别名,因为一旦它发现敌人,就会不分青红皂白,不顾友军伤亡地释放它的死亡射线.
 
 fire elemental
 火元素
 Wandering fire elementals are a byproduct of summoning greater entities. They are too chaotic in their nature to be controlled by even the most powerful demonologist.
-这些游荡的火元素是召唤某个更加巨大的存在时出现的副产物,它们的天性过于混沌,以至于连强大的恶魔使者都无法役使它们。
+这些游荡的火元素是召唤某个更加巨大的存在时出现的副产物,它们的天性过于混沌,以至于连最强大的恶魔使者都无法役使它们。
 
 DM-300
 DM-300
@@ -1091,14 +1084,14 @@ DM-300进行了自我修理!
 Mission failed. Shutting down.
 任务失败.系统关闭.
 Unauthorised personnel detected.
-侦测到出现未授权人员.
+侦测到未授权人员闯入.
 This machine was created by the Dwarves several centuries ago. Later, Dwarves started to replace machines with golems, elementals and even demons. Eventually it led their civilization to the decline. The DM-300 and similar machines were typically used for construction and mining, and in some cases, for city defense.
 这台设备是矮人在数个世纪之前建造的.后来,矮人们选择放弃机械转而依赖魔像,元素甚至恶魔的力量,这最终导致了矮人文明的衰落.DM-300及其系列设备用于建设和挖掘,某些情况下也能用于城市防御.
 
 sewer crab
 下水道螃蟹
 These huge crabs are at the top of the food chain in the sewers. They are extremely fast and their thick exoskeleton can withstand heavy blows.
-这些巨大螃蟹位于下水道食物链的顶端.它们的行动极为迅速,并拥有能抵挡重击的厚实外骨骼.
+这些巨型螃蟹位于下水道食物链的顶端.它们的行动极为迅速,并拥有能抵挡重击的厚实外骨骼.
 
 gnoll brute
 豺狼蛮人
@@ -1143,30 +1136,30 @@ The seed emits a roar that echoes throughout the dungeon!
 shopkeeper
 店主
 This stout guy looks more appropriate for a trade district in some large city than for a dungeon. His prices explain why he prefers to do business here.
-这个勇敢的家伙看起来更适合在大城市而非地牢里做生意.他厚颜无耻的标价解释了为什么他选择来这里.
+这个悍勇的家伙看起来更适合在大城市而非地牢里做生意.他厚颜无耻的标价解释了为什么他选择来这里.
 Select an item to sell
 选择一件物品来出售
 
 rat king
 鼠王
 I'm not sleeping!
-我可没有打盹!
+我可没打盹!
 What is it? I have no time for this nonsense. My kingdom won't rule itself!
-它谁?我没时间跟你说这些有的没的.我的王国需要我的统治!
+它谁?我没功夫跟你说这些有的没的.我的王国需要我的统治!
 This rat is a little bigger than a regular marsupial rat and it's wearing a tiny crown on its head.
-这只袋鼬体型比普通袋鼬稍大,头上带着一顶小小的王冠.
+这只袋鼬体型比普通袋鼬稍大,头上戴着一顶小小的王冠.
 
 mirror image
 镜像
 This illusion bears a close resemblance to you, but it's paler and twitches a little.
-幻象看起来和你很相似,但会略微晃动,颜色也更加苍白.
+幻象模样与你很相似,但会微微晃动,颜色也略苍白.
 
 ambitious imp
 野心勃勃的小恶魔
 Hello, friend!
-朋友你好!
+朋友,你好!
 Imps are lesser demons. They are notable for neither their strength nor their magic talent. But they are quite smart and sociable, and many of imps prefer to live and do business among non-demons.
-小恶魔是一种劣等恶魔.他们力量贫弱魔力也不强大,但却非常机灵,富有社交手腕,而且许多小恶魔喜欢生活在非恶魔中,与他们做生意.
+小恶魔是一种劣魔.他们力量贫弱魔力也不强大,但却非常机灵,富有社交手腕,而且许多小恶魔喜欢生活在非恶魔中,与他们做生意.
 Are you an adventurer? I love adventurers! You can always rely on them if something needs to be killed. Am I right? For bounty of course ;)\nIn my case this is _golems_ who need to be killed. You see, I'm going to start a little business here, but these stupid golems are bad for business! It's very hard to negotiate with wandering lumps of granite, damn them! So please, kill... let's say _6 of them_ and a reward is yours.
 你是冒险者?我爱死冒险者了!如果你想杀死某些东西总是要靠冒险者出力的.我说得不错吧?酬劳当然不会少了你的. ;)\n这次咱要对付的是_魔像_.你看啊,我打算在这做点小生意什么的,可是这些蠢家伙对生意可没好影响!见鬼,和这些晃来晃去的大岩块根本说不通话.所以我请你杀_6只魔像_,你会得到奖励的.
 Are you an adventurer? I love adventurers! You can always rely on them if something needs to be killed. Am I right? For bounty of course ;)\nIn my case this is _monks_ who need to be killed. You see, I'm going to start a little business here, but these lunatics don't buy anything themselves and will scare away other customers. So please, kill... let's say _8 of them_ and a reward is yours.
@@ -1180,16 +1173,16 @@ See you, %s!
 Psst, %s!
 喂喂,%s!
 Imps are lesser demons. They are notable for neither their strength nor their magic talent, but they are quite smart and sociable. Many imps prefer to live among non-demons.
-小恶魔是一种劣等恶魔.他们力量贫弱魔力也不强大,但却非常机灵,富有社交手腕,而且许多小恶魔喜欢生活在非恶魔中.
+小恶魔是一种劣魔.他们力量贫弱魔力也不强大,但却非常机灵,富有社交手腕,而且许多小恶魔喜欢生活在非恶魔中.
 
 sad ghost
 怨灵
 Hello adventurer... Once I was like you - strong and confident... And now I'm dead... But I can't leave this place... Not until I have my _dried rose_... It's very important to me... Some monster stole it from my body...
-你好冒险者...我曾经和你一样强壮自信...而我现在死了..但我依然无法离开这里,除非我找到我那束_枯萎玫瑰_...它对我非常重要...某只怪物从我尸体上偷走了它.
+你好冒险者...我曾和你一样强壮自信...而我现在死了..但我依然无法离开这里,除非我找到我那束_枯萎玫瑰_...它对我非常重要...某只怪物从我尸体上偷走了它.
 Please... Help me... Find the rose...
 请...请帮助我...找到那束玫瑰...
 Hello adventurer... Once I was like you - strong and confident... And now I'm dead... But I can't leave this place... Not until I have my revenge... Slay the _fetid rat_, that has taken my life...
-你好冒险者...我曾经和你一样强壮自信...而我现在死了..但我依然无法离开这里,除非我完成我的复仇...杀死那只_腐臭鼠鼬_,它曾经夺走了我的性命.
+你好冒险者...我曾和你一样强壮自信...而我现在死了..但我依然无法离开这里,除非我完成我的复仇...杀死那只_腐臭鼠鼬_,它曾经夺走了我的性命.
 Please... Help me... Slay the abomination...
 请...请帮助我...杀死那只恶心的家伙...
 The ghost is barely visible. It looks like a shapeless spot of faint light with a sorrowful face.
@@ -1224,7 +1217,7 @@ I need to know what I'm working with, identify them first!
 I don't work with cursed items!
 我可不负责加工诅咒物品!
 It's a junk, the quality is too poor!
-这垃圾,质量太差不能做材料!
+这垃圾,质量太差做不了材料!
 I can't reforge these items!
 我没办法重铸这些物品!
 This troll blacksmith looks like all trolls look: he is tall and lean, and his skin resembles stone in both color and texture. The troll blacksmith is tinkering with unproportionally small tools.
@@ -1261,7 +1254,7 @@ You've bought %s for %dg
 # Wandmaker
 
 Oh, I see you have succeeded! I do hope it hasn't troubled you too much. As I promised, you can choose one of my high quality wands.
-哦,我瞧见你已经成功了!我的确希望没太麻烦到你.如我许诺过的,你现在可以挑选一支上好的法杖作为报酬.
+哦,我瞧见你成功了!我真的希望这没太麻烦到你.正如我向你许诺过的,你现在可以挑走一支上好的法杖作为报酬.
 
 Battle wand
 战斗法杖
@@ -1313,7 +1306,7 @@ Sorrowmoss
 seed of Sorrowmoss
 悲伤藓种子
 A Sorrowmoss is a flower (not a moss) with razor-sharp petals, coated with a deadly venom.
-悲伤藓是一种有着刀片一样锋利的花瓣的花(并非苔藓),花瓣上涂满了致命的毒液.
+悲伤藓是一种花瓣锋利如刃的花(并非苔藓),花瓣上涂满了致命的毒液.
 
 Sungrass
 太阳草
@@ -1427,7 +1420,7 @@ UNEQUIP
 dewdrop
 露珠
 A crystal clear dewdrop.
-水晶般澄澈的露珠.
+晶莹剔透的露珠.
 
 dew vial
 露水瓶
@@ -1442,7 +1435,7 @@ Your dew vial is full!
 Your dew vial is empty!
 露水瓶是空的!
 You can store excess dew in this tiny vessel for drinking it later. If the vial is full, in a moment of deadly peril the dew will be consumed automatically.
-你能够将额外的露珠存放进这个小瓶子中以供将来使用.如果装满它,在承受致命伤害的刹那会自动消耗露水来治愈伤口.
+你可以把额外的露珠存放进这个小瓶子中供将来使用.如果装满它,在承受致命伤害的刹那它会自动消耗露水来治愈伤口.
 
 armor kit
 防具升级工具
@@ -1456,7 +1449,7 @@ Using this kit of small tools and materials anybody can transform any armor into
 Ankh
 重生十字章
 The ancient symbol of immortality grants an ability to return to life after death. Upon resurrection all non-equipped items are lost.
-那古老的不朽之符文赋予了你死后重生的能力.一旦重生会丢失掉携带的全部物品.
+那古老的不朽符文赋予了你死后重生的能力.一旦重生会丢失掉携带的全部物品.
 
 Amulet of Yendor
 尼德罗护符
@@ -1547,7 +1540,7 @@ Average damage of this weapon equals to %d points per hit.
 battle axe
 战斧
 The enormous steel head of this battle axe puts considerable heft behind each stroke.
-这柄战斧斧刃使用了大量钢材使得它每一次劈砍都能造成客观的伤害.
+这柄战斧斧刃使用了大量钢材使得它每一次劈砍都能造成可观的伤害.
 
 dagger
 匕首
@@ -1694,19 +1687,19 @@ This lightweight armor offers basic protection.
 leather armor
 皮甲
 Armor made from tanned monster hide. Not as light as cloth armor but provides better protection.
-使用鞣制怪物皮做出的护甲.比布甲沉一些但防护效果也好一些.
+使用鞣制怪物皮制成的护甲.比布甲稍沉但防护效果也更好.
 mail armor
 链甲
 Interlocking metal links make for a tough but flexible suit of armor.
-铁片相连做成的护甲,坚韧而富有弹性.
+铁片相连制成的护甲,坚韧而富弹性.
 scale armor
 鳞甲
 The metal scales sewn onto a leather vest create a flexible, yet protective armor.
-将金属鳞片缝进皮革做成的兼顾弹性和防护性能的护甲.
+将金属鳞片缝进皮革制成的兼顾弹性与防护性能的护甲.
 plate armor
 板甲
 Enormous plates of metal are joined together into a suit that provides unmatched protection to any adventurer strong enough to bear its staggering weight.
-使用大量金属板打造而成,为那些能够承受得了它那惊人重量的冒险者提供无可比拟的防护.
+使用大量金属板打造而成,为能够承受得了它那惊人分量的冒险者提供无可比拟的防护.
 
 warrior suit of armor
 战士铠甲
@@ -1794,7 +1787,7 @@ When this wand is used as a melee weapon, its average damage is %d points per hi
 You can use this wand as a melee weapon.
 你可以将这柄法杖作为近战武器使用.
 your wand fizzles; it must be out of charges for now
-你的法杖嘶嘶作响;一定是现在耗光了能量.
+你的法杖嘶嘶作响;一定是耗光了能量.
 You can't target yourself
 你不能以自己为目标
 
@@ -1838,7 +1831,7 @@ The purple light from this wand will make the target run amok attacking random c
 Wand of Avalanche
 崩塌法杖
 You killed yourself with your own Wand of Avalanche...
-你使用你自己的崩塌法杖杀死了自己.
+你使用崩塌法杖杀死了自己.
 When a discharge of this wand hits a wall (or any other solid obstacle) it causes an avalanche of stones, damaging and stunning all creatures in the affected area.
 法杖释放的魔弹碰到墙壁或别的固态屏障时会造成土石崩塌,伤害并晕眩附近受影响区域的所有生物.
 
@@ -1855,14 +1848,14 @@ This wand emits a beam of destructive energy, which pierces all creatures in its
 Wand of Firebolt
 火球法杖
 You killed yourself with your own Wand of Firebolt...
-你使用你自己的火球法杖杀死了自己.
+你使用火球法杖杀死了自己.
 This wand unleashes bursts of magical fire. It will ignite flammable terrain, and will damage and burn a creature it hits.
 这柄法杖发出一道魔力火焰,能够引燃可燃地形,并伤害和点燃击中的生物.
 
 Wand of Flock
 羊群法杖
 A flick of this wand summons a flock of magic sheep, creating temporary impenetrable obstacle.
-这柄法杖能够召唤出一群魔法山羊,制造出无法通过的临时屏障.
+这柄法杖能够召唤出一群魔法绵羊,制造出无法通过的临时屏障.
 sheep
 绵羊
 Baa!
@@ -1874,19 +1867,19 @@ Baa.
 Baa...
 咩...
 This is a magic sheep. What's so magical about it? You can't kill it. It will stand there until it magcially fades away, all the while chewing cud with a blank stare.
-这是一只魔法山羊.它有什么神奇的地方呢?你无法杀死它,直到它自己神奇地消失,一边咀嚼反刍的食物一边用那茫然的眼神盯着你.
+这是一只魔法绵羊.它有什么神奇的地方呢?你无法杀死它,直到它自己神奇地消失,一边咀嚼反刍的食物一边用那茫然的眼神盯着你.
 
 Wand of Lightning
 雷霆法杖
 You killed yourself with your own Wand of Lightning...
-你使用你自己的雷霆法杖杀死了自己.
+你使用雷霆法杖杀死了自己.
 This wand conjures forth deadly arcs of electricity, which deal damage to several creatures standing close to each other.
 这柄法杖向前放出一道致命的电弧,能够对相邻而站的一群生物造成伤害.
 
 Wand of Magic Missile
 魔弹法杖
 You killed yourself with your own Wand of Magic Missile...
-你使用你自己的魔弹法杖杀死了自己.
+你使用魔弹法杖杀死了自己.
 This wand launches missiles of pure magical energy, dealing moderate damage to a target creature.
 这柄法杖能够发出纯净魔力构成的魔弹,对目标生物造成一定的伤害.
 DISENCHANT
@@ -1902,7 +1895,7 @@ The vile blast of this twisted bit of wood will imbue its target with a deadly v
 这柄有些扭曲的法杖释放的恶毒魔力能够让目标染上致命毒素.中毒的生物在效果结束前会持续掉血.效果持续时间随着法杖等级的提升而延长.
 
 Wand of Regrowth
-草木法杖
+句芒法杖
 "When life ceases new life always begins to grow... The eternal cycle always remains!"
 "生生不息,周而复始!"
 
@@ -2139,7 +2132,7 @@ This ring accelerates the wearer's flow of time, allowing one to perform all act
 这枚指环增加穿戴者身体周围的时间流速,让他的所有行动都变得稍快一些.
 
 Ring of Herbalism
-草木指环
+句芒指环
 This ring increases your chance to gather dew and seeds from trampled grass.
 这枚指环提升你通过践踏草木获得露珠和种子的几率.
 
