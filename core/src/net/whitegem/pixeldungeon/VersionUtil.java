@@ -86,6 +86,7 @@ public class VersionUtil
         if (version.equals("???"))
         {
             checkState = 3;
+            return;
         }
 
         Net.HttpRequest httpGet = new Net.HttpRequest(Net.HttpMethods.GET);
@@ -95,15 +96,23 @@ public class VersionUtil
         {
             public void handleHttpResponse(Net.HttpResponse httpResponse)
             {
-                JsonValue root = new JsonReader().parse(httpResponse.getResultAsString());
+                String result = httpResponse.getResultAsString();
+                if (result == null)
+                {
+                    checkState = 2;
+                    return;
+                }
+                JsonValue root = new JsonReader().parse(result);
                 String versionNewest = root.get(0).getString("tag_name");
                 if (Game.version.equals(versionNewest))
                 {
                     checkState = 3;
+                    return;
                 }
                 else
                 {
                     checkState = 2;
+                    return;
                 }
             }
             public void failed(Throwable t)

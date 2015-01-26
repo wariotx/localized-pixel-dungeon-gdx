@@ -2620,3 +2620,7 @@ Settings
 
 You don't know what is there.
 你不知道那边有什么.
+
+# Chinese translation
+This version of Chinese translation has expired.
+该汉化测试版已作废,请下载新版.
