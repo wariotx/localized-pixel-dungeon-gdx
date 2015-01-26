@@ -107,7 +107,6 @@ public class LanguageUtil
 
         if (!code.equals("en"))
         {
-
             // 3x5 (6)
             PixelScene.font1x = BitmapText.Font.colorMarked(
                     BitmapCache.get(fonts.get("font1x").png), 0x00000000, BitmapText.Font.LATIN_FULL, fonts.get("font1x").fnt, fonts.get("font1x").scale);

@@ -28,9 +28,11 @@ import com.watabou.pixeldungeon.input.GameAction;
 import com.watabou.pixeldungeon.scenes.GameScene;
 import com.watabou.pixeldungeon.scenes.PixelScene;
 import com.watabou.pixeldungeon.scenes.TitleScene;
+import com.watabou.pixeldungeon.windows.WndError;
 import com.watabou.utils.PDPlatformSupport;
 import com.watabou.utils.Signal;
 import net.whitegem.pixeldungeon.LanguageUtil;
+import net.whitegem.pixeldungeon.VersionUtil;
 
 public class PixelDungeon extends Game<GameAction> {
 
@@ -93,6 +95,13 @@ public class PixelDungeon extends Game<GameAction> {
 		com.watabou.utils.Bundle.addAlias( 
 			com.watabou.pixeldungeon.plants.Dreamweed.Seed.class,
 			"com.watabou.pixeldungeon.plants.Blindweed$Seed" );
+	}
+
+	@Override
+	public void update()
+	{
+		super.update();
+		VersionUtil.check();
 	}
 	
 	@Override
