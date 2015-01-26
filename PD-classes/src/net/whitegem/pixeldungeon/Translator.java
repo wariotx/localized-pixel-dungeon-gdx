@@ -36,9 +36,11 @@ public class Translator
                 }
                 line = reader.readLine();
             }
+            reader.close();
         } catch (IOException ioe)
         {
         }
+
 
         if (lines.size() % 2 != 0)
         {

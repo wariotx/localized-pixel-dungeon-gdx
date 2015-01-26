@@ -312,6 +312,7 @@ public class BitmapText extends Visual {
 					}
 					line = reader.readLine();
 				}
+				reader.close();
 			} catch (IOException ioe)
 			{
 			}
