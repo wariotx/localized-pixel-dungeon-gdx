@@ -310,7 +310,7 @@ public class Ring extends EquipableItem {
 			if (!isIdentified() && --ticksToKnow <= 0) {
 				String gemName = name();
 				identify();
-				GLog.w( Utils.format(TXT_IDENTIFY, gemName, Ring.this.toString()) );
+				GLog.w( Utils.format(TXT_IDENTIFY, gemName, LanguageFactory.getTranslation(Ring.this.toString())) );
 				Badges.validateItemLevelAquired( Ring.this );
 			}
 			

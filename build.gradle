@@ -19,7 +19,7 @@ allprojects {
         versionCode = 59
         appName = 'pixel-dungeon'
 	    appTitle = 'Pixel Dungeon'
-	    appId = 'net.whitegem.pixeldungeon.android'
+	    appId = 'net.whitegem.pixeldungeon'
         gdxVersion = '1.4.1'
         roboVMVersion = '0.0.14'
     }
