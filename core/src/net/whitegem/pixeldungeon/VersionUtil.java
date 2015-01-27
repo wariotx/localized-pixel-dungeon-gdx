@@ -8,7 +8,9 @@ import com.watabou.noosa.BitmapText;
 import com.watabou.noosa.Game;
 import com.watabou.pixeldungeon.Assets;
 import com.watabou.pixeldungeon.scenes.PixelScene;
+import com.watabou.pixeldungeon.ui.Icons;
 import com.watabou.pixeldungeon.windows.WndError;
+import com.watabou.pixeldungeon.windows.WndTitledMessage;
 import com.watabou.utils.BitmapCache;
 
 /**
@@ -22,8 +24,15 @@ public class VersionUtil
 
     public static void check()
     {
-        if (checkState == 3)
+        if (shown)
         {
+            return;
+        }
+
+        if (checkState == 5)
+        {
+            Game.scene().add(new WndTitledMessage(Icons.ALERT.get(), "Information", "You are using the latest beta version."));
+            shown = true;
             return;
         }
 
@@ -38,44 +47,56 @@ public class VersionUtil
                 case 1: // checking
                     break;
                 case 2: // failed
-                    if (!shown)
-                    {
-                        Game.scene().add(new WndError("This version of Chinese translation has expired."));
-                        LanguageFactory.INSTANCE.setLanguage("en");
-                        // 3x5 (6)
-                        PixelScene.font1x = BitmapText.Font.colorMarked(
-                                BitmapCache.get(Assets.FONTS1X), 0x00000000, BitmapText.Font.LATIN_FULL);
-                        PixelScene.font1x.baseLine = 6;
-                        PixelScene.font1x.tracking = -1;
-
-                        // 5x8 (10)
-                        PixelScene.font15x = BitmapText.Font.colorMarked(
-                                BitmapCache.get(Assets.FONTS15X), 12, 0x00000000, BitmapText.Font.LATIN_FULL);
-                        PixelScene.font15x.baseLine = 9;
-                        PixelScene.font15x.tracking = -1;
-
-                        // 6x10 (12)
-                        PixelScene.font2x = BitmapText.Font.colorMarked(
-                                BitmapCache.get(Assets.FONTS2X), 14, 0x00000000, BitmapText.Font.LATIN_FULL);
-                        PixelScene.font2x.baseLine = 11;
-                        PixelScene.font2x.tracking = -1;
-
-                        // 7x12 (15)
-                        PixelScene.font25x = BitmapText.Font.colorMarked(
-                                BitmapCache.get(Assets.FONTS25X), 17, 0x00000000, BitmapText.Font.LATIN_FULL);
-                        PixelScene.font25x.baseLine = 13;
-                        PixelScene.font25x.tracking = -1;
-
-                        // 9x15 (18)
-                        PixelScene.font3x = BitmapText.Font.colorMarked(
-                                BitmapCache.get(Assets.FONTS3X), 22, 0x00000000, BitmapText.Font.LATIN_FULL);
-                        PixelScene.font3x.baseLine = 17;
-                        PixelScene.font3x.tracking = -2;
-                        shown = true;
-                    }
+                    Game.scene().add(new WndError("This version of Chinese translation has expired.  You'll be switched to the English version."));
+                    setEng();
+                    shown = true;
+                    break;
+                case 3: // failed
+                    Game.scene().add(new WndError("Internet access failed.  You'll be switched to the English version."));
+                    setEng();
+                    shown = true;
+                    break;
+                case 4: // cancelled
+                    Game.scene().add(new WndError("Internet access cancelled.  You'll be switched to the English version."));
+                    setEng();
+                    shown = true;
                     break;
             }
         }
+    }
+
+    private static void setEng()
+    {
+        LanguageFactory.INSTANCE.setLanguage("en");
+        // 3x5 (6)
+        PixelScene.font1x = BitmapText.Font.colorMarked(
+                BitmapCache.get(Assets.FONTS1X), 0x00000000, BitmapText.Font.LATIN_FULL);
+        PixelScene.font1x.baseLine = 6;
+        PixelScene.font1x.tracking = -1;
+
+        // 5x8 (10)
+        PixelScene.font15x = BitmapText.Font.colorMarked(
+                BitmapCache.get(Assets.FONTS15X), 12, 0x00000000, BitmapText.Font.LATIN_FULL);
+        PixelScene.font15x.baseLine = 9;
+        PixelScene.font15x.tracking = -1;
+
+        // 6x10 (12)
+        PixelScene.font2x = BitmapText.Font.colorMarked(
+                BitmapCache.get(Assets.FONTS2X), 14, 0x00000000, BitmapText.Font.LATIN_FULL);
+        PixelScene.font2x.baseLine = 11;
+        PixelScene.font2x.tracking = -1;
+
+        // 7x12 (15)
+        PixelScene.font25x = BitmapText.Font.colorMarked(
+                BitmapCache.get(Assets.FONTS25X), 17, 0x00000000, BitmapText.Font.LATIN_FULL);
+        PixelScene.font25x.baseLine = 13;
+        PixelScene.font25x.tracking = -1;
+
+        // 9x15 (18)
+        PixelScene.font3x = BitmapText.Font.colorMarked(
+                BitmapCache.get(Assets.FONTS3X), 22, 0x00000000, BitmapText.Font.LATIN_FULL);
+        PixelScene.font3x.baseLine = 17;
+        PixelScene.font3x.tracking = -2;
     }
 
     private static void checkGithubIsLatest()
@@ -85,7 +106,7 @@ public class VersionUtil
         String version = Game.version;
         if (version.equals("???"))
         {
-            checkState = 3;
+            checkState = 5;
             return;
         }
 
@@ -99,14 +120,14 @@ public class VersionUtil
                 String result = httpResponse.getResultAsString();
                 if (result == null)
                 {
-                    checkState = 2;
+                    checkState = 3;
                     return;
                 }
                 JsonValue root = new JsonReader().parse(result);
                 String versionNewest = root.get(0).getString("tag_name");
                 if (Game.version.equals(versionNewest))
                 {
-                    checkState = 3;
+                    checkState = 5;
                     return;
                 }
                 else
@@ -117,11 +138,11 @@ public class VersionUtil
             }
             public void failed(Throwable t)
             {
-                checkState = 2;
+                checkState = 3;
             }
             public void cancelled()
             {
-                checkState = 2;
+                checkState = 4;
             }
         });
     }

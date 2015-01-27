@@ -2622,5 +2622,13 @@ You don't know what is there.
 你不知道那边有什么.
 
 # Chinese translation
-This version of Chinese translation has expired.
-该汉化测试版已作废,请下载新版.
+Information
+提示
+You are using the latest beta version.
+您正在使用最新的汉化测试版.
+This version of Chinese translation has expired.  You'll be switched to the English version.
+该汉化测试版已过期,请下载新版.您将被切换至英文版.
+Internet access failed.  You'll be switched to the English version.
+网络连接失败.您将被切换至英文版.
+Internet access cancelled.  You'll be switched to the English version.
+网络连接被取消.您将被切换至英文版.

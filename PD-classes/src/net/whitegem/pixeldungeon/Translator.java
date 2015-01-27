@@ -206,7 +206,7 @@ public class Translator
             {
                 if (end == paragraph.length())
                 {
-                    words.add(str.trim());
+                    words.add(str);//.trim());
                     start = end;
                     end++;
                 }

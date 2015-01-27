@@ -299,14 +299,12 @@ public class BitmapText extends Visual {
 			FileHandle file = Gdx.files.internal(fntFile);
 			BufferedReader reader = new BufferedReader(file.reader());
 			ArrayList<String> lines = new ArrayList<String>();
-			int start = 0;
 			try
 			{
 				String line = reader.readLine();
 				while (line != null)
 				{
-					start++;
-					if (!line.trim().equals("") && start >= 5)
+					if (!line.trim().equals(""))
 					{
 						lines.add(line.trim());
 					}
