@@ -111,12 +111,11 @@ public class PixelDungeon extends Game<GameAction> {
 		// set language
 		LanguageUtil.setLanguage();
 
-		boolean landscape = Gdx.graphics.getWidth() > Gdx.graphics.getHeight();
+		// boolean landscape = Gdx.graphics.getWidth() > Gdx.graphics.getHeight();
 
 		final Preferences prefs = Preferences.INSTANCE;
-		if (prefs.getBoolean(Preferences.KEY_LANDSCAPE, false) != landscape) {
-			landscape( !landscape );
-		}
+
+		landscape(prefs.getBoolean(Preferences.KEY_LANDSCAPE, false));
 		fullscreen( prefs.getBoolean(Preferences.KEY_WINDOW_FULLSCREEN, false) );
 		
 		Music.INSTANCE.enable( music() );
