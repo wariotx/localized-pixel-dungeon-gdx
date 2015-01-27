@@ -842,9 +842,9 @@ No, I give up
 # SadGhost
 
 Yes! Yes!!! This is it! Please give it to me! And you can take one of these items, maybe they will be useful to you in your journey...
-好的,好的,就是它!请把它交给我!而你可以选一件东西拿走,或许在你接下来的旅途里能派上用场...
+好的,好的,就是它!请把它交给我!而你可以挑一件东西拿走,或许它在你接下来的旅途里能派上用场...
 Yes! The ugly creature is slain and I can finally rest... Please take one of these items, maybe they will be useful to you in your journey...
-好的,那只丑陋的怪物终于死了而我也终于能够安息...请选一件东西拿走,或许在你接下来的旅途里能派上用场...
+好的,那只丑陋的怪物已经死了而我也终于能够安息...请挑一件东西拿走,或许它在你接下来的旅途里能派上用场...
 Ghost's weapon
 怨灵的武器
 Ghost's armor
@@ -888,7 +888,7 @@ The caves, which stretch down under the abandoned prison, are sparcely populated
 废弃牢狱下方延伸出的洞穴人迹罕至.城市难以在这么深的地底进行开发,矿物贫瘠也无法勾起矮人的兴趣.过去这里曾一度是城邦之间驿道的贸易前哨,但自从矮人之都衰落后这里也就荒废了.如今只有那些无处不在的豺狼人和地下生物还在这里游荡.
 
 Dwarven Metropolis was once the greatest of dwarven city-states. In its heyday the mechanized army of dwarves has successfully repelled the invasion of the old god and his demon army. But it is said, that the returning warriors have brought seeds of corruption with them, and that victory was the beginning of the end for the underground kingdom.
-矮人之都曾经是最伟大的矮人城邦.在其全盛时期矮人的机械军团曾成功地抵御古神和它的恶魔军团的入侵.但传闻凯旋的战士也带回了腐朽的种子,这场胜利也标志着这座地下王国衰败的开端.
+矮人之都曾是最伟大的矮人城邦.在其全盛时期矮人的机械军团曾成功地抵御古神和它的恶魔军团的入侵.但传闻凯旋的战士也带回了腐朽的种子,这场胜利也标志着这座地下王国衰败的开端.
 
 In the past these levels were the outskirts of Metropolis. After the costly victory in the war with the old god dwarves were too weakened to clear them of remaining demons. Gradually demons have tightened their grip on this place and now it's called Demon Halls.\n\nVery few adventurers have ever descended this far...
 过去这里曾是矮人之都的郊区.对抗古神获得代价高昂的胜利后,矮人国度太过虚弱,无法清除这里残留的恶魔.渐渐恶魔占据了这里,如今这里被称作恶魔大厅.\n\n罕有冒险者能抵达这么深处的地底来...
@@ -938,7 +938,7 @@ dwarf warlock
 %s's shadow bolt killed you...
 %s的暗影球杀死了你...
 When dwarves' interests have shifted from engineering to arcane arts, warlocks have come to power in the city. They started with elemental magic, but soon switched to demonology and necromancy.
-当矮人的兴趣由工程转向奥术后,术士掌控了城市的大权.它们一开始醉心于元素魔法,后来逐渐涉足恶魔法术和亡灵法术.
+当矮人的兴趣由工程转向奥术后,术士掌控了城市的大权.它们一开始醉心于元素魔法,后来则逐渐涉足恶魔法术与亡灵法术.
 
 crazy thief
 疯狂飞贼
@@ -968,7 +968,7 @@ The deadly swarm of flies buzzes angrily. Every non-magical attack will split it
 succubus
 魅魔
 The succubi are demons that look like seductive (in a slightly gothic way) girls. Using its magic, the succubus can charm a hero, who will become unable to attack anything until the charm wears off.
-魅魔是一种外表看上去如同热辣少女(略哥特风那种热辣)的恶魔.魅魔能够使用魔法魅惑英雄,使得他们在魅惑效果结束前无法攻击任何目标.
+魅魔是一种外表酷似热辣少女(略哥特风那种热辣)的恶魔.魅魔能够使用魔法魅惑英雄,使得他们在魅惑效果结束前无法攻击任何目标.
 
 animated statue
 石像兵
@@ -1444,7 +1444,7 @@ Select an armor to upgrade
 you applied the armor kit to upgrade your %s
 你使用防具升级工具改造了你的%s
 Using this kit of small tools and materials anybody can transform any armor into an "epic armor", which will keep all properties of the original armor, but will also provide its wearer a special ability depending on his class. No skills in tailoring, leatherworking or blacksmithing are required.
-使用这套工具和材料任何人都能够将任何防具改造成一件"传奇装备",它不但能保留原有防具的全部特性,还能使得穿戴者获得独特的职业技能.不需要任何裁剪,皮革加工和铁匠技能.
+使用这套器材无论是谁都能够将任何一件防具改造成"传奇装备",它不但能保留原有防具的全部特性,还能使得穿戴者获得独特的职业技能.无需任何裁剪,皮革加工和铁匠技能.
 
 Ankh
 重生十字章
@@ -1495,13 +1495,13 @@ upgraded
 degraded
 降级后的
 This %s is %s tier-%d melee weapon. 
-这柄%s是一柄%s第%d阶近战武器.
+此%s乃%s%d階近戰武器.
 Its average damage is %d points per hit. 
 它的平均伤害为每击%d点.
 Its typical average damage is %d points per hit and usually it requires %d points of strength. 
 一般来说它的平均伤害为每击%d点,此外想要自如地使用它通常需要%d点力量.
 Probably this weapon is too heavy for you. 
-或许这柄武器对你来说过于沉重.
+或许此武器对你来说过于沉重.
 This is a rather fast and accurate weapon. 
 这是一柄相当快速且精准的武器.
 This is a rather fast but inaccurate weapon. 
@@ -1550,7 +1550,7 @@ A simple iron dagger with a well worn wooden handle.
 glaive
 大刀
 A polearm consisting of a sword blade on the end of a pole.
-由一把长柄和末端的刀刃构成的长杆武器.
+由一根长柄和末端的刀刃构成的长杆武器.
 
 knuckleduster
 指虎
@@ -1560,7 +1560,7 @@ A piece of iron shaped to fit around the knuckles.
 longsword
 长剑
 This towering blade inflicts heavy damage by investing its heft into every cut.
-这柄长刃发挥它沉重的优势每一次劈砍都能造成大量伤害.
+这柄长刃如能发挥它沉重的优势,那么每一次劈砍都能造成大量伤害.
 
 mace
 铁槌
@@ -1579,7 +1579,7 @@ REFORGE
 Select a weapon to upgrade
 选择一件武器来升级
 you reforged the short sword to upgrade your %s
-重铸这柄短剑来升级你的%s
+你重铸这柄短剑升级了你的%s
 you can't upgrade a boomerang this way
 你不能用这种方式来升级回旋镖
 It is indeed quite short, just a few inches longer, than a dagger.
@@ -1616,7 +1616,7 @@ Thrown to the enemy this flat curved wooden missile will return to the hands of 
 将它扔向敌人这柄削平的木质飞镖会自动回到投资者的手中.
 
 curare dart
-淬毒飞镖
+麻痹飞镖
 These little evil darts don't do much damage but they can paralyze the target leaving it helpless and motionless for some time.
 这些恶毒的小飞镖造成不了多少伤害但却能够让目标麻痹使其在一段时间内都无助地陷在原地无法移动.
 
@@ -1676,7 +1676,7 @@ You can feel a malevolent magic lurking within the %s
 Your health is too low!
 你的生命值过低!
 You need to be wearing this armor to use its special power!
-你需要穿着这件护甲才能发动特殊能力!
+你需要穿上这件护甲才能发动特殊能力!
 The thing looks awesome!
 这东西看起来无与伦比!
 
