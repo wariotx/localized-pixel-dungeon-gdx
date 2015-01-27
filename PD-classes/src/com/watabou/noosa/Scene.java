@@ -17,6 +17,7 @@
 
 package com.watabou.noosa;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.watabou.input.NoosaInputProcessor;
 import com.watabou.utils.Signal;
@@ -26,6 +27,7 @@ public class Scene extends Group {
 	private Signal.Listener<NoosaInputProcessor.Key> keyListener;
 	
 	public void create() {
+		Gdx.input.setCatchBackKey(true);
 		Game.instance.getInputProcessor().addKeyListener(keyListener = new Signal.Listener<NoosaInputProcessor.Key>() {
 			@Override
 			public void onSignal(NoosaInputProcessor.Key key) {
