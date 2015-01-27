@@ -141,11 +141,8 @@ public class PixelDungeon extends Game<GameAction> {
 	 */
 	
 	public static void landscape( boolean value ) {
-		// FIXME
-//		Game.instance.setRequestedOrientation( value ?
-//			ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE :
-//			ActivityInfo.SCREEN_ORIENTATION_PORTRAIT );
-//		Preferences.INSTANCE.put( Preferences.KEY_LANDSCAPE, value );
+		Game.instance.getInputProcessor().setOrientation(value);
+		Preferences.INSTANCE.put( Preferences.KEY_LANDSCAPE, value );
 	}
 	
 	public static boolean landscape() {

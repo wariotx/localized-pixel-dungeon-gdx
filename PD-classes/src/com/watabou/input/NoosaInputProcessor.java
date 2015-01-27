@@ -40,6 +40,9 @@ public abstract class NoosaInputProcessor<T> implements InputProcessor {
 		// Do nothing
 	}
 
+	public void setOrientation(boolean landscape)
+	{}
+
 	@Override
 	public boolean keyDown(int keycode) {
 		switch (keycode) {

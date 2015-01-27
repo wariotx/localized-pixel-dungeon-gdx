@@ -132,7 +132,7 @@ public class WndSettings extends Window {
 
 		Button lastBtn = btnSound;
 		if (!inGame) {
-		/*	if (type == Application.ApplicationType.Android || type == Application.ApplicationType.iOS) {
+			if (type == Application.ApplicationType.Android || type == Application.ApplicationType.iOS) {
 				RedButton btnOrientation = new RedButton(orientationText()) {
 					@Override
 					protected void onClick() {
@@ -143,7 +143,7 @@ public class WndSettings extends Window {
 				add(btnOrientation);
 
 				lastBtn = btnOrientation;
-			} else*/ if (type == Application.ApplicationType.Desktop) {
+			} else if (type == Application.ApplicationType.Desktop) {
 
 				RedButton btnResolution = new RedButton(resolutionText()) {
 					@Override
