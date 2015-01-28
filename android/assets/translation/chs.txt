@@ -605,7 +605,7 @@ All wands identified
 All potions, scrolls, rings & wands identified
 全部药水,卷轴,指环和法杖都已鉴定
 All bags bought
-所以行囊都已购入
+所有行囊都已购入
 Death from fire
 死于烈火
 Death from poison
