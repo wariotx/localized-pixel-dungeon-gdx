@@ -426,43 +426,43 @@ Something went wrong...
 
 # mob
 Killed by %s on level %d
-被%s残忍杀害,尸体躺在第%d层冰冷的地板上.
+被第%2$d层的%1$s残忍杀害.
 # boss
 Killed by the %s on level %d
-被%s残忍杀害,尸体躺在第%d层冰冷的地板上.
+被第%2$d层的%1$s残忍杀害.
 # wand
 Killed by your own %s on level %d
-捣鼓自己的%s时出了意外,尸体躺在第%d层冰冷的地板上.
+在第%2$d层捣鼓自己的%1$s时出了意外.
 # glyph
 Killed by the %s on level %d
-被护甲上的%s杀死,尸体躺在第%d层冰冷的地板上.
+在第%2$d层被护甲上的%1$s杀死.
 # trap
 Killed by discharge of %s on level %d
-因为触发%s而死于非命,尸体躺在第%d层冰冷的地板上.
+在第%2$d层因触发%1$s而死于非命.
 # burning
 Burned to death on level %d
-在第%d层焚烧至死
+在第%d层焚烧至死.
 # starving
 Starved to death on level %d
-在第%d层活活饿死
+在第%d层活活饿死.
 # poison
 Died from poison on level %d
-在第%d层毒发身亡
+在第%d层毒发身亡.
 # toxicgas
 Died from toxic gas on level %d
-在第%d层长眠于毒气中
+在第%d层长眠于毒气中.
 # bleeding
 Bled to death on level %d
-在第%d层因失血过多而致死
+在第%d层因失血过多而致死.
 # ooze
 Killed by a caustic ooze on level %d
-在第%d层死在腐蚀泥浆中
+在第%d层死在腐蚀泥浆中.
 # fall
 Fell to death on level %d
 在第%d层尝试信仰之跃失败.
 # win
 Obtained the Amulet of Yendor
-得到了尼德罗护符
+得到了尼德罗护符.
 
 
 # Journal
@@ -2614,7 +2614,7 @@ Select a cell to examine
 Scroll of Weapon Upgrade
 武器升级卷轴
 Mystery meat burns up!
-神秘肉烧着了！
+神秘肉烧着了!
 
 # backpack
 backpack
@@ -2636,3 +2636,7 @@ Internet access failed.  You'll be switched to the English version.
 网络连接失败.您将被切换至英文版.
 Internet access cancelled.  You'll be switched to the English version.
 网络连接被取消.您将被切换至英文版.
+Language
+语言
+Please select your language.
+选择游戏显示语言.
