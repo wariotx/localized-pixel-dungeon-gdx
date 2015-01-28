@@ -49,11 +49,6 @@ public class LanguageFactory
         return translator.hasKey(key) || translator.hasKey(key.replaceAll("\\.$", ""));
     }
 
-    public String fixWrap(String inText)
-    {
-        return translator.fixWrap(inText);
-    }
-
     public void addFormatTranslation(String formattedText, String format, Object...args)
     {
         System.out.println("Utils.format >>> " + formattedText + " ||| " + format + " ||| " + args);
@@ -109,7 +104,6 @@ public class LanguageFactory
             if (text != null)
             {
                 text = (s == null) ? INSTANCE.translate(text) : s;
-                text = INSTANCE.fixWrap(text);
             }
         }
         return text;

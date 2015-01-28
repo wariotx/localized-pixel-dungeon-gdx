@@ -33,6 +33,7 @@ import com.watabou.pixeldungeon.sprites.ItemSpriteSheet;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.utils.Utils;
 import com.watabou.utils.Bundle;
+import net.whitegem.pixeldungeon.LanguageFactory;
 
 public class LloydsBeacon extends Item {
 
@@ -49,7 +50,7 @@ public class LloydsBeacon extends Item {
 		"Lloyd's beacon is an intricate magic device, that allows you to return to a place you have already been.";
 	
 	private static final String TXT_SET = 
-		"\n\nThis beacon was set somewhere on the level %d of Pixel Dungeon.";
+		"This beacon was set somewhere on the level %d of Pixel Dungeon.";
 	
 	public static final float TIME_TO_USE = 1;
 	
@@ -173,6 +174,6 @@ public class LloydsBeacon extends Item {
 	
 	@Override
 	public String info() {
-		return TXT_INFO + (returnDepth == -1 ? "" : Utils.format( TXT_SET, returnDepth ) );
+		return LanguageFactory.getTranslation(TXT_INFO) + (returnDepth == -1 ? "" : "\n\n" + LanguageFactory.getTranslation(Utils.format(TXT_SET, returnDepth)));
 	}
 }

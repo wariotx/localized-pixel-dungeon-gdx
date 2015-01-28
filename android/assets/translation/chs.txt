@@ -1383,8 +1383,8 @@ The lloyd's beacon is successfully set at your current location, now you can ret
 劳埃德的信标成功地绑定到你当前的位置,现在你可以选择在任何时间点回到这里.
 Lloyd's beacon is an intricate magic device, that allows you to return to a place you have already been.
 劳埃德的信标是一种复杂的魔法设备,能够允许你回到曾经去过的地方.
-\n\nThis beacon was set somewhere on the level %d of Pixel Dungeon.
-\n\n信标设置在了像素地牢第%d层的某处.
+This beacon was set somewhere on the level %d of Pixel Dungeon.
+信标设置在了像素地牢第%d层的某处.
 
 you wince as your grip involuntarily tightens around your %s
 你畏葸不前不自觉地握紧了手中的%s
