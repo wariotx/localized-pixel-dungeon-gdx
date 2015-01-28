@@ -17,6 +17,7 @@
 
 package com.watabou.noosa;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -249,7 +250,14 @@ public abstract class Game<GameActionType> implements ApplicationListener {
 	}
 
 	public void finish() {
-		Gdx.app.exit();
+		if (Gdx.app.getType() == Application.ApplicationType.Android)
+		{
+			inputProcessor.hideActivity();
+		}
+		else
+		{
+			Gdx.app.exit();
+		}
 	}
 
 	public NoosaInputProcessor<GameActionType> getInputProcessor() {

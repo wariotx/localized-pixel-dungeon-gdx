@@ -14,6 +14,12 @@ public class AndroidInputProcessor extends PDInputProcessor {
 	}
 
 	@Override
+	public void hideActivity()
+	{
+		activity.moveTaskToBack(true);
+	}
+
+	@Override
 	public boolean touchDown(int screenX, int screenY, int pointer, int button) {
 		Touch touch = new Touch(screenX, screenY);
 		pointers.put(pointer, touch);
