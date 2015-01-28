@@ -814,7 +814,7 @@ Buffs
 Experience
 经验
 Game Duration
-游戏时长
+计步器
 Maximum Depth
 最深层数
 Mobs Killed
@@ -1197,7 +1197,9 @@ troll blacksmith
 your %s certainly looks better now
 你的%s看起来品质的确有所提高
 Hey human! Wanna be useful, eh? Take dis pickaxe and mine me some _dark gold ore_, _15 pieces_ should be enough. What do you mean, how am I gonna pay? You greedy...\nOk, ok, I don't have money to pay, but I can do some smithin' for you. Consider yourself lucky, I'm the only blacksmith around.
-嘿人类!你也想要多少派上点用场吧?拿走那只镐然后给我挖些_暗金矿_回来,_15块_足矣.你啥意思,我得付你报酬,你个小气鬼...\n好好我没钱给你,不过我能帮你做点铁匠活儿.你运气真是好到爆了啊,我可是附近唯一的铁匠. 
+嘿人类!你也想要多少派上点用场吧?拿走那只镐然后给我挖些_暗金矿_回来,_15块_足矣.你啥意思,你是说我得付你报酬?你个小气鬼...\n好好我没钱给你,不过我能帮你做点铁匠活儿.你运气真是好到爆了啊,我可是附近唯一的铁匠. 
+Hey human! Wanna be useful, eh? Take dis pickaxe and _kill a bat_ wit' it, I need its blood on the head. What do you mean, how am I gonna pay? You greedy...\nOk, ok, I don't have money to pay, but I can do some smithin' for you. Consider yourself lucky, I'm the only blacksmith around.
+嘿人类!你也想要多少派上点用场吧?用那只镐杀只_蝙蝠_然后给我带回来,我需要镐头上沾点蝙蝠血.你啥意思,你是说我得付你报酬?你个小气鬼...\n好好我没钱给你,不过我能帮你做点铁匠活儿.你运气真是好到爆了啊,我可是附近唯一的铁匠. 
 Are you kiddin' me? Where is my pickaxe?!
 你在耍我吗?我的镐呢?
 Dark gold ore. 15 pieces. Seriously, is it dat hard?
@@ -1221,7 +1223,7 @@ It's a junk, the quality is too poor!
 I can't reforge these items!
 我没办法重铸这些物品!
 This troll blacksmith looks like all trolls look: he is tall and lean, and his skin resembles stone in both color and texture. The troll blacksmith is tinkering with unproportionally small tools.
-巨魔铁匠和其他巨魔一般模样:高高瘦瘦,皮肤的纹理和颜色和石头都差不多.巨魔铁匠操弄着和他体型极不相称的小工具.
+巨魔铁匠和其他巨魔一般模样:高高瘦瘦,皮肤的纹理颜色都和石头差不多.巨魔铁匠操弄着和他体型极不相称的小工具.
 
 
 # TradeItem
@@ -1346,6 +1348,8 @@ Never mind
 
 torch
 火把
+LIGHT
+照明
 It's an indispensable item in The Demon Halls, which are notorious for their poor ambient lighting.
 恶魔大厅不可或缺的物品,那里因可怜的环境照明而臭名昭著.
 
@@ -1383,8 +1387,8 @@ The lloyd's beacon is successfully set at your current location, now you can ret
 劳埃德的信标成功地绑定到你当前的位置,现在你可以选择在任何时间点回到这里.
 Lloyd's beacon is an intricate magic device, that allows you to return to a place you have already been.
 劳埃德的信标是一种复杂的魔法设备,能够允许你回到曾经去过的地方.
-This beacon was set somewhere on the level %d of Pixel Dungeon.
-信标设置在了像素地牢第%d层的某处.
+\n\nThis beacon was set somewhere on the level %d of Pixel Dungeon.
+\n\n信标设置在了像素地牢第%d层的某处.
 
 you wince as your grip involuntarily tightens around your %s
 你畏葸不前不自觉地握紧了手中的%s
@@ -1771,7 +1775,7 @@ Defered damage (%d)
 %s of anti-entropy
 反熵%s
 %s of affection
-反射%s
+魅惑%s
 
 
 # Wand
@@ -2031,7 +2035,7 @@ The incantation on this scroll will instantly strip from the reader's weapon, ar
 Scroll of Teleportation
 传送卷轴
 In a blink of an eye you were teleported to another location of the level.
-一眨眼你就被传送到了这一层的另外一处地方.
+一眨眼你就被传送到了这一层的另外一处.
 Strong magic aura of this place prevents you from teleporting!
 这地方的强烈魔法波动让你无法进行传送!
 The spell on this parchment instantly transports the reader to a random location on the dungeon level. It can be used to escape a dangerous situation, but the unlucky reader might find himself in an even more dangerous place.
