@@ -22,35 +22,32 @@ import com.watabou.pixeldungeon.effects.Identification;
 import com.watabou.pixeldungeon.items.Item;
 import com.watabou.pixeldungeon.utils.GLog;
 import com.watabou.pixeldungeon.windows.WndBag;
+import net.whitegem.pixeldungeon.LanguageFactory;
 
 public class ScrollOfIdentify extends InventoryScroll {
 
-	{
-		name = "Scroll of Identify";
-		inventoryTitle = "Select an item to identify";
-		mode = WndBag.Mode.UNIDENTIFED;
-	}
-	
-	@Override
-	protected void onItemSelected( Item item ) {
-		
-		curUser.sprite.parent.add( new Identification( curUser.sprite.center().offset( 0, -16 ) ) );
-		
-		item.identify();
-		//GLog.i( "It is %s", item );
-		GLog.i( "It is %s", LanguageFactory.getTranslation(item.this.toString()) );
-		
-		Badges.validateItemLevelAquired( item );
-	}
-	
-	@Override
-	public String desc() {
-		return
-			"Permanently reveals all of the secrets of a single item.";
-	}
-	
-	@Override
-	public int price() {
-		return isKnown() ? 30 * quantity : super.price();
-	}
+    {
+        name = "Scroll of Identify";
+        inventoryTitle = "Select an item to identify";
+        mode = WndBag.Mode.UNIDENTIFED;
+    }
+
+    @Override
+    protected void onItemSelected(Item item) {
+        curUser.sprite.parent.add(new Identification(curUser.sprite.center().offset(0, -16)));
+        item.identify();
+        //GLog.i( "It is %s", item );
+        GLog.i("It is %s", LanguageFactory.getTranslation(item.toString()));
+        Badges.validateItemLevelAquired(item);
+    }
+
+    @Override
+    public String desc() {
+        return "Permanently reveals all of the secrets of a single item.";
+    }
+
+    @Override
+    public int price() {
+        return isKnown() ? 30 * quantity : super.price();
+    }
 }
