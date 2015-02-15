@@ -435,7 +435,7 @@ Killed by your own %s on level %d
 在第%2$d层捣鼓自己的%1$s时出了意外.
 # glyph
 Killed by the %s on level %d
-在第%2$d层被护甲上的%1$s杀死.
+在第%2$d层被%1$s杀死.
 # trap
 Killed by discharge of %s on level %d
 在第%2$d层因触发%1$s而死于非命.
@@ -2128,7 +2128,7 @@ This ring increases your chance to dodge enemy attack.
 Ring of Haggler
 折扣指环
 In fact this ring doesn't provide any magic effect, but it demonstrates to shopkeepers and vendors, that the owner of the ring is a member of The Thieves' Guild. Usually they are glad to give a discount in exchange for temporary immunity guarantee. Upgrading this ring won't give any additional bonuses.
-实际上这枚指环并没有什么魔法效果,但它可以用作向店主和供应商出示的凭证,证明它的主人隶属于盗贼公会.通常他们很乐于提供一些折扣来作为缴纳的保护费.升级这枚指环不会获得额外的效果.
+实际上这枚指环并没有什么魔法效果,但它可以用作向店主和供货商出示的凭证,证明它的主人隶属于盗贼公会.通常他们很乐于提供一些折扣来作为上缴的保护费.升级这枚指环不会获得额外的效果.
 
 Ring of Haste
 迅疾指环
@@ -2143,12 +2143,12 @@ This ring increases your chance to gather dew and seeds from trampled grass.
 Ring of Mending
 回复指环
 This ring increases the body's regenerative properties, allowing one to recover lost health at an accelerated rate. Degraded rings will decrease or even halt one's natural regeneration.
-这枚指环能够赋予身体愈合的能力,让穿戴者更快地回复生命值.降级的指环会让身体减慢甚至停止自然愈合.
+这枚指环能够赋予身体愈合的能力,让穿戴者更快地回复生命值.降级的指环会让身体自愈速度减慢甚至停止.
 
 Ring of Power
 威能指环
 Your wands will become more powerful in the energy field that radiates from this ring. Degraded rings of power will instead weaken your wands.
-在指环释放的能量场中你的法杖威力将更加巨大.降级的指环则会虚弱法杖的威能.
+在指环释放的能量场中你的法杖威力将更加巨大.降级的指环则会削弱法杖的威能.
 
 Ring of Satiety
 餍足指环
