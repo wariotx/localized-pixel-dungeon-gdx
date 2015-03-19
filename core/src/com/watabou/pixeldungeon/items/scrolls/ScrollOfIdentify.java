@@ -39,7 +39,7 @@ public class ScrollOfIdentify extends InventoryScroll {
 		
 		item.identify();
 		//GLog.i( "It is %s", item );
-		GLog.i( "It is %s", LanguageFactory.getTranslation(item.this.toString()) );
+		GLog.i( "It is %s", LanguageFactory.getTranslation( item.toString() ) );
 		
 		Badges.validateItemLevelAquired( item );
 	}
