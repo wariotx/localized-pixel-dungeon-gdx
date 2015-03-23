@@ -101,7 +101,7 @@ public class PixelDungeon extends Game<GameAction> {
 	public void update()
 	{
 		super.update();
-		VersionUtil.check();
+		// VersionUtil.check();
 	}
 	
 	@Override
